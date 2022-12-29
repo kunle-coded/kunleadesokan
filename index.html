@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A personal portfolio website created by Kunle Adesokan"
+      keyword="web developer, web development, web design, html5, css, javascript, software developer"
+    />
+    <title>Kunle Adesokan | Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="http://127.0.0.1:5501/">
+            <svg
+              class="icon"
+              width="70"
+              height="70"
+              viewBox="0 0 70 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect id="black-back" width="70" height="70" fill="black" />
+              <rect
+                id="third-icon"
+                x="18"
+                y="18"
+                width="35"
+                height="35"
+                rx="5"
+                fill="#45A29E"
+              />
+              <rect
+                id="second-icon"
+                x="18"
+                y="18"
+                width="35"
+                height="35"
+                rx="5"
+                fill="#000000"
+              />
+              <g id="Vector">
+                <path
+                  d="M18 23C18 20.2386 20.2386 18 23 18H48C50.7614 18 53 20.2386 53 23V48C53 50.7614 50.7614 53 48 53H23C20.2386 53 18 50.7614 18 48V23Z"
+                  fill="#66FCF1"
+                />
+                <path
+                  d="M26.2955 47V23.7273H30.5114V34.4205H30.7955L39.875 23.7273H45.0227L36.0227 34.1705L45.1023 47H40.0341L33.0909 37.0227L30.5114 40.0682V47H26.2955Z"
+                  fill="black"
+                />
+              </g></svg
+          ></a>
+        </div>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a class="nav-link nav-effect" href="#section-1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-effect" href="#section-1">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-effect" href="#section-2">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-effect" href="#section-3">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="icon">
+          <li id="github">
+            <a href="#"><i class="fab fa-github"></i></a>
+          </li>
+          <li id="twitter">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li id="ig">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="header-container intro-text">
+        <h1>Welcome...</h1>
+        <p class="welcome-text">
+          Hi, my name is Kunle Adesokan. A stylish front-end web developer and a
+          soon-to-be software engineer.
+        </p>
+
+        <button class="button-scroll">Learn More &DownArrow;</button>
+      </div>
+
+      <div class="header-container slider">
+        <div class="slide">
+          <img src="/images/tech.jpg" alt="Developer Desk" />
+        </div>
+        <div class="slide">
+          <img src="/images/web-design.jpg" alt="Web Design" />
+        </div>
+        <div class="slide">
+          <img src="/images/software.jpg" alt="Software" />
+        </div>
+        <div class="slide">
+          <img src="/images/business.jpg" alt="Business" />
+        </div>
+
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </header>
+
+    <section class="boxes">
+      <div class="container">
+        <div class="box">
+          <i class="fab fa-html5"></i>
+        </div>
+        <div class="box">
+          <i class="fab fa-css3-alt"></i>
+        </div>
+        <div class="box">
+          <i class="fab fa-js"></i>
+        </div>
+        <div class="box">
+          <i class="fab fa-java"></i>
+        </div>
+        <div class="box">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="box">
+          <i class="fab fa-vuejs"></i>
+        </div>
+        <div class="box">
+          <i class="fab fa-node-js"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2 class="section-description">Services</h2>
+        <h3 class="section-header" id="section-1">
+          Complete Web Solutions for Every Business need.
+        </h3>
+      </div>
+
+      <div class="portfolio">
+        <div class="portfolio-tab-container">
+          <button
+            class="btn portfolio-tab portfolio-tab-1 portfolio-tab-active"
+            data-tab="1"
+          >
+            <span>01</span>Web Design
+          </button>
+          <button class="btn portfolio-tab portfolio-tab-2" data-tab="2">
+            <span>02</span>Software
+          </button>
+          <button class="btn portfolio-tab portfolio-tab-3" data-tab="3">
+            <span>03</span>IT Services
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="portfolio-content portfolio-content-1 portfolio-content-active"
+      >
+        <div class="portfolio-icon portfolio-icon-1">
+          <svg>
+            <img id="icon-1" src="images/laptop-code-solid.svg"></img>
+          </svg>
+        </div>
+        <h5 class="portfolio-header">Powerful & Responsive Websites</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          sunt voluptatem. Laudantium quisquam magnam expedita rerum nemo dolor
+          totam repellat ut, veritatis deleniti explicabo suscipit soluta?
+          Necessitatibus ut modi ad rem? Ratione eaque dolore dolor doloribus
+          voluptatem quos voluptas natus iste, amet at rem aliquam non!
+          Repellat, veniam laudantium! Eius temporibus dolores ullam enim? Quis
+          ab explicabo sapiente commodi fugit repellat, praesentium animi
+          corrupti impedit, a assumenda nihil! Saepe eveniet, nemo debitis
+          perferendis deleniti voluptatum magni amet impedit pariatur sit!
+        </p>
+      </div>
+
+      <div class="portfolio-content portfolio-content-2">
+        <div class="portfolio-icon portfolio-icon-2">
+          <svg>
+            <img id="icon-2" src="images/uncharted.svg"></img>
+          </svg>
+        </div>
+        <h5 class="portfolio-header">Agile & Efficient Software</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          sunt voluptatem. Laudantium quisquam magnam expedita rerum nemo dolor
+          totam repellat ut, veritatis deleniti explicabo suscipit soluta?
+          Necessitatibus ut modi ad rem? Ratione eaque dolore dolor doloribus
+          voluptatem quos voluptas natus iste, amet at rem aliquam non!
+          Repellat, veniam laudantium! Eius temporibus dolores ullam enim? Quis
+          ab explicabo sapiente commodi fugit repellat, praesentium animi
+          corrupti impedit, a assumenda nihil! Saepe eveniet, nemo debitis
+          perferendis deleniti voluptatum magni amet impedit pariatur sit!
+        </p>
+      </div>
+
+      <div class="portfolio-content portfolio-content-3">
+        <div class="portfolio-icon portfolio-icon-3">
+          <svg>
+            <img id="icon-3" src="images/microchip-solid.svg"></img>
+          </svg>
+        </div>
+        <h5 class="portfolio-header">Reliable IT Solutions</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          sunt voluptatem. Laudantium quisquam magnam expedita rerum nemo dolor
+          totam repellat ut, veritatis deleniti explicabo suscipit soluta?
+          Necessitatibus ut modi ad rem? Ratione eaque dolore dolor doloribus
+          voluptatem quos voluptas natus iste, amet at rem aliquam non!
+          Repellat, veniam laudantium! Eius temporibus dolores ullam enim? Quis
+          ab explicabo sapiente commodi fugit repellat, praesentium animi
+          corrupti impedit, a assumenda nihil! Saepe eveniet, nemo debitis
+          perferendis deleniti voluptatum magni amet impedit pariatur sit!
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title about-title">
+        <h2 class="section-description about-description">About</h2>
+        <h6 class="section-header about-header">About the site</h6>
+      </div>
+      <div class="container" id="section-2">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste possimus
+          minima assumenda consequatur! Blanditiis, quo. Corporis id sed veniam
+          tempore. Reiciendis unde alias debitis? Voluptas accusantium enim
+          sequi sint nisi odio deserunt recusandae quidem nostrum optio, sunt
+          alias fuga placeat ab voluptate! Deleniti, fugit accusantium, cumque
+          quibusdam pariatur nobis voluptatibus eaque eius exercitationem fugiat
+          id, suscipit accusamus voluptatum expedita reprehenderit. Eaque porro
+          nostrum maiores quae quos natus nobis, voluptatibus hic delectus fugit
+          iure excepturi exercitationem neque quasi illum similique, ducimus
+          unde placeat voluptatum perferendis debitis at possimus. Sit, ab
+          suscipit optio autem neque voluptatum quidem. Ullam tempore magni
+          nostrum quae sunt quod nemo quasi! Dolore sapiente excepturi
+          consectetur sunt, amet ex a repudiandae saepe repellat nemo veniam, in
+          dolor unde reprehenderit nulla cum tempora? Commodi quibusdam quia
+          hic, repudiandae reprehenderit ex itaque? Alias praesentium obcaecati
+          optio soluta voluptates amet hic sed dolores ratione fugit quos
+          accusantium odio, repellat vitae porro.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title contact-title">
+        <h2 class="section-description about-description">Contact</h2>
+        <h6 class="section-header">Have a question for us?</h6>
+      </div>
+      <div class="container" id="section-3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste possimus
+          minima assumenda consequatur! Blanditiis, quo. Corporis id sed veniam
+          tempore. Reiciendis unde alias debitis? Voluptas accusantium enim
+          sequi sint nisi odio deserunt recusandae quidem nostrum optio, sunt
+          alias fuga placeat ab voluptate! Deleniti, fugit accusantium, cumque
+          quibusdam pariatur nobis voluptatibus eaque eius exercitationem fugiat
+          id, suscipit accusamus voluptatum expedita reprehenderit. Eaque porro
+          nostrum maiores quae quos natus nobis, voluptatibus hic delectus fugit
+          iure excepturi exercitationem neque quasi illum similique, ducimus
+          unde placeat voluptatum perferendis debitis at possimus. Sit, ab
+          suscipit optio autem neque voluptatum quidem. Ullam tempore magni
+          nostrum quae sunt quod nemo quasi! Dolore sapiente excepturi
+          consectetur sunt, amet ex a repudiandae saepe repellat nemo veniam, in
+          dolor unde reprehenderit nulla cum tempora? Commodi quibusdam quia
+          hic, repudiandae reprehenderit ex itaque? Alias praesentium obcaecati
+          optio soluta voluptates amet hic sed dolores ratione fugit quos
+          accusantium odio, repellat vitae porro.
+        </p>
+      </div>
+    </section>
+
+    <!--
+    <div class="slides-testimonial">
+      <div class="slide-testimonial">
+        <div class="testimonial"></div>
+        <h5 class="testimonial-header">Lorem ipsum dolor sit.</h5>
+        <blockquote class="testimonial-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatibus dolorem veritatis iusto doloremque ipsa, at consequuntur provident nesciunt laboriosam aspernatur soluta ex amet mollitia minima quas exercitationem corrupti assumenda.</blockquote>
+        <address class="testimonial-author">
+          <img src="" alt="">
+          <h6 class="testimonial-name">John Doe</h6>
+          <p class="testimonial-location">Lorem ipsum dolor sit.</p>
+        </address>
+      </div>
+    </div>
+  </div>
+-->
+
+    <div class="footer">
+      <footer>Copyright &copy; 2022 Kunle Adesokan</footer>
+    </div>
+  </body>
+</html>
