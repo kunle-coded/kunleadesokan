@@ -2,8 +2,6 @@
 
 Welcome to the codebase for my personal portfolio website! This project showcases my work as a Full-Stack Developer, highlighting my skills, recent projects, and core values as I pursue opportunities in front-end, full-stack, and software engineering.
 
----
-
 ## 🚀 Project Overview
 
 This website serves as a central hub for my professional online presence, built to reflect my experience and personality through interactive design, smooth user experience, and performant code. It’s built with modern web technologies to ensure responsiveness, accessibility, and fast load times.
@@ -15,8 +13,6 @@ The portfolio project is organized into versioned directories (e.g., v1, v2), al
 - **Current Version**: v1
 - **Status**: In development, with core sections completed.
 
----
-
 ## 🛠️ Tech Stack
 
 - Frontend: React (with Vite for fast development), HTML, CSS, JavaScript+TypeScript
@@ -24,8 +20,6 @@ The portfolio project is organized into versioned directories (e.g., v1, v2), al
 - Styling: CSS Modules for scoped styles and theming (Tailwind CSS for future versions)
 - Animations: CSS and JavaScript for smooth transitions and interactive elements
 - Hosting: Will be deployed on Netlify
-
----
 
 ## 📁 Project Structure
 
@@ -44,8 +38,6 @@ kunleadesokan/
 
 Each version folder contains its own set of source code and assets, enabling continuous updates and version control.
 
----
-
 ## 🌟 Features
 
 - Responsive Layout: Adapts to devices of all sizes for a seamless experience.
@@ -54,8 +46,6 @@ Each version folder contains its own set of source code and assets, enabling con
 - Skills Section: Categorized skill set with visual elements for each category.
 - Contact Form: Easily accessible contact form for communication.
 - Dark Mode: Toggle between light and dark themes for user preference.
-
----
 
 ## 📚 Future Improvements
 
@@ -67,8 +57,6 @@ Each version folder contains its own set of source code and assets, enabling con
 6. SEO Optimization: Improve search engine visibility and ranking.
 7. Performance Optimization: Optimize images, scripts, and styles for faster load times.
 8. Accessibility Improvements: Enhance keyboard navigation and screen reader support.
-
----
 
 ## 🚀 Getting Started
 
@@ -110,13 +98,9 @@ npm run dev
 
 5. Open the browser and visit `http://localhost:5173` to view the application.
 
----
-
 ## 📝 License
 
 This project is licensed under the MIT License. See the [MIT License](https://opensource.org/licenses/MIT) file for details.
-
----
 
 ## 📞 Contact
 
@@ -126,10 +110,6 @@ For inquiries or collaborations, you can reach me at the following platforms:
 [GitHub](https://github.com/kunle-coded)
 [Email](mailto:kunle.adesokan9@gmail.com).
 
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit a pull request or open an issue if you have any suggestions, improvements, or feedback.
-
----
