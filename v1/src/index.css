@@ -1,1 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+:root {
+  /* Global variables */
+
+  /* Typography */
+  /* Family */
+  --primary-fnt: 'Poppins', Helvetica, Arial, sans-serif;
+  --secondary-fnt: 'Epilogue', Helvetica, Arial, sans-serif;
+  --tertiary-fnt: 'Fira Code', monospace;
+
+  /* Font Sizes */
+  /* Desktop */
+  /* Heading */
+  --display: 128px; /* line-height: 100%, SemiBold, -2%, Epilogue */
+  --display-small: 96px; /* line-height: 100%, SemiBold, -1.2%, Poppins */
+  --h1: 72px; /* line-height: 100%, SemiBold, -1.1%, Epilogue */
+  --h2: 64px; /* line-height: 120%, Medium, 0%, Epilogue */
+  --h3: 64px; /* line-height: 72px, Medium, 0%, Poppins */
+  --h4: 48px; /* line-height: 56px, SemiBold, 0%, Epilogue */
+  --h4-scndry: 48px; /* line-height: 56px, SemiBold, 0%, Poppins */
+  --h5: 18px; /* line-height: 100%, regular, 0%, Poppins, Upper */
+
+  /* Body */
+  --p-deflt: 16px; /* line-height: 120%, regular, 0%, Poppins */
+  --p-lg: 42px; /* line-height: 140%, regular, 0%, Poppins */
+  --p-bg: 32px; /* line-height: 100%, bold, 0%, Poppins */
+  --p-md: 24px; /* line-height: 100%, regular, 0%, Poppins */
+  --p-sm: 14px; /* line-height: 120%, regular, 0%, Poppins */
+  --p-xsm: 12px; /* line-height: 140%, regular, 0%, Poppins */
+  --p-micro: 12px; /* line-height: 100%, regular, 0%, Poppins, Upper */
+
+  /* Mobile */
+  /* Heading */
+  --mb-display: 79px; /* line-height: 100%, SemiBold, -1.5%, Epilogue */
+  --mb-display-small: 59px; /* line-height: 100%, SemiBold, -1.2%, Poppins */
+  --mb-h1: 44px; /* line-height: 100%, SemiBold, 0%, Epilogue */
+  --mb-h2: 40px; /* line-height: 120%, Medium, 0%, Epilogue */
+  --mb-h3: 40px; /* line-height: 48px, Medium, 0%, Poppins */
+  --mb-h4: 30px; /* line-height: 38px, SemiBold, 0%, Epilogue */
+  --mb-h4-scndry: 30px; /* line-height: 38px, SemiBold, 0%, Poppins */
+  --mb-h5: 14px; /* line-height: 100%, regular, 0%, Poppins, Upper */
+
+  /* Body */
+  --mb-p-deflt: 14px; /* line-height: auto, regular, 0%, Poppins */
+  --mb-p-lg: 26px; /* line-height: 140%, regular, 0%, Poppins */
+  --mb-p-bg: 20px; /* line-height: auto, SemiBold, 0%, Poppins */
+  --mb-p-md: 15px; /* line-height: auto, regular, 0%, Poppins */
+  --mb-p-sm: 12px; /* line-height: 140%, regular, 0%, Poppins */
+
+  /* NOTE: May use these */
+  --mb-p-xsm: 11px; /* line-height: 140%, regular, 0%, Poppins */
+  --mb-p-micro: 10px; /* line-height: 100%, regular, 0%, Poppins, Upper */
+
+  /* Color Palette */
+  /* White */
+  --wht-primary: #ffffff;
+  --wht-80: #f5f5f5;
+  --wht-60: #ececec;
+  --wht-40: #c3c3c4;
+  --wht-20: #9b9b9c;
+
+  /* Black */
+  --blck-primary: #212123;
+  --blck-80: #474749;
+  --blck-60: #747475;
+  --blck-40: #ababab;
+  --blck-20: #dcdcdc;
+
+  /* Accent */
+  --acnt-primary: #305cde;
+  --acnt-secondary: #c4d2fc;
+  --acnt-dark: #182e6f;
+  --acnt-tertiary: #fa8072;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-fnt);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: var(--wht-80);
+  color: var(--blck-primary);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
