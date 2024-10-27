@@ -18,7 +18,7 @@
   /* Font Sizes */
   /* Desktop */
   /* Heading */
-  --display: 128px; /* line-height: 100%, SemiBold, -2%, Epilogue */
+  --display: 128px; /* 128px line-height: 100%, SemiBold, -2%, Epilogue */
   --display-small: 96px; /* line-height: 100%, SemiBold, -1.2%, Poppins */
   --h1: 72px; /* line-height: 100%, SemiBold, -1.1%, Epilogue */
   --h2: 64px; /* line-height: 120%, Medium, 0%, Epilogue */
@@ -78,6 +78,24 @@
   --acnt-secondary: #c4d2fc;
   --acnt-dark: #182e6f;
   --acnt-tertiary: #fa8072;
+
+  /* Border Color */
+  --outline: #dcdcdc;
+  --outline-variant: #ababab;
+  --img-bg: #ababab;
+
+  /* Shadow Effects */
+  --umbra: 0px 16px 24px 2px rgb(000, 14%);
+  --penumbra: 0px 6px 30px 5px rgb(000, 12%);
+  --ambient: 0px 8px 10px 0px rgb(000, 20%);
+  --dropdown: rgb(0, 0, 0, 0.05) 0px 1px 1px 0px;
+
+  /* Margins */
+  --margin-desktop-clm: 0 5.6rem;
+  --margin-mobile-clm: 0 3.5rem; /* 0px 16px*/
+
+  --dp-sct: 5.6rem;
+  --mb-sct: 3.5rem; /* 16px */
 }
 
 html {
@@ -97,4 +115,31 @@ body {
   transition:
     color 0.3s ease,
     background-color 0.3s ease;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  /* position: fixed;
+  top: 0; */
+  /* width: 100vw;
+  display: block;
+  z-index: 100; */
+
+  display: contents;
+}
+
+.element {
+  min-height: 100%;
+  width: auto;
+}
+
+.main {
+  flex: 1;
+  padding-top: 8rem;
+  z-index: 1;
 }

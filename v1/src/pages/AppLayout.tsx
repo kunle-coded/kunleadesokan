@@ -1,11 +1,20 @@
 import { Outlet } from 'react-router-dom';
+import Header from '../components/header/Header';
 
 function AppLayout() {
   return (
-    <div>
-      <h1>Routed TS React App</h1>
+    <div className="app">
+      <header className="header">
+        <Header />
+      </header>
 
-      <Outlet />
+      <main className="main">
+        <Outlet />
+      </main>
+
+      <footer className="footer">
+        <p>&copy; 2024 - footer here</p>
+      </footer>
     </div>
   );
 }

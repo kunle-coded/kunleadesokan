@@ -1,0 +1,60 @@
+:global(.header) .container {
+  flex: 0 0 auto;
+  height: auto;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  transform: perspective(1200px);
+  z-index: 10;
+}
+
+.navMenu {
+  display: flex;
+}
+
+.navMenu ul {
+  display: flex;
+  gap: 20px;
+}
+
+.contentControl.contentScroll .headerWrapper {
+  gap: 32px;
+  justify-content: center;
+  padding: 16px 0px;
+  width: min-content;
+}
+
+.contentControl .headerWrapper {
+  place-content: center space-between;
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  height: min-content;
+  overflow: visible;
+  padding: 16px 48px;
+  position: relative;
+  width: 1440px;
+}
+
+.contentControl.contentScroll .headerContent {
+  flex: 0 0 auto;
+  gap: 32px;
+  height: min-content;
+  justify-content: center;
+  padding: 8px 8px 8px 32px;
+  width: min-content;
+}
+
+.contentControl .headerContent {
+  place-content: center space-between;
+  align-items: center;
+  display: flex;
+  flex: 1 0 0px;
+  flex-flow: row;
+  height: 48px;
+  overflow: visible;
+  padding: 0px;
+  position: relative;
+  width: 1px;
+}
