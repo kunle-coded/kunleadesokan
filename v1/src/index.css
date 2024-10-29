@@ -126,11 +126,9 @@ body {
 .header {
   /* position: fixed;
   top: 0; */
-  /* width: 100vw;
+  width: 100vw;
   display: block;
-  z-index: 100; */
-
-  display: contents;
+  z-index: 10;
 }
 
 .element {
