@@ -11,24 +11,14 @@
 }
 
 .contentControl {
-  /* place-content: center space-between;
-  align-items: center; */
   display: flex;
-  /* flex-flow: row; */
-  /* height: min-content; */
   overflow: visible;
-  /* padding: 16px 48px; */
   position: relative;
   width: inherit;
 }
 
-.contentScroll {
-  /* For controlling the header */
-}
-
 .headerWrapper {
   /* For wrapping the header */
-
   display: flex;
   justify-content: center;
   width: 100%;
@@ -39,15 +29,15 @@
   display: flex;
   justify-content: space-between;
   -webkit-box-pack: justify;
-  /* justify-content: center;
-  -webkit-box-pack: center; */
   align-items: center;
   -webkit-box-align: center;
-  /* width: 100%; */
   min-width: 600px;
   height: 3rem;
   margin: 1.5rem 5.6rem;
-  padding: 1rem 0.5rem 1rem 2rem;
+  padding-top: 1rem;
+  padding-right: 0;
+  padding-bottom: 1rem;
+  padding-left: 0;
   transition:
     width 0.9s ease,
     border-radius 0s ease,
@@ -55,33 +45,12 @@
     background-color 150ms ease;
 }
 
-.contentControl.contentScroll .headerContent {
-  /* flex: 0 0 auto;
-  gap: 32px;
-  height: min-content;
-  justify-content: center;
-  padding: 8px 8px 8px 32px;
-  width: min-content; */
-  /* width: 70%; */
-}
-
-.contentControl .logo {
-  /* place-content: flex-start;
-  align-items: flex-start;
-  display: flex;
-  flex: 0 0 auto;
-  flex-flow: column;
-  gap: 16px;
-  height: min-content;
-  overflow: visible;
-  padding: 0px;
-  position: relative;
-  width: 130px; */
+.contentScroll .headerContent {
+  padding-right: 0.5rem;
+  padding-left: 2rem;
 }
 
 .logo a {
-  /* width: min-content; */
-  /* transform: translateX(100%); */
   text-decoration: none;
 }
 
@@ -92,6 +61,7 @@
   font-weight: 700;
   color: var(--blck-primary);
 }
+
 .logoText span {
   color: var(--acnt-primary);
 }
@@ -118,13 +88,15 @@
 }
 
 .navMenuList li:not(:last-child) {
-  margin: 0 1rem;
+  margin-right: 1.3rem;
 }
 
 .navMenuList li > a {
   text-decoration: none;
   color: var(--blck-primary);
+  color: var(--blck-80);
   font-size: clamp(0.7rem, 1.1vw, 1.5rem);
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -135,18 +107,4 @@
 .navMenuList li > a.active {
   color: #000;
   color: var(--blck-60);
-}
-
-.contentControl .navMenu {
-  /* place-content: center flex-start;
-  align-items: center;
-  display: flex;
-  flex: 0 0 auto;
-  flex-flow: row;
-  gap: 48px;
-  height: 100%;
-  overflow: visible;
-  padding: 0px;
-  position: relative;
-  width: min-content; */
 }

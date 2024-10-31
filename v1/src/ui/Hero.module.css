@@ -1,0 +1,65 @@
+.containerHro {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--wht-60);
+  padding-top: 8rem;
+}
+
+.contentHro {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: var(--margin-desktop-clm);
+  height: 100%;
+}
+
+.gridColmn {
+  grid-column: span 6;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.colmLft {
+  position: relative;
+  /* background-color: rosybrown; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.colmRgt {
+  background-color: lightcoral;
+}
+
+.hroTxt {
+  /* width: 100%; */
+  position: relative;
+}
+
+.hroTxtDspl {
+  /* width: 100%; */
+  display: flex;
+  align-items: first baseline;
+  -webkit-box-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.hroTxtDspl > span {
+  margin-left: -0.2rem;
+  font-size: 128px;
+  line-height: 100%;
+  font-weight: 600;
+  font-family: var(--secondary-fnt);
+  color: var(--acnt-primary);
+}
+
+.hroTxtHdg {
+  color: var(--blck-80);
+}
+
+.hroTxtCta {
+  margin-top: 2rem;
+}

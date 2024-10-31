@@ -115,6 +115,8 @@ body {
   transition:
     color 0.3s ease,
     background-color 0.3s ease;
+  min-height: 100vh;
+  overscroll-behavior: none;
 }
 
 svg:not(:root) {
@@ -125,6 +127,7 @@ svg:not(:root) {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: scroll;
 }
 
 .header {
@@ -142,6 +145,49 @@ svg:not(:root) {
 
 .main {
   flex: 1;
-  padding-top: 8rem;
+  /* padding-top: 8rem; */
   z-index: 1;
+}
+
+.containerGlobal {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* Global typographic styles */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.display {
+  font-size: var(--display);
+  line-height: 100%;
+  font-weight: 600;
+  font-family: var(--secondary-fnt);
+  letter-spacing: -0.07em;
+  /* letter-spacing: -0.6rem; */
+  margin-left: -0.06em;
+}
+
+.headingOne {
+  font-family: var(--secondary-fnt);
+  font-size: var(--h1);
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -1.1%;
+  margin-left: -0.06em;
 }

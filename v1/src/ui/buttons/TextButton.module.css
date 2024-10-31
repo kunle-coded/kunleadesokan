@@ -1,0 +1,43 @@
+.btnCntnr {
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+}
+
+.btnTxt {
+  font-size: var(--p-deflt);
+  font-weight: normal;
+  line-height: 1.2;
+  color: var(--acnt-dark);
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.btnTxt::after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: var(--acnt-primary);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition:
+    background-color 250ms ease,
+    width 250ms ease;
+}
+
+.btnCntnr:hover .btnTxt::after {
+  width: 0;
+}
+
+.btnArrw {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  margin-left: 0.3rem;
+}
+
+.btnCntnr:hover .btnArwSvg {
+  transform: rotate(-45deg);
+  transition: transform 250ms ease;
+}
