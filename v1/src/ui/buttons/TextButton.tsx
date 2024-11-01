@@ -12,15 +12,15 @@ function TextButton({ children, href }: TextButtonProps) {
       <span className={styles.btnArrw}>
         <svg
           className={styles.btnArwSvg}
-          style={{
-            position: 'absolute',
-            left: '0px',
-            top: '0px',
-            bottom: '0px',
-          }}
           viewBox="0 0 18 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          style={{
+            position: 'absolute',
+            inset: '0px',
+            width: '100%',
+            height: '100%',
+          }}
         >
           <path
             d="M10.5 3.75L15.75 9M15.75 9L10.5 14.25M15.75 9L2.25 9"

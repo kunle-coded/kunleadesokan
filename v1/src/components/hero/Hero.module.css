@@ -20,19 +20,6 @@
   padding: 0;
 }
 
-.colmLft {
-  position: relative;
-  /* background-color: rosybrown; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.colmRgt {
-  background-color: lightcoral;
-}
-
 .hroTxt {
   /* width: 100%; */
   position: relative;
@@ -61,5 +48,39 @@
 }
 
 .hroTxtCta {
+  width: max-content;
   margin-top: 2rem;
+}
+
+.colmLft {
+  position: relative;
+  /* background-color: rosybrown; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.colmRgt {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.innerGridCntnr {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 10px;
+  height: 100%;
+}
+
+.dktpCntnr {
+  grid-column: span 8;
+  position: relative;
+}
+
+.mblCntnr {
+  grid-column: span 4;
+  position: relative;
 }

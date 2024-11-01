@@ -5,17 +5,19 @@
 }
 
 .btnTxt {
+  /* line-height: 120%, regular, 0%, Poppins */
   font-size: var(--p-deflt);
-  font-weight: normal;
-  line-height: 1.2;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
   color: var(--acnt-dark);
   position: relative;
-  padding-bottom: 6px;
+  padding-bottom: 1px;
 }
 
 .btnTxt::after {
   content: '';
-  height: 4px;
+  height: 2px;
   width: 100%;
   background-color: var(--acnt-primary);
   position: absolute;
@@ -32,8 +34,8 @@
 
 .btnArrw {
   position: relative;
-  height: 18px;
-  width: 18px;
+  height: 24px;
+  width: 24px;
   margin-left: 0.3rem;
 }
 

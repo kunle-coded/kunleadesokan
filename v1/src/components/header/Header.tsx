@@ -55,8 +55,6 @@ function Header() {
 
       const headerDynWidth = 100 - progress * 100;
 
-      console.log(progress);
-
       let width = `${headerDynWidth}%`;
 
       const dynamicHeaderStyle = {
