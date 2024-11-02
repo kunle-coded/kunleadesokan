@@ -7,24 +7,13 @@ import styles from './Hero.module.css';
 import MobileWireframe from './MobileWireframe';
 import useWireframeAnimation from '../../hooks/useWireframeAnimation';
 
-// interface
+// interface 2126
 
-type NumberValue = number;
-
-const DESKTOP_WIREFRAME_HEIGHT: NumberValue = 1425;
-const MOBILE_WIREFRAME_HEIGHT: NumberValue = 2126;
+const DESKTOP_MOBILE_HEIGHTS: number[] = [1425, 1855];
 
 function Hero() {
-  const { transformNum, getMouseMovement } = useWireframeAnimation(
-    DESKTOP_WIREFRAME_HEIGHT
-  );
-
-  const onDesktopHover = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    // setIsWireframeScroll(false);
-    // setMoveValue(0)
-  };
+  const { transformNum, transformNumTwo, getMouseMovement } =
+    useWireframeAnimation(DESKTOP_MOBILE_HEIGHTS);
 
   return (
     <div className="containerGlobal" onMouseMove={getMouseMovement}>
@@ -51,7 +40,7 @@ function Hero() {
                 <DesktopWireframe scrollValue={transformNum} />
               </div>
               <div className={styles.mblCntnr}>
-                <MobileWireframe />
+                <MobileWireframe scrollValue={transformNumTwo} />
               </div>
             </div>
           </div>

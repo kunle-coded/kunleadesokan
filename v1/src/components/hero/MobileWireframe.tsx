@@ -1,14 +1,22 @@
-function MobileWireframe() {
+interface MobileWireframeProps {
+  scrollValue: number;
+}
+
+function MobileWireframe({ scrollValue }: MobileWireframeProps) {
+  const svgStyle: React.CSSProperties = {
+    position: 'absolute',
+    inset: '1',
+    width: '100%',
+    transform: `translateY(${-scrollValue}%)`,
+    transition: 'transform 550ms ease',
+  };
+
   return (
     <svg
       viewBox="0 0 236 2126"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      style={{
-        position: 'absolute',
-        inset: '1',
-        width: '100%',
-      }}
+      style={svgStyle}
     >
       <g clipPath="url(#clip0_174_3705)">
         <rect width="236" height="285" fill="#DCDCDC" />

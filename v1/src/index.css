@@ -18,9 +18,17 @@
   /* Font Sizes */
   /* Desktop */
   /* Heading */
-  --display: 128px; /* 128px line-height: 100%, SemiBold, -2%, Epilogue */
+  --display: clamp(
+    4.9375rem,
+    6.125vw + 2.640625rem,
+    8rem
+  ); /* 128px line-height: 100%, SemiBold, -2%, Epilogue */
   --display-small: 96px; /* line-height: 100%, SemiBold, -1.2%, Poppins */
-  --h1: 72px; /* line-height: 100%, SemiBold, -1.1%, Epilogue */
+  --h1: clamp(
+    2.75rem,
+    3.5vw + 1.4375rem,
+    4.5rem
+  ); /* line-height: 100%, SemiBold, -1.1%, Epilogue */
   --h2: 64px; /* line-height: 120%, Medium, 0%, Epilogue */
   --h3: 64px; /* line-height: 72px, Medium, 0%, Poppins */
   --h4: 48px; /* line-height: 56px, SemiBold, 0%, Epilogue */

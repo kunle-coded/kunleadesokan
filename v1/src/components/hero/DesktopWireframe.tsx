@@ -15,8 +15,6 @@ function DesktopWireframe({ scrollValue }: DesktopWireframeProps) {
     transition: 'transform 550ms ease',
   };
 
-  //   console.log((scrollValue / 1425) * 100);
-
   return (
     <svg
       viewBox="0 0 424 1425"
