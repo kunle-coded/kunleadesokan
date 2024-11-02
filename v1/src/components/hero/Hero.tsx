@@ -5,46 +5,19 @@ import HeadingOne from '../../ui/headings/HeadingOne';
 import DesktopWireframe from './DesktopWireframe';
 import styles from './Hero.module.css';
 import MobileWireframe from './MobileWireframe';
+import useWireframeAnimation from '../../hooks/useWireframeAnimation';
 
 // interface
 
+type NumberValue = number;
+
+const DESKTOP_WIREFRAME_HEIGHT: NumberValue = 1425;
+const MOBILE_WIREFRAME_HEIGHT: NumberValue = 2126;
+
 function Hero() {
-  const [isWireframScroll, setIsWireframeScroll] = useState<boolean>(false);
-  const [moveValue, setMoveValue] = useState<number>(0);
-  const [isHover, setIsHover] = useState<boolean>(false);
-  // const [initialY, setInitialY] = useState<number>(0);
-
-  const prevX = useRef<number | null>(null);
-  const prevY = useRef<number | null>(null);
-
-  const getMouseMovement = (event: React.MouseEvent<HTMLDivElement>) => {
-    const { clientX, clientY, pageX } = event;
-
-    const width = window.innerWidth;
-    const scrollPercentage = (clientX / width) * 100;
-    // const scrollPercentage = (clientX / 1425) * 100;
-
-    if (prevX.current !== null && prevY.current !== null) {
-      setIsWireframeScroll(true);
-      if (clientX > prevX.current) {
-        setMoveValue(-scrollPercentage);
-        console.log(' moving right', scrollPercentage);
-      } else if (clientX < prevX.current) {
-        setMoveValue(scrollPercentage);
-        console.log(' moving left', scrollPercentage);
-      }
-
-      // if (clientY > prevY.current) {
-      //   setMoveValue(clientX);
-      //   // console.log(' moving down', prevY.current, clientY);
-      // } else if (clientY < prevY.current) {
-      //   setMoveValue(-clientX);
-      //   // console.log(' moving up', prevY.current, clientY);
-      // }
-    }
-    prevX.current = clientX;
-    prevY.current = clientY;
-  };
+  const { transformNum, getMouseMovement } = useWireframeAnimation(
+    DESKTOP_WIREFRAME_HEIGHT
+  );
 
   const onDesktopHover = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -75,11 +48,7 @@ function Hero() {
           <div className={`${styles.gridColmn} ${styles.colmRgt}`}>
             <div className={styles.innerGridCntnr}>
               <div className={styles.dktpCntnr}>
-                <DesktopWireframe
-                  isScroll={isWireframScroll}
-                  scrollValue={moveValue}
-                  isHover={isHover}
-                />
+                <DesktopWireframe scrollValue={transformNum} />
               </div>
               <div className={styles.mblCntnr}>
                 <MobileWireframe />

@@ -10,6 +10,7 @@ function Homepage() {
           width: '350px',
           height: '900px',
           backgroundColor: 'lightcoral',
+          marginBottom: '50px',
         }}
       ></div>
     </div>

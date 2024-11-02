@@ -1,37 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
 interface DesktopWireframeProps {
-  isScroll: boolean;
-  isHover: boolean;
+  // isScroll: boolean;
+  // isHover: boolean;
   scrollValue: number;
 }
 
-type NumberValue = number;
-
-const DESKTOP_WIREFRAME_HEIGHT: NumberValue = 1425;
-
-function DesktopWireframe({
-  isScroll,
-  isHover,
-  scrollValue,
-}: DesktopWireframeProps) {
-  const [transformNum, setTransformNum] = useState<number>(0);
-
-  useEffect(() => {
-    if (scrollValue < DESKTOP_WIREFRAME_HEIGHT) {
-      setTransformNum(scrollValue);
-      //   console.log('scroll value', scrollValue);
-    } else {
-      //   setTransformNum(0);
-    }
-    // console.log('scrolling... ', scrollValue);
-  }, [scrollValue]);
-
+function DesktopWireframe({ scrollValue }: DesktopWireframeProps) {
   const svgStyle: React.CSSProperties = {
     position: 'absolute',
     inset: '1',
     width: '100%',
-    transform: `translateY(${transformNum}px)`,
+    transform: `translateY(${-scrollValue}%)`,
     transition: 'transform 550ms ease',
   };
 
