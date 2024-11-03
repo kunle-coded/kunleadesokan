@@ -1,3 +1,4 @@
+import TextButton from '../../ui/buttons/TextButton';
 import styles from './Intro.module.css';
 
 function Intro() {
@@ -11,6 +12,11 @@ function Intro() {
               <span className={styles.intrTxtHghlgt}>stand out</span>, are
               engaging, accessible, and user-centric.
             </h4>
+            <span className={styles.intrLnkCntnr}>
+              <TextButton href="/about" type="custom">
+                About me
+              </TextButton>
+            </span>
           </div>
         </div>
       </div>

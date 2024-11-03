@@ -36,10 +36,20 @@
   padding: 5.625rem;
   padding: 6rem;
   background-color: var(--blck-primary);
-  color: var(--wht-40);
+  background-color: var(--blck-20);
+  background-color: var(--acnt-tertiary);
+  background-color: rgba(48, 92, 223, 0.109);
+  color: var(--wht-primary);
+  color: var(--blck-80);
   position: relative;
 }
 
 .intrTxtHghlgt {
   color: var(--acnt-tertiary);
+}
+
+.intrLnkCntnr {
+  position: absolute;
+  bottom: 6rem;
+  right: 8.5rem;
 }

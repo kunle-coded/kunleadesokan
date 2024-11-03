@@ -96,6 +96,11 @@
   --outline-variant: #ababab;
   --img-bg: #ababab;
 
+  /* Utility Color */
+  --success: #4cbe38;
+  --outline-variant: #ababab;
+  --img-bg: #ababab;
+
   /* Shadow Effects */
   --umbra: 0px 16px 24px 2px rgb(000, 14%);
   --penumbra: 0px 6px 30px 5px rgb(000, 12%);
@@ -103,9 +108,13 @@
   --dropdown: rgb(0, 0, 0, 0.05) 0px 1px 1px 0px;
 
   /* Margins */
+  /* Desktop */
   --margin-desktop-clm: 0 5.6rem;
-  --margin-mobile-clm: 0 3.5rem; /* 0px 16px*/
   --margin-desktop-spcr: 8.25rem;
+  --margin-desktop-spcrsmll: 2.5rem;
+
+  /* Mobile */
+  --margin-mobile-clm: 0 3.5rem; /* 0px 16px*/
 
   --dp-sct: 5.6rem;
   --mb-sct: 3.5rem; /* 16px */
@@ -200,7 +209,6 @@ a {
   font-size: var(--h1);
   font-weight: 600;
   line-height: 100%;
-  letter-spacing: -1.1%;
   letter-spacing: -0.04em;
   margin-left: -0.06em;
 }
@@ -210,7 +218,19 @@ a {
   font-size: var(--h4);
   font-weight: 600;
   line-height: 120%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
+  /* margin-left: -0.06em; */
+}
+
+/* --h5: 18px; line-height: 100%, regular, 0%, Poppins, Upper */
+
+.headingFive {
+  font-family: var(--primary-fnt);
+  font-size: var(--h5);
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
   /* margin-left: -0.06em; */
 }
 
@@ -218,4 +238,8 @@ a {
   display: block;
   margin: var(--margin-desktop-clm);
   padding-top: 56px;
+}
+
+.tempSpcr {
+  height: 900px;
 }

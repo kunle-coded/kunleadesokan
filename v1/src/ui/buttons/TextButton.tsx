@@ -3,9 +3,10 @@ import styles from './TextButton.module.css';
 interface TextButtonProps {
   children: string;
   href: string;
+  type?: string;
 }
 
-function TextButton({ children, href }: TextButtonProps) {
+function TextButton({ children, href, type }: TextButtonProps) {
   return (
     <a className={styles.btnCntnr} href={href}>
       <span className={styles.btnTxt}>{children}</span>
