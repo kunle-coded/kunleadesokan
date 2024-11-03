@@ -1,7 +1,21 @@
 import styles from './Intro.module.css';
 
 function Intro() {
-  return <div className={styles.secCntnr}></div>;
+  return (
+    <div className={styles.secIntrCntnr}>
+      <div className={styles.intrInnrCntnr}>
+        <div className={styles.intrCntWrppr}>
+          <div className={styles.intrCntCntnr}>
+            <h4 className="headingFour">
+              I’m passionate about crafting digital experiences that{' '}
+              <span className={styles.intrTxtHghlgt}>stand out</span>, are
+              engaging, accessible, and user-centric.
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Intro;

@@ -28,10 +28,14 @@
     2.75rem,
     3.5vw + 1.4375rem,
     4.5rem
-  ); /* line-height: 100%, SemiBold, -1.1%, Epilogue */
+  ); /* 72px line-height: 100%, SemiBold, -1.1%, Epilogue */
   --h2: 64px; /* line-height: 120%, Medium, 0%, Epilogue */
   --h3: 64px; /* line-height: 72px, Medium, 0%, Poppins */
-  --h4: 48px; /* line-height: 56px, SemiBold, 0%, Epilogue */
+  --h4: clamp(
+    1.875rem,
+    2.25vw + 1.03125rem,
+    3rem
+  ); /* line-height: 56px, SemiBold, 0%, Epilogue */
   --h4-scndry: 48px; /* line-height: 56px, SemiBold, 0%, Poppins */
   --h5: 18px; /* line-height: 100%, regular, 0%, Poppins, Upper */
 
@@ -101,6 +105,7 @@
   /* Margins */
   --margin-desktop-clm: 0 5.6rem;
   --margin-mobile-clm: 0 3.5rem; /* 0px 16px*/
+  --margin-desktop-spcr: 8.25rem;
 
   --dp-sct: 5.6rem;
   --mb-sct: 3.5rem; /* 16px */
@@ -196,5 +201,21 @@ a {
   font-weight: 600;
   line-height: 100%;
   letter-spacing: -1.1%;
+  letter-spacing: -0.04em;
   margin-left: -0.06em;
+}
+
+.headingFour {
+  font-family: var(--secondary-fnt);
+  font-size: var(--h4);
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0%;
+  /* margin-left: -0.06em; */
+}
+
+.sectionTitle {
+  display: block;
+  margin: var(--margin-desktop-clm);
+  padding-top: 56px;
 }

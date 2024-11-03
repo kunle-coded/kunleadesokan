@@ -1,3 +1,45 @@
-.secCntnr {
+.secIntrCntnr {
   display: block;
+  width: 100%;
+  margin: 0;
+  margin-top: var(--margin-desktop-spcr);
+  margin-bottom: var(--margin-desktop-spcr);
+  padding: 0;
+}
+
+.intrInnrCntnr {
+  display: flex;
+  margin: var(--margin-desktop-clm);
+  padding: 0;
+}
+
+.intrCntWrppr {
+  display: flex;
+  justify-content: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  -webkit-box-align: center;
+  width: 100%;
+  margin-top: 0;
+  margin-right: 6.25rem;
+  margin-left: 6.25rem;
+  margin-bottom: 0;
+}
+
+.intrCntCntnr {
+  display: flex;
+  justify-content: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  -webkit-box-align: center;
+  width: 100%;
+  padding: 5.625rem;
+  padding: 6rem;
+  background-color: var(--blck-primary);
+  color: var(--wht-40);
+  position: relative;
+}
+
+.intrTxtHghlgt {
+  color: var(--acnt-tertiary);
 }

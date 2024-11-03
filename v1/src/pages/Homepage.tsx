@@ -1,18 +1,13 @@
 import Hero from '../components/hero/Hero';
+import Intro from '../components/intro/Intro';
+import SectionTitle from '../ui/headings/SectionTitle';
 
 function Homepage() {
   return (
     <div>
       <Hero />
-      <h1>Remaining content</h1>
-      <div
-        style={{
-          width: '350px',
-          height: '900px',
-          backgroundColor: 'lightcoral',
-          marginBottom: '50px',
-        }}
-      ></div>
+      <Intro />
+      <SectionTitle title="Work" isPoint />
     </div>
   );
 }
