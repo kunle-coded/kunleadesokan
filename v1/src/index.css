@@ -1,1 +1,89 @@
+@font-face {
+  font-family: "Geist";
+  src: url(./assets/fonts/geist/sans/Geist-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Geist";
+  src: url(./assets/fonts/geist/sans/Geist-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url(./assets/fonts/geist/sans/Geist-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url(./assets/fonts/geist/sans/Geist-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url(./assets/fonts/geist/sans/Geist-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url(./assets/fonts/geist/mono/GeistMono-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url(./assets/fonts/geist/mono/GeistMono-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Variables */
+  --primary-black: #141821;
+  --primary-black-light: #28303b;
+  --primary-white: #e6e6e6;
+  --primary-white-dark: #dcdcde;
+  --primary-white-darker: #d5d5d7;
+  --secondary-capri: #00bfff;
+  --accent-neon-coral: #ff6044;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-synthesis: none;
+  overflow-x: hidden;
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
