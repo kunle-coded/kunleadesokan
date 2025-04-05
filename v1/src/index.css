@@ -47,6 +47,14 @@
   font-style: normal;
 }
 
+.ibm-plex-sans-test {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 *,
 *::before,
 *::after {
@@ -61,29 +69,211 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Variables */
+  /* Color */
+  --primary-black-dark: #0e1018;
   --primary-black: #141821;
   --primary-black-light: #28303b;
+  --primary-black-lighter: #5e6469;
+  --primary-black-lightest: #797d80;
   --primary-white: #e6e6e6;
   --primary-white-dark: #dcdcde;
-  --primary-white-darker: #d5d5d7;
+  --primary-white-darker: #bcbcbe;
+  --primary-white-darkest: #858586;
   --secondary-capri: #00bfff;
+  --secondary-capri-dark: #0074b4;
   --accent-neon-coral: #ff6044;
+
+  --primary-border: rgb(121, 125, 128, 0.5);
+  --secondary-border: rgb(121, 125, 128, 0.2);
+
+  /* Typography */
+  --h1: clamp(2.75rem, 3.5vw + 1.4375rem, 4.5rem);
+
+  --p-md: 2vw;
+  --p-sm: 14px;
+
+  /* Padding */
+  --global-padding: 3.6rem;
+  --global-padding-inner: 6.6rem;
+  --section-padding: 8.5rem 6.6rem 5.5rem;
+  --section-padding-big: 8.5rem 8.1rem 5.5rem;
+
+  /* Margins */
+  --margin-desktop-spcr: 8.5rem;
+  --margin-desktop-section: 0 8.1rem;
+
+  /* Heights */
+  --header-height: 11.12em;
 }
 
 html {
   width: 100%;
-  height: 100%;
-  font-size: 100%;
+  font-size: 0.9rem;
   scroll-behavior: smooth;
   scrollbar-width: thin;
 }
 
 body {
-  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-family: "Geist", "Barlow", "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.15;
   font-synthesis: none;
   overflow-x: hidden;
-  background-color: var(--primary-white);
-  color: var(--primary-black);
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  width: 100%;
+  /* height: 100%; */
   transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-left: -0.06em;
+}
+
+h1 span {
+  margin-left: 0.5rem;
+  color: var(--secondary-capri);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  margin-block: 0;
+  padding-inline: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+  cursor: pointer;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-property: opacity, color, background-color,
+    -webkit-transform, border;
+  -webkit-transition-property: opacity, color, background-color, transform,
+    border;
+  transition-property: opacity, color, background-color, transform, border;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button,
+[role="button"],
+[type="submit"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#root {
+  /* height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%; */
+}
+
+.app {
+  position: relative;
+}
+
+.main {
+  display: block;
+  outline: none;
+}
+
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.nav-link {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.section-hidden {
+  visibility: visible;
+  opacity: 0;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 20, 0, 1);
+}
+
+.section {
+  transition: all, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
+    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.sectionNew {
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: all, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
+    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+@media (hover: hover) and (any-pointer: fine) {
+  .nav-link::after {
+    content: "";
+    width: 20%;
+    min-width: 1em;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    transform: translateX(0);
+    transform-origin: left;
+    transition: 0.3s;
+    position: absolute;
+    pointer-events: none;
+    background-color: currentColor;
+    /* background-color: var(--secondary-capri); */
+  }
+}
+
+@media (hover: hover) and (any-pointer: fine) {
+  .nav-link:hover:after {
+    opacity: 0.2;
+    transform: translateX(0.5em);
+  }
+}
+
+@media (min-width: 701px) {
+  main {
+    touch-action: none;
+    scroll-snap-type: y mandatory;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1600px) {
+  html {
+    font-size: clamp(14px, 1vw, 16px);
+  }
 }
