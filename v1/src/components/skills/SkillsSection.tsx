@@ -7,6 +7,7 @@ import ToolsSkills from "../shapes/ToolsSkills";
 import SoftSkills from "../shapes/SoftSkills";
 import OtherSkills from "../shapes/OtherSkills";
 import useReveal from "../../hooks/useReveal";
+import LinkButton from "../../ui/buttons/LinkButton";
 
 function SkillsSection() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -108,11 +109,11 @@ function SkillsSection() {
                     </li>
                   </ul>
                   <div className={styles.skllSctnCta}>
-                    {/* <LinkButton
-                      label="My résumé"
-                      href="/resume"
+                    <LinkButton
+                      label="My Resume"
+                      link="/resume"
                       type="secondary"
-                    /> */}
+                    />
                   </div>
                 </div>
               </div>

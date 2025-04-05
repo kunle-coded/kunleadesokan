@@ -7,7 +7,6 @@ function useReveal(ref: RefObject<HTMLDivElement | null>) {
     const revealSection = function (entries: IntersectionObserverEntry[]) {
       const [entry] = entries;
       setIsIntersecting(entry.isIntersecting);
-      console.log("observing entry... ", entry);
 
       //   const scrollY = window.scrollY;
       //   const threshold = 10;

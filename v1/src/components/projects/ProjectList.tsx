@@ -1,18 +1,10 @@
 import { projects, otherProjects } from "../../data";
 import styles from "./ProjectList.module.css";
-// import SectionTitle from "../../ui/headings/SectionTitle";
-// import SubSectionTitle from "../../ui/headings/SubSectionTitle";
 import ProjectCardOther from "./ProjectCardOther";
-// import Button from "../../ui/buttons/Button";
 import FeaturedProject from "./FeaturedProject";
 import { useRef } from "react";
 import useReveal from "../../hooks/useReveal";
 import SectionTitle from "../../ui/SectionTitle";
-
-// import ProjectCardOne from './ProjectCardOneV1';
-// import ProjectCardTwo from './ProjectCardTwoV1';
-// import ProjectCardThree from './ProjectCardThreeV1';
-// import useReveal from '../../hooks/useReveal';
 
 function ProjectList() {
   const otherProjectsTitleRef = useRef(null);
@@ -24,9 +16,6 @@ function ProjectList() {
         <SectionTitle title="My Work" isPoint />
 
         <ul className={styles.projectList}>
-          {/* <ProjectCardOne project={projects[0]} />
-          <ProjectCardTwo project={projects[1]} />
-          <ProjectCardThree project={projects[0]} /> */}
           {projects.map((project) => (
             <FeaturedProject key={project.id} project={project} />
           ))}

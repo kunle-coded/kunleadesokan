@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Project } from "../../types/projectTypes";
 import styles from "./FeaturedProject.module.css";
 import useReveal from "../../hooks/useReveal";
+import LinkButton from "../../ui/buttons/LinkButton";
 
 interface FeaturedProjectProps {
   project: Project;
@@ -27,7 +28,7 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
             <ul className={styles.projectLink}>
               <li>
                 <a
-                  href="https://github.com/bchiang7/spotify-profile"
+                  href="https://github.com/kunle-coded/project-name"
                   aria-label="GitHub Link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -50,7 +51,7 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
               </li>
               <li>
                 <a
-                  href="https://spotify-profile.herokuapp.com/"
+                  href="https://project-website.com/"
                   aria-label="External Link"
                   className="external"
                   rel="noopener noreferrer"
@@ -78,10 +79,101 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
           </div>
         </div>
         <div className={styles.projectBody}>
-          <div className={styles.projectDetails}>desc</div>
-          <div className={styles.projectImage}>image</div>
+          <div className={styles.projectDetails}>
+            <div className={styles.projectDetailsContainer}>
+              <p className={styles.projectNumber}>0{project.id}.</p>
+              <h2 className={styles.projectName}>{project.name}</h2>
+              <LinkButton label="Case Study" link="/project-name" />
+              <p className={styles.projectDescription}>{project.shortDesc}</p>
+            </div>
+          </div>
+          <div className={styles.projectImage}>
+            <div className={styles.imageCover}>
+              <div className={`${styles.projectImageWrapper} ${styles.img}`}>
+                <div className={styles.imageInnerWrapper}>
+                  <img
+                    alt=""
+                    role="presentation"
+                    aria-hidden="true"
+                    src={project.images[0]}
+                    style={{
+                      maxWidth: "100%",
+                      display: "block",
+                      position: "static",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className={styles.projectFooter}></div>
+        <div className={styles.projectFooter}>
+          <ul className={styles.paginationDots}>
+            <li>
+              <button></button>
+            </li>
+            <li>
+              <button></button>
+            </li>
+            <li>
+              <button></button>
+            </li>
+            <li>
+              <button></button>
+            </li>
+          </ul>
+
+          <div className={styles.slideProgress}>
+            <p>
+              1 <span>/</span> 6
+            </p>
+            <hr />
+            <div className={styles.slideButtons}>
+              <button
+                id="previousSlide"
+                data-inactive="true"
+                aria-disabled="true"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 7L9 12L14 17"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                id="nextSlide"
+                data-inactive="false"
+                aria-disabled="false"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 17L15 12L10 7"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </li>
   );

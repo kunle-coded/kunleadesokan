@@ -1,7 +1,6 @@
 .projectListSection {
   display: block;
   padding: var(--section-padding);
-  /* padding-top: var(--global-padding); */
   background-color: var(--primary-black);
   color: var(--primary-white);
 }
@@ -18,11 +17,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.projectList a {
   position: relative;
-  z-index: 1;
 }
 
 .otherProjectsContainer {

@@ -113,7 +113,7 @@
   border: 1px solid currentColor;
   -webkit-transition: -webkit-transform 0.2s 100ms;
   -webkit-transition: transform 0.2s 100ms;
-  transition: transform 0.2s 150ms ease, background-color 0.2s 150ms ease;
+  transition: transform 0.2s 100ms ease, background-color 0.2s 150ms ease;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
