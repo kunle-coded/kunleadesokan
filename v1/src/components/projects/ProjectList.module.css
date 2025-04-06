@@ -25,18 +25,15 @@
   flex-direction: column;
   justify-content: flex-start;
   -webkit-box-pack: start;
-  margin: 3.5rem 0 0;
+  margin: 8.5rem 0 0;
 }
 
 .otherProjectsList {
   display: grid;
-  /* grid-template-columns: repeat(12, 1fr);
-    justify-items: stretch; */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 15px;
-  margin: 3.25rem 3.25rem 0;
+  margin: var(--margin-desktop-section);
   padding: 0px;
   list-style: none;
   position: relative;
-  /* margin: 0 4.85rem; */
 }

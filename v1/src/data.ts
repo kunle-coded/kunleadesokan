@@ -7,7 +7,7 @@ export const projects = [
       "A responsive language learning website designed to offer an accessible platform for learners at various skill levels. The site features interactive language resources, practice materials, and tools aimed at enhancing language proficiency. With a mobile-friendly layout and user-focused design, Koos Languages makes language learning engaging and convenient.",
     shortDesc:
       "A responsive website with a mobile-friendly layout and user-focused design.",
-    stack: ["React", "Nodejs", "Figma", "Styled Component", "Google Cloud"],
+    stack: ["React", "Nodejs", "Figma", "Styled Component"],
     status: "Published",
     updated: "July 2024",
     images: ["/src/assets/img/koos/img.png"],
@@ -21,7 +21,7 @@ export const projects = [
     overview:
       "A multi-chain and multi-currency cryptocurrency wallet built with highest security standards and high perfornance in mind. This modern crypto wallet employs latest web3 standards and technology to securely protect your assets and interact with blockchain.",
     shortDesc: "A modern multi-chain and multi-currency cryptocurrency wallet.",
-    stack: ["React", "Web3", "Figma", "Tailwind CSS", "Crypto", "Ethersjs"],
+    stack: ["React", "Web3", "Figma", "Tailwind CSS", "Ethersjs"],
     status: "Published",
     updated: "July 2024",
     images: ["/src/assets/img/walleth/home.webp"],

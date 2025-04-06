@@ -164,7 +164,7 @@ svg:not(:root) {
 .projectName {
   font-family: "Barlow", Arial, Helvetica, sans-serif;
   font-size: 3.5rem;
-  font-size: clamp(3.5rem, 1vw + 3.125rem, 4rem);
+  font-size: var(--h2);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -180,7 +180,6 @@ svg:not(:root) {
 }
 
 /* Project image */
-
 .projectListItem .projectImage {
   grid-area: 1 / 5 / -1 / -1;
   position: relative;
@@ -348,4 +347,5 @@ svg,
 .slideButtons button[data-inactive="true"] {
   color: var(--primary-white-darkest);
   opacity: 0.5;
+  cursor: default;
 }

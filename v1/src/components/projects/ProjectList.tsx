@@ -2,14 +2,10 @@ import { projects, otherProjects } from "../../data";
 import styles from "./ProjectList.module.css";
 import ProjectCardOther from "./ProjectCardOther";
 import FeaturedProject from "./FeaturedProject";
-import { useRef } from "react";
-import useReveal from "../../hooks/useReveal";
-import SectionTitle from "../../ui/SectionTitle";
+import SectionTitle from "../../ui/titles/SectionTitle";
+import SectionSubtitle from "../../ui/titles/SectionSubtitle";
 
 function ProjectList() {
-  const otherProjectsTitleRef = useRef(null);
-  useReveal(otherProjectsTitleRef);
-
   return (
     <section data-section="vier" className={styles.projectListSection}>
       <div className={styles.lstSctnWrppr}>
@@ -23,13 +19,11 @@ function ProjectList() {
       </div>
 
       <div className={styles.otherProjectsContainer}>
-        <div ref={otherProjectsTitleRef} className="section">
-          {/* <SubSectionTitle
-            title="Other Projects"
-            subtitle="View the archive"
-            link="/archive"
-          /> */}
-        </div>
+        <SectionSubtitle
+          title="Other Notable Projects"
+          subtitle="view the archive"
+          link="/archive"
+        />
 
         <ul className={styles.otherProjectsList}>
           {otherProjects.map((project) => (

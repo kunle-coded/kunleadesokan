@@ -1,0 +1,23 @@
+.subtitleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-align: center;
+  margin: var(--margin-desktop-section);
+  margin-bottom: 5.5rem;
+}
+
+.subtitleSection h3 {
+  font-size: var(--h3);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.subtitleSection a {
+  font-family: "Geist Mono", "Fira Code" Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--secondary-capri);
+  margin-top: 1rem;
+}

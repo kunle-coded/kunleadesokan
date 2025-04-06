@@ -15,7 +15,7 @@ function Home() {
         style={{
           width: "100%",
           height: "700px",
-          backgroundColor: "",
+          backgroundColor: "gainsboro",
         }}
       ></div>
     </>

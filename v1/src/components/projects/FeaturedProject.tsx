@@ -20,10 +20,9 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
           <p className={styles.projectLabel}>Featured project</p>
           <div className={styles.projectMeta}>
             <ul className={styles.projectStackList}>
-              <li>React</li>
-              <li>Tailwind</li>
-              <li>Nodejs</li>
-              <li>MongoDB</li>
+              {project.stack.map((stackItem, index) => (
+                <li key={index}>{stackItem}</li>
+              ))}
             </ul>
             <ul className={styles.projectLink}>
               <li>
