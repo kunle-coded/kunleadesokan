@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 
 function AppLayout() {
   return (
@@ -18,6 +19,7 @@ function AppLayout() {
           You are now in "About" section.
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

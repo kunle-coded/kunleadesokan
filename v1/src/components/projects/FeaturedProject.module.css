@@ -333,7 +333,7 @@ svg,
 
 .slideProgress hr {
   width: 1.8rem;
-  margin: 0px 0.25rem;
+  margin: 0rem 0.25rem 0rem 0.7rem;
   height: 1px;
   border: none;
   background-color: var(--primary-white-darkest);

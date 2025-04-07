@@ -13,13 +13,6 @@ function Home() {
       <SkillsSection />
       <ProjectList />
       <ContactSection />
-      <div
-        style={{
-          width: "100%",
-          height: "700px",
-          backgroundColor: "gainsboro",
-        }}
-      ></div>
     </>
   );
 }

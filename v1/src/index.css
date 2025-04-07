@@ -112,7 +112,7 @@ html {
   width: 100%;
   font-size: 0.9rem;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
+  /* scrollbar-width: thin; */
 }
 
 body {
@@ -209,6 +209,20 @@ button,
 ::selection {
   background-color: var(--accent-neon-coral);
   color: var(--primary-black);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-black-light);
+  border: 3px solid var(--primary-black);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-black);
 }
 
 #root {

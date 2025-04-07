@@ -64,11 +64,10 @@
   align-items: center;
   width: 100%;
   margin-top: 6.5rem;
+  /* margin-left: 12px; */
   padding: 6.5rem 20.5rem 12.5rem;
   background-color: transparent;
-  background-color: var(--primary-black-light);
   background-color: var(--primary-black-dark);
-  /* font-family: "Barlow", Arial, Helvetica, sans-serif; */
 }
 
 .contactSection .contactBottom form {

@@ -52,9 +52,7 @@ function AboutSection() {
           <p>
             Developing scalable web applications, leveraging modern frameworks
             and libraries with a strong emphasis on performance, accessibility,
-            and cross-platform compatibility. My expertise extends to building
-            mobile applications, ensuring seamless user experiences across
-            devices.
+            and cross-platform compatibility.
           </p>
           <svg
             width="323"
