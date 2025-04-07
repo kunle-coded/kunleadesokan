@@ -116,7 +116,7 @@ html {
 }
 
 body {
-  font-family: "Geist", "Barlow", "Inter", Arial, Helvetica, sans-serif;
+  font-family: "Geist", "Barlow", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.15;
@@ -130,7 +130,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-inline-start: 0px;
@@ -199,6 +200,12 @@ button,
   appearance: none;
 }
 
+:focus {
+  /* outline-width: 0.2em;
+  outline-style: dashed;
+  outline-color: rgb(255, 96, 68, 0.5); */
+}
+
 ::selection {
   background-color: var(--accent-neon-coral);
   color: var(--primary-black);
@@ -238,6 +245,108 @@ button,
   user-select: none;
 }
 
+/* Forms */
+.contact-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.contact-form .input-wrapper textarea::placeholder,
+.contact-form .input-wrapper input::placeholder {
+  color: inherit;
+}
+
+.contact-form .input-wrapper:not(.focused) textarea,
+.contact-form
+  .input-wrapper:not(.focused)
+  input:not([type="submit"]):not([type="button"]) {
+  border-color: currentColor;
+}
+
+.contact-form textarea,
+.contact-form input:not([type="submit"]):not([type="button"]) {
+  line-height: 1.5;
+  font-size: 1.15em;
+}
+
+.input-wrapper textarea,
+.input-wrapper [type="tel"],
+.input-wrapper [type="text"],
+.input-wrapper [type="email"],
+.input-wrapper [type="search"],
+.input-wrapper [type="password"] {
+  border: 0;
+  padding: 0.6em;
+  padding-left: 0;
+  position: relative;
+  color: currentColor;
+  background: transparent;
+  border-bottom: 1px solid currentColor;
+}
+
+.input-wrapper textarea:after,
+.input-wrapper [type="tel"]:after,
+.input-wrapper [type="text"]:after,
+.input-wrapper [type="email"]:after,
+.input-wrapper [type="search"]:after,
+.input-wrapper [type="password"]:after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1px;
+}
+
+.contact-form textarea {
+  height: 4.2em;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+input,
+button,
+textarea {
+  border-radius: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+textarea:focus,
+[type="tel"]:focus,
+[type="text"]:focus,
+[type="email"]:focus,
+[type="search"]:focus,
+[type="password"]:focus {
+  outline: transparent;
+}
+
+textarea:required,
+textarea:invalid,
+[type="tel"]:required,
+[type="tel"]:invalid,
+[type="text"]:required,
+[type="text"]:invalid,
+[type="email"]:required,
+[type="email"]:invalid,
+[type="search"]:required,
+[type="search"]:invalid,
+[type="password"]:required,
+[type="password"]:invalid {
+  box-shadow: none;
+}
+
+/* Sections */
+
 .section-hidden {
   visibility: visible;
   opacity: 0;
@@ -255,6 +364,13 @@ button,
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   transition: all, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.contactSection #home-contact label,
+.contactSection #home-contact textarea,
+.contactSection #home-contact [type="text"],
+.contactSection #home-contact [type="email"] {
+  font-weight: 200;
 }
 
 @media (hover: hover) and (any-pointer: fine) {

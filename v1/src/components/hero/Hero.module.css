@@ -70,10 +70,12 @@
   position: fixed;
   margin-top: 8em;
   right: calc(var(--global-padding) + 1em);
-  color: var(--accent-neon-coral);
-  color: var(--secondary-capri-dark);
   color: var(--primary-black-light);
   z-index: 1000;
+}
+
+.sectionNav:not([data-section="eins"]) {
+  /* color: var(--primary-white); */
 }
 
 .navList {
@@ -147,7 +149,7 @@
 
 .bottomRowLeft h2 {
   text-transform: uppercase;
-  font-family: "Barlow", "Inter", "Geist", Arial, Helvetica, sans-serif;
+  font-family: "Barlow", "Geist", Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 600;
   letter-spacing: 0.2rem;
@@ -156,10 +158,9 @@
 
 .bottomRowLeft h3 {
   text-transform: uppercase;
-  font-family: "Barlow", "Inter", "Geist", Arial, Helvetica, sans-serif;
+  font-family: "Barlow", "Geist", Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 600;
-  /* letter-spacing: 0.1rem; */
   color: var(--primary-black-lighter);
 }
 
@@ -169,10 +170,8 @@
   justify-content: flex-end;
   -webkit-box-align: center;
   align-items: center;
-  font-family: "Inter", "Barlow", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  /* text-transform: uppercase; */
   color: var(--primary-black-light);
   position: relative;
 }

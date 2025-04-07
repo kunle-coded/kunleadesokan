@@ -2,6 +2,7 @@
   display: block;
   padding: var(--section-padding-big);
   background-color: var(--primary-black);
+  width: 100%;
 }
 
 .skllSctnWrppr {
@@ -116,6 +117,10 @@
   color: var(--primary-white-darkest);
   width: max-content;
   transition: all 250ms linear;
+}
+
+.skllTbsItm:hover {
+  color: var(--primary-white);
 }
 
 .activeTab {

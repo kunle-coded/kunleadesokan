@@ -16,8 +16,8 @@
 
 .subtitleSection a {
   font-family: "Geist Mono", "Fira Code" Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.2;
   color: var(--secondary-capri);
   margin-top: 1rem;
 }

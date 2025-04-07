@@ -1,0 +1,164 @@
+.contactSection {
+  display: block;
+  padding: 8.5rem 0rem 0rem;
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  width: 100%;
+}
+
+.contactInnerContainer {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contactTop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: start;
+  justify-items: start;
+  margin: 0rem 6.6rem;
+}
+
+.contactHeading {
+  grid-column: span 2;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.contactHeading h1 {
+  font-family: "Barlow", Arial, Helvetica, sans-serif;
+  font-size: 5.5rem;
+  letter-spacing: -0.01em;
+  margin-left: 0;
+}
+
+.contactHeading h1 span {
+  margin-left: 0;
+}
+
+.contactBody {
+  grid-column: 3;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  align-items: flex-end;
+  height: 100%;
+  color: var(--primary-white-darker);
+}
+
+.contactBottom {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 6.5rem;
+  padding: 6.5rem 20.5rem 12.5rem;
+  background-color: transparent;
+  background-color: var(--primary-black-light);
+  background-color: var(--primary-black-dark);
+  /* font-family: "Barlow", Arial, Helvetica, sans-serif; */
+}
+
+.contactSection .contactBottom form {
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contactSection .contactBottom form > div {
+  width: 100%;
+}
+
+.formHeader {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  margin-bottom: 5.2rem;
+}
+
+.formHeader p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+.formHeader span {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  margin-left: 4.5rem;
+}
+
+.contactBottom .formHeader span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: var(--secondary-capri);
+  padding: 1px;
+  border-radius: 100px;
+  border: 1px solid currentColor;
+}
+
+.contactSection .contactBottom form label {
+  margin-bottom: 0.5rem;
+}
+
+.contactBottom form .formRow:not(:nth-last-of-type(2)) {
+  margin-bottom: 3rem;
+}
+
+.formRow {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.formRow .inputGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  color: var(--primary-white-darker);
+  color: rgb(0, 191, 255, 0.5);
+}
+
+.formRow .inputGroup.focused {
+  color: var(--secondary-capri);
+}
+
+.contactBottom form textarea {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-black-light) var(--primary-black-dark);
+}
+.contactBottom form textarea::-webkit-scrollbar {
+  width: 12px;
+  cursor: grabbing;
+}
+
+.sendButton {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-top: 5.5rem;
+}

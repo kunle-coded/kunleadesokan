@@ -3,6 +3,7 @@
   padding: var(--section-padding);
   background-color: var(--primary-black);
   color: var(--primary-white);
+  width: 100%;
 }
 
 .lstSctnWrppr {
@@ -10,7 +11,6 @@
   flex-direction: column;
   justify-content: flex-start;
   -webkit-box-pack: start;
-  /* margin: var(--margin-desktop-clmLg); */
 }
 
 .projectList {

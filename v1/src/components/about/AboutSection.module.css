@@ -6,6 +6,7 @@
   background-color: var(--primary-black);
   color: var(--primary-black-lighter);
   min-height: 700px;
+  width: 100%;
 }
 
 .innerContainer {

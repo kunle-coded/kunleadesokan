@@ -1,4 +1,5 @@
 import AboutSection from "../components/about/AboutSection";
+import ContactSection from "../components/contact/ContactSection";
 import Hero from "../components/hero/Hero";
 import ProjectList from "../components/projects/ProjectList";
 import SkillsSection from "../components/skills/SkillsSection";
@@ -11,6 +12,7 @@ function Home() {
       <AboutSection />
       <SkillsSection />
       <ProjectList />
+      <ContactSection />
       <div
         style={{
           width: "100%",
