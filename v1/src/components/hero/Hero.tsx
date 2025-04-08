@@ -1,8 +1,16 @@
+import { RefObject } from "react";
 import styles from "./Hero.module.css";
+import { Indicator } from "../../lib/types/types";
 
-function Hero() {
+interface HeroProps {
+  activeIndex: number;
+  heroRef: RefObject<HTMLDivElement | null>;
+  indicators: Indicator;
+}
+
+function Hero({ heroRef, activeIndex, indicators }: HeroProps) {
   return (
-    <section data-section="eins" className={styles.heroSection}>
+    <section ref={heroRef} data-section="eins" className={styles.heroSection}>
       <div className={styles.innerRow}></div>
       <div className={`${styles.innerRow} ${styles.middleRow}`}>
         <ul className={styles.middleRowInner}>
@@ -42,39 +50,54 @@ function Hero() {
         </ul>
         <nav aria-label="Section navigation" className={styles.sectionNav}>
           <ul className={styles.navList}>
-            <li tabIndex={0}>
+            <li
+              tabIndex={0}
+              style={{ color: indicators.first ? "#e6e6e6" : "" }}
+            >
               <button
                 type="button"
                 aria-label="Go to first section. Pitch"
-                className={styles.current}
+                className={activeIndex === 0 ? styles.current : ""}
               ></button>
             </li>
-            <li tabIndex={1}>
+            <li
+              tabIndex={1}
+              style={{ color: indicators.second ? "#e6e6e6" : "" }}
+            >
               <button
                 type="button"
                 aria-label="Go to second section. About"
-                // className={styles.current}
+                className={activeIndex === 1 ? styles.current : ""}
               ></button>
             </li>
-            <li tabIndex={2}>
+            <li
+              tabIndex={2}
+              style={{ color: indicators.third ? "#e6e6e6" : "" }}
+            >
               <button
                 type="button"
                 aria-label="Go to third section. Skills"
-                // className={styles.current}
+                className={activeIndex === 2 ? styles.current : ""}
               ></button>
             </li>
-            <li tabIndex={3}>
+            <li
+              tabIndex={3}
+              style={{ color: indicators.fourth ? "#e6e6e6" : "" }}
+            >
               <button
                 type="button"
                 aria-label="Go to fourth section. Projects"
-                // className={styles.current}
+                className={activeIndex === 3 ? styles.current : ""}
               ></button>
             </li>
-            <li tabIndex={4}>
+            <li
+              tabIndex={4}
+              style={{ color: indicators.fifth ? "#e6e6e6" : "" }}
+            >
               <button
                 type="button"
                 aria-label="Go to fifth section. Contact"
-                // className={styles.current}
+                className={activeIndex === 4 ? styles.current : ""}
               ></button>
             </li>
           </ul>

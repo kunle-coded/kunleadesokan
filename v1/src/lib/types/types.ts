@@ -9,3 +9,11 @@ export interface Project {
   updated: string;
   images: string[];
 }
+
+export interface Indicator {
+  first: boolean;
+  second: boolean;
+  third: boolean;
+  fourth: boolean;
+  fifth: boolean;
+}

@@ -1,16 +1,24 @@
-import { useRef } from "react";
+import { RefObject, useRef } from "react";
 import Button from "../../ui/buttons/Button";
 import styles from "./ContactSection.module.css";
-import useReveal from "../../hooks/useReveal";
+import useReveal from "../../lib/hooks/useReveal";
 
-function ContactSection() {
+interface ContactProps {
+  contactSectionRef: RefObject<HTMLDivElement | null>;
+}
+
+function ContactSection({ contactSectionRef }: ContactProps) {
   const contactTopRef = useRef(null);
   const contactBottomRef = useRef(null);
   useReveal(contactTopRef);
   useReveal(contactBottomRef);
 
   return (
-    <section data-section="fuenf" className={styles.contactSection}>
+    <section
+      ref={contactSectionRef}
+      data-section="fuenf"
+      className={styles.contactSection}
+    >
       <div className={styles.contactInnerContainer}>
         <div ref={contactTopRef} className={`section ${styles.contactTop}`}>
           <div className={styles.contactHeading}>

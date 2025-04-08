@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import { Project } from "../../types/projectTypes";
+import { Project } from "../../lib/types/types";
 import styles from "./ProjectCardOther.module.css";
-import useReveal from "../../hooks/useReveal";
+import useReveal from "../../lib/hooks/useReveal";
 
 interface ProjectCardOtherProps {
   project: Project;

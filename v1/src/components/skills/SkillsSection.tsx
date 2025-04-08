@@ -1,15 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { RefObject, useEffect, useRef, useState } from "react";
 import styles from "./SkillsSection.module.css";
-// import LinkButton from "../../ui/buttons/LinkButton";
 import TechSkills from "../shapes/TechSkills";
 import DesignSkills from "../shapes/DesignSkills";
 import ToolsSkills from "../shapes/ToolsSkills";
 import SoftSkills from "../shapes/SoftSkills";
 import OtherSkills from "../shapes/OtherSkills";
-import useReveal from "../../hooks/useReveal";
+import useReveal from "../../lib/hooks/useReveal";
 import LinkButton from "../../ui/buttons/LinkButton";
 
-function SkillsSection() {
+interface SkillsProps {
+  skillsSectionRef: RefObject<HTMLDivElement | null>;
+}
+
+function SkillsSection({ skillsSectionRef }: SkillsProps) {
   const [currentTab, setCurrentTab] = useState(0);
   const [topPercentage, setTopPercentage] = useState(0);
 
@@ -43,7 +46,11 @@ function SkillsSection() {
   }
 
   return (
-    <section data-section="drei" className={styles.skillSection}>
+    <section
+      ref={skillsSectionRef}
+      data-section="drei"
+      className={styles.skillSection}
+    >
       <div
         id="skillsSection"
         ref={skillSectionRef}

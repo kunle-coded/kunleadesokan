@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import { Project } from "../../types/projectTypes";
+import { Project } from "../../lib/types/types";
 import styles from "./FeaturedProject.module.css";
-import useReveal from "../../hooks/useReveal";
+import useReveal from "../../lib/hooks/useReveal";
 import LinkButton from "../../ui/buttons/LinkButton";
 
 interface FeaturedProjectProps {

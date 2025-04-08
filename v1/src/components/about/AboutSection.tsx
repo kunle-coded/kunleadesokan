@@ -1,13 +1,21 @@
-import { useRef } from "react";
+import { RefObject, useRef } from "react";
 import styles from "./AboutSection.module.css";
-import useReveal from "../../hooks/useReveal";
+import useReveal from "../../lib/hooks/useReveal";
 
-function AboutSection() {
+interface AboutProps {
+  aboutSectionRef: RefObject<HTMLDivElement | null>;
+}
+
+function AboutSection({ aboutSectionRef }: AboutProps) {
   const aboutRef = useRef(null);
   useReveal(aboutRef);
 
   return (
-    <section data-section="zwei" className={styles.aboutSection}>
+    <section
+      ref={aboutSectionRef}
+      data-section="zwei"
+      className={styles.aboutSection}
+    >
       <div ref={aboutRef} className={`section ${styles.innerContainer}`}>
         <div className={`${styles.gridCol} ${styles.leftCol}`}>
           <p className={styles.leftColText}>

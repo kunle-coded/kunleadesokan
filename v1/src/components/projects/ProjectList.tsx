@@ -1,13 +1,22 @@
-import { projects, otherProjects } from "../../data";
+import { RefObject } from "react";
+import { projects, otherProjects } from "../../lib/store/data";
 import styles from "./ProjectList.module.css";
 import ProjectCardOther from "./ProjectCardOther";
 import FeaturedProject from "./FeaturedProject";
 import SectionTitle from "../../ui/titles/SectionTitle";
 import SectionSubtitle from "../../ui/titles/SectionSubtitle";
 
-function ProjectList() {
+interface ProjectListProps {
+  projectsSectionRef: RefObject<HTMLDivElement | null>;
+}
+
+function ProjectList({ projectsSectionRef }: ProjectListProps) {
   return (
-    <section data-section="vier" className={styles.projectListSection}>
+    <section
+      ref={projectsSectionRef}
+      data-section="vier"
+      className={styles.projectListSection}
+    >
       <div className={styles.lstSctnWrppr}>
         <SectionTitle title="My Work" isPoint />
 
