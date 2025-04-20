@@ -134,8 +134,6 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
                 aria-disabled="true"
               >
                 <svg
-                  width="24"
-                  height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -155,8 +153,6 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
                 aria-disabled="false"
               >
                 <svg
-                  width="24"
-                  height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

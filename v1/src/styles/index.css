@@ -106,6 +106,17 @@
 
   /* Heights */
   --header-height: 11.12em;
+
+  /* Mobile */
+  /* Padding */
+  --section-padding-tablet: 4.5rem 3.6rem 2.5rem;
+  --section-padding-big-tablet: 4.5rem 4rem 2.5rem;
+  --section-padding-mobile: 3.5rem 2.6rem 1.5rem;
+
+  --global-padding-mobile: 2.5rem;
+
+  /* Margins */
+  --margin-desktop-section-tablet: 0 1.1rem;
 }
 
 html {
@@ -122,7 +133,7 @@ body {
   line-height: 1.15;
   font-synthesis: none;
   overflow-x: hidden;
-  background-color: var(--primary-black);
+  background-color: var(--primary-white);
   color: var(--primary-white);
   width: 100%;
   /* height: 100%; */
@@ -207,7 +218,7 @@ button,
 }
 
 ::selection {
-  background-color: var(--accent-neon-coral);
+  background-color: var(--secondary-capri);
   color: var(--primary-black);
 }
 
@@ -216,7 +227,7 @@ button,
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary-black-light);
+  background-color: var(--primary-black-lighter);
   border: 3px solid var(--primary-black);
   border-radius: 10px;
 }
@@ -225,20 +236,21 @@ button,
   background: var(--primary-black);
 }
 
-#root {
-  /* height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  grid-template-columns: 100%; */
-}
-
 .app {
   position: relative;
+  display: block;
+  outline: none;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* Or shorthand: margin: 0 auto; */
+  padding-inline: 0rem;
 }
 
 .main {
   display: block;
   outline: none;
+  background-color: var(--primary-black);
 }
 
 .visuallyHidden {
@@ -274,6 +286,11 @@ button,
 .contact-form .input-wrapper textarea::placeholder,
 .contact-form .input-wrapper input::placeholder {
   color: inherit;
+  transition: color 0.2s ease;
+}
+.contact-form .input-wrapper textarea:focus::placeholder,
+.contact-form .input-wrapper input:focus::placeholder {
+  color: transparent;
 }
 
 .contact-form .input-wrapper:not(.focused) textarea,
@@ -286,7 +303,7 @@ button,
 .contact-form textarea,
 .contact-form input:not([type="submit"]):not([type="button"]) {
   line-height: 1.5;
-  font-size: 1.15em;
+  font-size: 1em;
 }
 
 .input-wrapper textarea,
@@ -380,6 +397,10 @@ textarea:invalid,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
 
+.contactSection #home-contact label {
+  font-size: 0.8em;
+}
+
 .contactSection #home-contact label,
 .contactSection #home-contact textarea,
 .contactSection #home-contact [type="text"],
@@ -417,10 +438,14 @@ textarea:invalid,
     touch-action: none;
     scroll-snap-type: y mandatory;
   }
+
+  .contactSection #home-contact label {
+    font-size: 0.9em;
+  }
 }
 
 @media (min-width: 701px) and (max-width: 1600px) {
   html {
-    font-size: clamp(14px, 1vw, 16px);
+    font-size: clamp(0.875rem, 1vw, 1rem);
   }
 }

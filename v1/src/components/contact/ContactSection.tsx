@@ -2,6 +2,7 @@ import { RefObject, useRef } from "react";
 import Button from "../../ui/buttons/Button";
 import styles from "./ContactSection.module.css";
 import useReveal from "../../lib/hooks/useReveal";
+import useInputFocus from "../../lib/hooks/useInputFocus";
 
 interface ContactProps {
   contactSectionRef: RefObject<HTMLDivElement | null>;
@@ -13,11 +14,18 @@ function ContactSection({ contactSectionRef }: ContactProps) {
   useReveal(contactTopRef);
   useReveal(contactBottomRef);
 
+  const nameFocus = useInputFocus();
+  const { isFocus: isNameFocus, ...nameFocusProps } = nameFocus;
+  const emailFocus = useInputFocus();
+  const { isFocus: isEmailFocus, ...emailFocusProps } = emailFocus;
+  const messageFocus = useInputFocus();
+  const { isFocus: isMessageFocus, ...messageFocusProps } = messageFocus;
+
   return (
     <section
       ref={contactSectionRef}
       data-section="fuenf"
-      className={styles.contactSection}
+      className={`contactSection ${styles.contactSection}`}
     >
       <div className={styles.contactInnerContainer}>
         <div ref={contactTopRef} className={`section ${styles.contactTop}`}>
@@ -54,8 +62,6 @@ function ContactSection({ contactSectionRef }: ContactProps) {
               </p>
               <span>
                 <svg
-                  width="18"
-                  height="18"
                   viewBox="0 0 25 25"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +76,11 @@ function ContactSection({ contactSectionRef }: ContactProps) {
               </span>
             </div>
             <div className={styles.formRow}>
-              <div className={`input-wrapper ${styles.inputGroup}`}>
+              <div
+                className={`input-wrapper ${styles.inputGroup} ${
+                  isNameFocus ? styles.focused : ""
+                }`}
+              >
                 <label htmlFor="full-name">Your name</label>
                 <input
                   id="full-name"
@@ -78,9 +88,14 @@ function ContactSection({ contactSectionRef }: ContactProps) {
                   placeholder="Enter your name"
                   name="name"
                   required
+                  {...nameFocusProps}
                 />
               </div>
-              <div className={`input-wrapper ${styles.inputGroup}`}>
+              <div
+                className={`input-wrapper ${styles.inputGroup} ${
+                  isEmailFocus ? styles.focused : ""
+                }`}
+              >
                 <label htmlFor="email">Email address</label>
                 <input
                   id="email"
@@ -88,17 +103,23 @@ function ContactSection({ contactSectionRef }: ContactProps) {
                   placeholder="Enter your email address"
                   name="_replyto"
                   required
+                  {...emailFocusProps}
                 />
               </div>
             </div>
             <div className={styles.formRow}>
-              <div className={`input-wrapper ${styles.inputGroup}`}>
+              <div
+                className={`input-wrapper ${styles.inputGroup} ${
+                  isMessageFocus ? styles.focused : ""
+                }`}
+              >
                 <label htmlFor="message">Your message</label>
 
                 <textarea
                   name="message"
                   id="message"
                   placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+                  {...messageFocusProps}
                 ></textarea>
               </div>
             </div>

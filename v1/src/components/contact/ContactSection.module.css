@@ -1,6 +1,6 @@
 .contactSection {
   display: block;
-  padding: 8.5rem 0rem 0rem;
+  padding: 4.5rem 0rem 0rem;
   background-color: var(--primary-black);
   color: var(--primary-white);
   width: 100%;
@@ -21,7 +21,7 @@
   grid-template-columns: repeat(3, 1fr);
   -webkit-box-pack: start;
   justify-items: start;
-  margin: 0rem 6.6rem;
+  margin: 0rem 4rem;
 }
 
 .contactHeading {
@@ -36,7 +36,7 @@
 
 .contactHeading h1 {
   font-family: "Barlow", Arial, Helvetica, sans-serif;
-  font-size: 5.5rem;
+  font-size: 3.5rem;
   letter-spacing: -0.01em;
   margin-left: 0;
 }
@@ -53,6 +53,7 @@
   -webkit-box-align: end;
   align-items: flex-end;
   height: 100%;
+  font-size: 0.9rem;
   color: var(--primary-white-darker);
 }
 
@@ -63,9 +64,8 @@
   -webkit-box-align: center;
   align-items: center;
   width: 100%;
-  margin-top: 6.5rem;
-  /* margin-left: 12px; */
-  padding: 6.5rem 20.5rem 12.5rem;
+  margin-top: 3.5rem;
+  padding: 4.5rem 5.5rem 5.5rem;
   background-color: transparent;
   background-color: var(--primary-black-dark);
 }
@@ -88,11 +88,11 @@
   justify-content: flex-start;
   -webkit-box-align: start;
   align-items: flex-start;
-  margin-bottom: 5.2rem;
+  margin-bottom: 3.2rem;
 }
 
 .formHeader p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.3;
   text-transform: capitalize;
@@ -104,7 +104,7 @@
   justify-content: flex-start;
   -webkit-box-align: start;
   align-items: flex-start;
-  margin-left: 4.5rem;
+  margin-left: 2.5rem;
 }
 
 .contactBottom .formHeader span {
@@ -118,12 +118,17 @@
   border: 1px solid currentColor;
 }
 
+.contactBottom .formHeader span svg {
+  width: 1rem;
+  height: 1rem;
+}
+
 .contactSection .contactBottom form label {
   margin-bottom: 0.5rem;
 }
 
 .contactBottom form .formRow:not(:nth-last-of-type(2)) {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .formRow {
@@ -138,11 +143,12 @@
   flex-direction: column;
   width: 100%;
   position: relative;
-  color: var(--primary-white-darker);
-  color: rgb(0, 191, 255, 0.5);
+  /* color: var(--primary-black-lightest); */
+  color: var(--primary-white-darkest);
 }
 
 .formRow .inputGroup.focused {
+  color: var(--primary-white);
   color: var(--secondary-capri);
 }
 
@@ -160,4 +166,47 @@
   -webkit-box-pack: center;
   justify-content: center;
   margin-top: 5.5rem;
+}
+
+@media (min-width: 768px) {
+  .contactSection {
+    padding: 8.5rem 0rem 0rem;
+  }
+
+  .contactTop {
+    margin: 0rem 6.6rem;
+  }
+
+  .contactHeading h1 {
+    font-size: 5.5rem;
+  }
+
+  .contactBody {
+    font-size: 1rem;
+  }
+
+  .contactBottom {
+    margin-top: 6.5rem;
+    padding: 6.5rem 20.5rem 12.5rem;
+  }
+
+  .formHeader {
+    margin-bottom: 5.2rem;
+  }
+  .formHeader p {
+    font-size: 1.2rem;
+  }
+
+  .formHeader span {
+    margin-left: 4.5rem;
+  }
+
+  .contactBottom .formHeader span svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .contactBottom form .formRow:not(:nth-last-of-type(2)) {
+    margin-bottom: 3rem;
+  }
 }

@@ -1,9 +1,9 @@
 .projectListItem:not(:last-of-type) {
-  margin-bottom: 8.25rem;
+  margin-bottom: 4.25rem;
 }
 
 .projectListItem:first-child {
-  margin-top: 3.6rem;
+  margin-top: 2.6rem;
 }
 
 .projectListItem {
@@ -14,7 +14,7 @@
   justify-content: flex-start;
   -webkit-box-align: start;
   align-items: flex-start;
-  margin: var(--margin-desktop-section);
+  margin: var(--margin-desktop-section-tablet);
   background-color: var(--primary-black-dark);
 }
 
@@ -30,14 +30,13 @@
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center;
-  padding: 2rem 2.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .projectHeader .projectLabel {
   flex: 1;
   color: var(--secondary-capri);
-  font-size: var(--p-sm);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .projectMeta {
@@ -56,13 +55,13 @@
   align-items: center;
   color: var(--primary-white-darkest);
   font-family: "Geist Mono", "Fira Code", Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   line-height: 1;
   font-weight: 300;
 }
 
 .projectListItem .projectStackList li:not(:first-child) {
-  margin-left: 1.5rem;
+  margin-left: 0.85rem;
 }
 
 .projectListItem .projectLink {
@@ -71,12 +70,12 @@
   justify-content: flex-end;
   -webkit-box-align: center;
   align-items: center;
-  margin-left: 3.5rem;
+  margin-left: 2rem;
   color: var(--primary-white-darkest);
 }
 
 .projectListItem .projectLink li:not(:first-child) {
-  margin-left: 1rem;
+  margin-left: 0.85rem;
 }
 
 .projectListItem .projectLink a {
@@ -89,15 +88,9 @@
   margin: 0;
 }
 
-@media (hover: hover) and (any-pointer: fine) {
-  .projectListItem .projectLink a:hover {
-    color: var(--secondary-capri);
-  }
-}
-
 .projectListItem .projectLink a svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 svg.feather {
@@ -121,16 +114,16 @@ svg:not(:root) {
   align-items: end;
   position: relative;
   width: 100%;
-  padding: 2rem 0rem 0rem;
+  padding: 1rem 0rem 0rem;
   border-width: 1px 0px 0px 0px;
   border-style: solid;
   border-color: var(--secondary-border);
 }
 
 .projectListItem .projectDetails {
-  grid-area: 1 / 9;
+  grid-area: 1 / 1 / -1 / 8;
   margin-top: 4rem;
-  padding: 5rem 3.5rem 2.5rem 5rem;
+  padding: 2rem;
   background-color: var(--primary-white);
   color: var(--primary-black);
   z-index: 5;
@@ -146,12 +139,6 @@ svg:not(:root) {
   width: 100%;
 }
 
-@media (min-width: 1080px) {
-  .projectListItem .projectDetails {
-    grid-area: 1 / 1 / -1 / 6;
-  }
-}
-
 /* Project details */
 .projectNumber {
   font-family: "Barlow", Arial, Helvetica, sans-serif;
@@ -163,8 +150,7 @@ svg:not(:root) {
 
 .projectName {
   font-family: "Barlow", Arial, Helvetica, sans-serif;
-  font-size: 3.5rem;
-  font-size: var(--h2);
+  font-size: 2.8rem;
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -173,9 +159,9 @@ svg:not(:root) {
 
 .projectListItem .projectDescription {
   position: relative;
-  font-size: 0.99rem;
+  font-size: 0.9rem;
   color: var(--primary-black-lighter);
-  padding: 1.5rem 0rem 0rem;
+  padding: 1.2rem 0rem 0rem;
   white-space: wrap;
 }
 
@@ -185,7 +171,7 @@ svg:not(:root) {
   position: relative;
   z-index: 1;
   height: 100%;
-  max-height: 450px;
+  max-height: 400px;
 }
 
 .projectListItem .projectImage .imageCover {
@@ -279,7 +265,7 @@ svg,
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center;
-  padding: 2rem 2.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .paginationDots {
@@ -311,9 +297,9 @@ svg,
 }
 
 .paginationDots li:first-child button {
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.7);
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
   background-color: var(--accent-neon-coral);
   opacity: 1;
 }
@@ -327,7 +313,7 @@ svg,
   gap: 8px;
   color: var(--primary-white-darkest);
   font-family: "Barlow", "Inter", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -348,4 +334,107 @@ svg,
   color: var(--primary-white-darkest);
   opacity: 0.5;
   cursor: default;
+}
+
+.slideButtons button svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .projectListItem:not(:last-of-type) {
+    margin-bottom: 8.25rem;
+  }
+
+  .projectListItem:first-child {
+    margin-top: 3.6rem;
+  }
+
+  .projectListItem {
+    margin: var(--margin-desktop-section);
+  }
+
+  .projectHeader {
+    padding: 2rem 2.5rem;
+  }
+
+  .projectHeader .projectLabel {
+    font-size: 1rem;
+  }
+
+  .projectStackList {
+    font-size: 0.9rem;
+  }
+
+  .projectListItem .projectStackList li:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+
+  .projectListItem .projectLink {
+    margin-left: 3.5rem;
+  }
+
+  .projectListItem .projectLink li:not(:first-child) {
+    margin-left: 1rem;
+  }
+
+  .projectListItem .projectLink a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .projectBody {
+    padding: 2rem 0rem 0rem;
+  }
+
+  .projectListItem .projectDetails {
+    /* grid-area: 1 / 1 / -1 / 6; */
+    margin-top: 4rem;
+    padding: 5rem 3.5rem 2.5rem 5rem;
+  }
+
+  .projectName {
+    font-size: var(--h2);
+    margin: 1rem 0rem 2.5rem;
+  }
+
+  .projectListItem .projectDescription {
+    font-size: 0.99rem;
+    padding: 1.5rem 0rem 0rem;
+  }
+
+  .projectListItem .projectImage {
+    max-height: 450px;
+  }
+
+  .projectFooter {
+    padding: 2rem 2.5rem;
+  }
+
+  .paginationDots li:first-child button {
+    -webkit-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+
+  .slideProgress {
+    font-size: 1rem;
+  }
+
+  .slideButtons button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .projectListItem .projectDetails {
+    grid-area: 1 / 1 / -1 / 6;
+  }
+}
+
+@media (hover: hover) and (any-pointer: fine) {
+  .projectListItem .projectLink a:hover {
+    color: var(--secondary-capri);
+  }
 }

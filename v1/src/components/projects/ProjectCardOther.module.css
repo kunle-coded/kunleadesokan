@@ -51,7 +51,7 @@
   width: 100%;
   height: inherit;
   flex: 1;
-  padding: 1.75rem 1.75rem;
+  padding: 1.2rem;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   background-color: var(--primary-black-dark);
@@ -69,8 +69,8 @@
 }
 
 .projectCardTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 500;
   line-height: 1.1;
   text-transform: capitalize;
   color: var(--primary-white);
@@ -97,17 +97,17 @@
 }
 
 .projectCard .projectCardDetails .projectCardFolder svg {
-  width: 25px;
-  height: 25px;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 .projectCard .projectCardDetails .projectCardFolder svg.feather {
   fill: none;
 }
 
 .projectDesc p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.5;
   color: var(--primary-white-darker);
 }
 
@@ -118,20 +118,47 @@
   flex-grow: 1;
   flex-wrap: wrap;
   padding: 0;
-  margin: 20px 0px 0px;
+  margin: 1.25rem 0 0;
   list-style: none;
 }
 
 .projectCard .projectStack > li {
   font-family: "Geist Mono", "Fira Code", Arial, Helvetica, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 300;
   line-height: 1.75;
   color: var(--primary-white-darker);
 }
 
 .projectCard .projectStack > li:not(:last-of-type) {
-  margin-right: 15px;
+  margin-right: 0.625rem;
+}
+
+@media (min-width: 768px) {
+  .projectCardDetails {
+    padding: 1.75rem;
+  }
+
+  .projectCardTitle {
+    font-size: 1.25rem;
+  }
+
+  .projectDesc p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .projectCard .projectCardDetails .projectCardFolder svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .projectCard .projectStack > li {
+    font-size: 0.75rem;
+  }
+  .projectCard .projectStack > li:not(:last-of-type) {
+    margin-right: 0.9375rem;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

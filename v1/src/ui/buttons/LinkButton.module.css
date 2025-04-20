@@ -1,6 +1,6 @@
 .buttonContainer {
-  font-family: "Geist", "Inter", Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-family: "Geist", "Barlow", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
   font-weight: bold;
   letter-spacing: 0.1em;
   -webkit-text-transform: uppercase;
@@ -8,6 +8,7 @@
   position: relative;
   display: inline-flex;
   min-width: 13.222em;
+  min-width: 11.222em;
   background-color: transparent;
   color: var(--primary-black);
   overflow: hidden;
@@ -30,9 +31,9 @@
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  padding: 1.15em 2.5em;
+  padding: 1em 2em;
   width: 100%;
-  min-height: 3.5em;
+  min-height: 3.2em;
   color: var(--primary-black);
   border: 1px solid currentColor;
   z-index: 1;
@@ -87,7 +88,23 @@
 }
 
 .bowArrow {
-  width: 3.1em;
-  height: 1.7em;
-  margin-left: 1.55em;
+  width: 3.2em;
+  height: 1.3em;
+  margin-left: 1em;
+}
+
+@media (min-width: 768px) {
+  .buttonContainer {
+    min-width: 13.222em;
+  }
+
+  .btnContent {
+    padding: 1em 3em;
+  }
+
+  .bowArrow {
+    width: 3.1em;
+    height: 1.7em;
+    margin-left: 1.55em;
+  }
 }

@@ -3,21 +3,37 @@
   flex-direction: column;
   align-items: center;
   -webkit-box-align: center;
-  margin: var(--margin-desktop-section);
-  margin-bottom: 5.5rem;
+  margin: var(--margin-desktop-section-tablet);
+  margin-bottom: 3rem;
 }
 
 .subtitleSection h3 {
-  font-size: var(--h3);
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0;
 }
 
 .subtitleSection a {
   font-family: "Geist Mono", "Fira Code" Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.2;
+  font-weight: normal;
   color: var(--secondary-capri);
   margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .subtitleSection {
+    margin: var(--margin-desktop-section);
+    margin-bottom: 5.5rem;
+  }
+
+  .subtitleSection h3 {
+    font-size: var(--h3);
+  }
+
+  .subtitleSection a {
+    font-size: 1.2rem;
+  }
 }

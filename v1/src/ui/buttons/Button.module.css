@@ -1,6 +1,6 @@
 .buttonContainer {
   font-family: "Geist", "Inter", Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8em;
   font-weight: bold;
   letter-spacing: 0.1em;
   -webkit-text-transform: uppercase;
@@ -24,7 +24,7 @@
 }
 
 .bigButtonContainer {
-  min-width: 23.222em;
+  min-width: 18.222em;
 }
 
 .btnContent {
@@ -34,16 +34,16 @@
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  padding: 1.15em 2.5em;
+  padding: 1em 2.5em;
   width: 100%;
-  min-height: 3.5em;
+  min-height: 2em;
   color: var(--primary-black);
   border: 1px solid currentColor;
   z-index: 1;
 }
 
 .bigButton {
-  padding: 1.25em 3em;
+  padding: 1em 2.3em;
 }
 
 .btnContentSecondary {
@@ -98,4 +98,15 @@
   width: 3.1em;
   height: 1.7em;
   margin-left: 1.55em;
+}
+
+@media (min-width: 768px) {
+  .bigButtonContainer {
+    min-width: 23.222em;
+  }
+
+  .btnContent {
+    min-height: 4.2em;
+    padding: 1em 3em;
+  }
 }

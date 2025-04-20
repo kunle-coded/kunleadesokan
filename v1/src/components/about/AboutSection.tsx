@@ -23,8 +23,8 @@ function AboutSection({ aboutSectionRef }: AboutProps) {
             <span>stand out</span>, are engaging, accessible, and user-centric.
           </p>
           <svg
-            width="121"
-            height="66"
+            width="221"
+            height="166"
             viewBox="0 0 81 26"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +40,8 @@ function AboutSection({ aboutSectionRef }: AboutProps) {
         <div className={`${styles.gridCol} ${styles.middleCol}`}>
           <h2 className={styles.taglineBig}>Creating magic for the web</h2>
           <svg
+            width="434"
+            height="382"
             viewBox="0 0 184 132"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
