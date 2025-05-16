@@ -45,6 +45,7 @@
   position: absolute;
   top: 25%;
   left: 1em;
+  color: rgb(255, 96, 68, 0.8);
   opacity: 0.3;
   z-index: 1;
 }
@@ -71,6 +72,7 @@
   right: 0;
   width: 10em;
   height: 9em;
+  color: rgb(255, 96, 68, 0.8);
   opacity: 0.3;
   z-index: 1;
 }
@@ -83,6 +85,8 @@
 
 .taglineBig {
   font-size: 5.5vw;
+  font-size: 6.5rem;
+  font-size: 6.5vw;
   font-weight: bold;
   color: var(--primary-white);
   max-width: 30%;
@@ -99,6 +103,7 @@
   right: 50%;
   width: 15em;
   height: 10em;
+  color: rgb(255, 96, 68, 0.8);
   transform: translate(-50%, -50%);
   opacity: 0.3;
   z-index: 1;

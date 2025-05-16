@@ -22,7 +22,7 @@
 }
 
 .middleRow {
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
@@ -45,7 +45,7 @@
   position: relative;
   display: inline-block;
   padding: 8px 0px;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .middleRowInner li:first-child {
@@ -206,6 +206,31 @@
   overflow: hidden;
 }
 
+@media (min-width: 581px) {
+  .heroSection {
+    background: linear-gradient(
+        90deg,
+        rgb(20, 24, 33),
+        rgb(31, 37, 45) 48.5%,
+        rgb(220, 220, 222) 48.5%,
+        rgb(230, 230, 230)
+      ),
+      linear-gradient(
+        90deg,
+        rgb(20, 24, 33),
+        rgba(31, 37, 45, 0.8) 48.5%,
+        rgb(220, 220, 222) 48.5%,
+        rgb(230, 230, 230)
+      );
+  }
+}
+
+@media (min-width: 700px) {
+  .middleRow {
+    display: flex;
+  }
+}
+
 @media (min-width: 768px) {
   .heroSection {
     background: linear-gradient(
@@ -226,11 +251,7 @@
   }
 
   .sectionNav {
-    right: calc(var(--global-padding) + 1em);
-  }
-
-  .middleRowInner li {
-    font-size: 1rem;
+    right: calc(var(--global-padding) - 1em);
   }
 
   .heroCTA {
@@ -270,24 +291,5 @@
     .heroSection {
       height: 100vh;
     }
-  }
-}
-
-@media (min-width: 581px) {
-  .heroSection {
-    background: linear-gradient(
-        90deg,
-        rgb(20, 24, 33),
-        rgb(31, 37, 45) 48.5%,
-        rgb(220, 220, 222) 48.5%,
-        rgb(230, 230, 230)
-      ),
-      linear-gradient(
-        90deg,
-        rgb(20, 24, 33),
-        rgba(31, 37, 45, 0.8) 48.5%,
-        rgb(220, 220, 222) 48.5%,
-        rgb(230, 230, 230)
-      );
   }
 }

@@ -1,15 +1,12 @@
 .ftrCntnr {
   display: flex;
-  padding-top: 6.5rem;
+  padding-top: 4.5rem;
   margin: 0;
   background-color: var(--primary-black);
 }
 
 .ftrInnrGrd {
   display: grid;
-  grid-template-columns: repeat(13, 1fr);
-  /* gap: 2rem; */
-  justify-items: stretch;
   width: 100%;
   padding-bottom: 2.5rem;
   margin-right: 4.1rem;
@@ -18,7 +15,6 @@
 }
 
 .ftrClmnCntnrBrand {
-  grid-column: 1/ 5;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -65,14 +61,6 @@
   color: var(--primary-white-darker);
 }
 
-.ftrHdr > p:first-child {
-  display: none;
-}
-
-.ftrHdr > p:last-child {
-  display: inline-block;
-}
-
 .ftrNvgtion {
   display: flex;
   flex-direction: column;
@@ -92,6 +80,64 @@
   transition: color 100ms ease;
 }
 
+@media (max-width: 580px) {
+  .ftrCntnr {
+    padding-top: 2.5rem;
+  }
+
+  .ftrInnrGrd {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    margin-right: 2.1rem;
+    margin-left: 2.1rem;
+  }
+
+  .ftrClmnCntnrBrand {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: flex-start;
+    -webkit-box-pack: start;
+    align-items: center;
+    -webkit-box-align: center;
+  }
+
+  .ftrClmnCntnrBrand .ftrHdr {
+    text-align: center;
+  }
+
+  .ftrClmnCntnrLinks {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .ftrClmnCntnrContact {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media (min-width: 580px) {
+  .ftrInnrGrd {
+    grid-template-columns: repeat(13, 1fr);
+    justify-items: stretch;
+    margin-right: 2.1rem;
+    margin-left: 2.1rem;
+  }
+
+  .ftrClmnCntnrBrand {
+    grid-column: 1/ 5;
+  }
+
+  .ftrClmnCntnrLinks {
+    grid-column: 7/10;
+  }
+
+  .ftrClmnCntnrContact {
+    grid-column: 11/14;
+  }
+}
+
 @media (min-width: 768px) {
   .ftrCntnr {
     padding-top: 12.5rem;
@@ -99,20 +145,18 @@
 
   .ftrInnrGrd {
     padding-bottom: 3.5rem;
-    margin-right: 8.1rem;
-    margin-left: 8.1rem;
-  }
-
-  .ftrHdr > p:first-child {
-    display: inline-block;
-    font-size: 1rem;
-  }
-
-  .ftrHdr > p:last-child {
-    display: none;
+    margin-right: 6.1rem;
+    margin-left: 6.1rem;
   }
 
   .ftrNvgtion {
     margin-top: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ftrInnrGrd {
+    margin-right: 8.1rem;
+    margin-left: 8.1rem;
   }
 }

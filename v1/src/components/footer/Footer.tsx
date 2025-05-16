@@ -6,8 +6,7 @@ function Footer() {
       <nav className={styles.ftrInnrGrd}>
         <div className={styles.ftrClmnCntnrBrand}>
           <div className={styles.ftrHdr}>
-            <p>Designed & Built by Kunle Adesokan</p>
-            <p>Designed & Built by Kunle A.</p>
+            <p>Designed & Built by Kunle</p>
           </div>
           <ul className={styles.ftrNvgtion}>
             <li>

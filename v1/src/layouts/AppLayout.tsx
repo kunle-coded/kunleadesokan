@@ -5,7 +5,7 @@ import Footer from "../components/footer/Footer";
 function AppLayout() {
   return (
     <div className="app">
-      <Header />
+      {/* <Header /> */}
       <main className="main">
         <Outlet />
         <div

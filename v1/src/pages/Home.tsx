@@ -6,6 +6,7 @@ import ProjectList from "../components/projects/ProjectList";
 import SkillsSection from "../components/skills/SkillsSection";
 import useIntersection from "../lib/hooks/useIntersection";
 import { Indicator } from "../lib/types/types";
+import Header from "../components/header/Header";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -38,6 +39,7 @@ function Home() {
 
   return (
     <>
+      <Header />
       <Hero
         activeIndex={activeIndex}
         heroRef={sectionRefs[0]}

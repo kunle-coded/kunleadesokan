@@ -12,6 +12,7 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
   const projectItemRef = useRef(null);
 
   useReveal(projectItemRef);
+  
 
   return (
     <li ref={projectItemRef} className={`section ${styles.projectListItem}`}>

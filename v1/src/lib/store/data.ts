@@ -21,7 +21,7 @@ export const projects = [
     overview:
       "A multi-chain and multi-currency cryptocurrency wallet built with highest security standards and high perfornance in mind. This modern crypto wallet employs latest web3 standards and technology to securely protect your assets and interact with blockchain.",
     shortDesc: "A modern multi-chain and multi-currency cryptocurrency wallet.",
-    stack: ["React", "Web3", "Figma", "Tailwind CSS", "Ethersjs"],
+    stack: ["React", "Web3", "Figma", "Tailwind", "Ethersjs"],
     status: "Published",
     updated: "July 2024",
     images: ["/src/assets/img/walleth/home.webp"],
