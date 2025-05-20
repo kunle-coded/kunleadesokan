@@ -1,0 +1,29 @@
+.container {
+  display: block;
+  padding: var(--global-padding-mobile);
+  background-color: var(--primary-black);
+  width: 100%;
+}
+
+.containerss {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: aqua;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--global-padding);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    /* padding: var(--section-padding); */
+  }
+}
