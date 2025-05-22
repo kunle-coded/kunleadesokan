@@ -3,7 +3,6 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  /* position: relative; */
 }
 
 .filterWrapper {
@@ -41,19 +40,13 @@
   font-size: 1rem;
   /* line-height: 1.5; */
   position: relative;
-  color: var(--secondary-capri);
-}
-
-.allFilter span {
-  font-size: 0.8rem;
-  margin-left: 0.2rem;
 }
 
 .allFilter::after {
   content: "";
   position: absolute;
   top: 0;
-  right: -1rem;
+  right: -0.8rem;
   height: 100%;
   width: 2px;
   background-color: var(--primary-white-dark);
@@ -61,11 +54,25 @@
 }
 
 .currentFilter {
-  display: inline;
-  color: var(--primary-white);
+  display: flex;
+  margin-right: 2rem;
+  font-size: 1rem;
 }
 
-.activeFilter {
+.allFilter span,
+.currentFilter span {
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+}
+
+.filterDisplay button {
+  color: var(--primary-white);
+}
+.filterDisplay button:hover {
+  color: var(--secondary-capri);
+}
+
+.filterDisplay button[aria-selected="true"] {
   color: var(--secondary-capri);
 }
 
@@ -115,9 +122,46 @@
   display: flex;
 }
 
+.filterOptions li {
+  margin-right: 2rem;
+  font-size: 1.1rem;
+  /* line-height: 1.5; */
+  position: relative;
+}
+
+.desktopFilter .filterOptions button {
+  display: flex;
+  align-items: start;
+  color: var(--primary-white);
+}
+.desktopFilter .filterOptions button:hover {
+  color: var(--secondary-capri);
+}
+
+.desktopFilter .filterOptions button[aria-selected="true"] {
+  color: var(--secondary-capri);
+}
+
+.desktopFilter .filterOptions li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -0.8rem;
+  height: 100%;
+  width: 2px;
+  background-color: var(--primary-white-dark);
+  transform: rotate(15deg);
+}
+
+.desktopFilter .filterOptions button span {
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+}
+
 .mobileFilter button,
 .desktopFilter button {
   background-color: transparent;
+  transition: color 150ms ease;
 }
 
 @media (min-width: 580px) {

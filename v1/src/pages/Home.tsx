@@ -7,6 +7,7 @@ import SkillsSection from "../components/skills/SkillsSection";
 import useIntersection from "../lib/hooks/useIntersection";
 import { Indicator } from "../lib/types/types";
 import Header from "../components/header/Header";
+import AboutMeSection from "../components/about/AboutMeSection";
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -45,7 +46,8 @@ function Home() {
         heroRef={sectionRefs[0]}
         indicators={indicators}
       />
-      <AboutSection aboutSectionRef={sectionRefs[1]} />
+      {/* <AboutSection aboutSectionRef={sectionRefs[1]} /> */}
+      <AboutMeSection aboutSectionRef={sectionRefs[1]} />
       <SkillsSection skillsSectionRef={sectionRefs[2]} />
       <ProjectList projectsSectionRef={sectionRefs[3]} />
       <ContactSection contactSectionRef={sectionRefs[4]} />

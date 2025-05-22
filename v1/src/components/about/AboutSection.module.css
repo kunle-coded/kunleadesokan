@@ -109,13 +109,6 @@
   z-index: 1;
 }
 
-@media (min-width: 1024px) {
-  .aboutSection {
-    padding: var(--section-padding);
-    min-height: 700px;
-  }
-}
-
 @media (min-width: 768px) {
   .aboutSection {
     padding: var(--section-padding-tablet);
@@ -177,5 +170,12 @@
   .rightCol p {
     font-size: 1.08rem;
     text-align: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutSection {
+    padding: var(--section-padding);
+    min-height: 700px;
   }
 }
