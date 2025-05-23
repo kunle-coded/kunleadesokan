@@ -12,7 +12,6 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
   const projectItemRef = useRef(null);
 
   useReveal(projectItemRef);
-  
 
   return (
     <li ref={projectItemRef} className={`section ${styles.projectListItem}`}>
@@ -84,7 +83,7 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
               <p className={styles.projectNumber}>0{project.id}.</p>
               <h2 className={styles.projectName}>{project.name}</h2>
               <LinkButton label="Case Study" link="/project-name" />
-              <p className={styles.projectDescription}>{project.shortDesc}</p>
+              <p className={styles.projectDescription}>{project.intent}</p>
             </div>
           </div>
           <div className={styles.projectImage}>

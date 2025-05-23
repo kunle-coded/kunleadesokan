@@ -1,12 +1,19 @@
+import PageFeaturedProject from "./PageFeaturedProject";
 import styles from "./PageProjectList.module.css";
 import ProjectFilter from "./ProjectFilter";
 
+import { projects } from "../../lib/store/data";
+
 function PageProjectList() {
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       <ProjectFilter />
-      <div>Projects go here</div>
-    </section>
+      <ul className={styles.projectList}>
+        {projects.map((project) => (
+          <PageFeaturedProject key={project.id} project={project} />
+        ))}
+      </ul>
+    </div>
   );
 }
 

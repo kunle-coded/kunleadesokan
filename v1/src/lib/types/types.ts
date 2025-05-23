@@ -1,13 +1,19 @@
 export interface Project {
+  client: string;
+  description: string;
+  externalLink: string;
+  gitHubLink: string;
+  goal: string;
   id: number;
+  images: string[];
+  intent: string;
   name: string;
-  type: string;
   overview: string;
-  shortDesc: string;
+  role: string;
   stack: string[];
   status: string;
-  updated: string;
-  images: string[];
+  type: string;
+  year: string;
 }
 
 export interface Indicator {

@@ -9,7 +9,6 @@ function Work() {
         subtitleOne="Websites. Apps. Design."
         subtitleTwo="Find all my projects here."
       />
-
       <PageProjectList />
     </>
   );

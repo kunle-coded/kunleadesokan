@@ -8,7 +8,7 @@ interface ProjectCardOtherProps {
 }
 
 function ProjectCardOther({ project }: ProjectCardOtherProps) {
-  const { name, shortDesc, stack, images } = project;
+  const { name, intent, stack, images } = project;
 
   const projectCardRef = useRef(null);
   useReveal(projectCardRef);
@@ -42,7 +42,7 @@ function ProjectCardOther({ project }: ProjectCardOtherProps) {
             </div>
           </div>
           <div className={styles.projectDesc}>
-            <p>{shortDesc}</p>
+            <p>{intent}</p>
           </div>
 
           <footer>

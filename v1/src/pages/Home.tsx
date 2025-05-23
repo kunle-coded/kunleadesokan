@@ -1,5 +1,4 @@
 import { useCallback, useRef, useState } from "react";
-import AboutSection from "../components/about/AboutSection";
 import ContactSection from "../components/contact/ContactSection";
 import Hero from "../components/hero/Hero";
 import ProjectList from "../components/projects/ProjectList";
@@ -46,7 +45,6 @@ function Home() {
         heroRef={sectionRefs[0]}
         indicators={indicators}
       />
-      {/* <AboutSection aboutSectionRef={sectionRefs[1]} /> */}
       <AboutMeSection aboutSectionRef={sectionRefs[1]} />
       <SkillsSection skillsSectionRef={sectionRefs[2]} />
       <ProjectList projectsSectionRef={sectionRefs[3]} />
