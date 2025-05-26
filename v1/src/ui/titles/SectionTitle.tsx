@@ -9,11 +9,11 @@ interface SectionTitleProps {
 function SectionTitle({ title, isPoint }: SectionTitleProps) {
   const titleRef = useRef(null);
 
-  useReveal(titleRef);
+  const { isIntersecting } = useReveal(titleRef);
 
   return (
     <div ref={titleRef} className="section">
-      <h1>
+      <h1 className={`text ${isIntersecting ? "textReveal" : ""}`}>
         {title}
         {isPoint && <span>.</span>}
       </h1>

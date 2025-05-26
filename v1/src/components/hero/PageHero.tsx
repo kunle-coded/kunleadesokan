@@ -1,21 +1,34 @@
+import { useRef } from "react";
 import SectionTitle from "../../ui/titles/SectionTitle";
 import styles from "./PageHero.module.css";
+import useReveal from "../../lib/hooks/useReveal";
 
 interface PageHeroProps {
   title: string;
-  subtitleOne: string;
+  subtitleOne?: string;
   subtitleTwo?: string;
+  bgImg?: boolean;
 }
 
-function PageHero({ title, subtitleOne, subtitleTwo }: PageHeroProps) {
+function PageHero({ title, subtitleOne, subtitleTwo, bgImg }: PageHeroProps) {
+  const heroRef = useRef(null);
+  const { isIntersecting } = useReveal(heroRef);
+
   return (
-    <div className={styles.heroContainer}>
-      <div className={styles.heroWrapper}>
+    <div className={`${styles.heroContainer} ${bgImg ? styles.bgImg : ""}`}>
+      <div className={styles.bgOverlay}></div>
+      <div ref={heroRef} className={styles.heroWrapper}>
         <SectionTitle title={title} isPoint />
-        <div className={styles.subtitle}>
-          <p>{subtitleOne}</p>
-          <p>{subtitleTwo}</p>
-        </div>
+        {subtitleOne && (
+          <div className={styles.subtitle}>
+            <p className={`text ${isIntersecting ? "textReveal" : ""}`}>
+              {subtitleOne}
+            </p>
+            <p className={`text ${isIntersecting ? "textReveal" : ""}`}>
+              {subtitleTwo}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

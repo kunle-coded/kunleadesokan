@@ -1,6 +1,5 @@
 .container {
   display: block;
-  padding: var(--global-padding-mobile);
   padding: var(--section-padding-mobile);
   background-color: var(--primary-black);
   width: 100%;
@@ -23,7 +22,6 @@
 
 @media (min-width: 768px) {
   .container {
-    padding: var(--global-padding);
     padding: var(--section-padding-tablet);
   }
 

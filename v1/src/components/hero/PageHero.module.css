@@ -3,6 +3,36 @@
   background-color: var(--primary-black-dark);
   width: 100%;
   padding: 1.5rem 2.5rem;
+  position: relative;
+}
+
+.bgImg {
+  /* background: url("../../assets/img/koos/img.png"); */
+  background-image: url("../../assets/img/koos/img.png");
+  background-repeat: no-repeat;
+  /* background-position: top; */
+  background-position: 100% 15%;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.bgOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 191, 255, 0.5);
+  background-color: rgb(14, 16, 24, 0.9);
+}
+
+.bgImg h1 {
+  /* font-family: "Geist", "Barlow", Arial, Helvetica, sans-serif; */
+  font-size: 8vw;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  letter-spacing: -0.01em;
+  /* color: var(--secondary-capri); */
 }
 
 .heroWrapper {
@@ -14,7 +44,6 @@
   align-items: center;
   margin-top: calc(var(--header-height) - 5rem);
   padding-bottom: 3.5rem;
-  background-color: inherit;
   transition: margin 150ms ease;
 }
 

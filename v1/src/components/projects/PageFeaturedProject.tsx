@@ -2,6 +2,7 @@ import { useRef } from "react";
 import styles from "./PageFeaturedProject.module.css";
 import useReveal from "../../lib/hooks/useReveal";
 import { Project } from "../../lib/types/types";
+import Button from "../../ui/buttons/Button";
 
 interface ProjectProps {
   project: Project;
@@ -9,59 +10,94 @@ interface ProjectProps {
 
 function PageFeaturedProject({ project }: ProjectProps) {
   const itemRef = useRef(null);
+  const imgRef = useRef(null);
+  const infoRef = useRef(null);
 
   useReveal(itemRef);
+  const { isIntersecting } = useReveal(imgRef);
+  // const { isIntersecting: infoIntersecting } = useReveal(infoRef);
 
   return (
     <li className={styles.container}>
       <div ref={itemRef} className={`section ${styles.itemWrapper}`}>
-        <div className={styles.contentCol}>
+        <div ref={imgRef} className={styles.contentCol}>
           <div className={styles.projectDetails}>
-            <div className={styles.shape}></div>
+            <div
+              className={`${styles.shape} ${
+                isIntersecting ? styles.shapeReveal : ""
+              }`}
+            ></div>
             <div className={styles.textsContainer}>
               <div className={styles.flexCol}>
-                <h3>
+                <h3
+                  className={`${styles.projectTitle} ${
+                    isIntersecting ? styles.titleReveal : ""
+                  }`}
+                >
                   {project.name}
                   <span>.</span>
                 </h3>
                 <div className={styles.flexContainer}>
                   <div className={styles.flexInner1}>
-                    <p>{project.overview}</p>
+                    <p className={`text ${isIntersecting ? "textReveal" : ""}`}>
+                      {project.overview}
+                    </p>
                   </div>
 
                   <div className={styles.flexInner2}>
-                    <p>{project.intent}</p>
+                    <p className={`text ${isIntersecting ? "textReveal" : ""}`}>
+                      {project.intent}
+                    </p>
                     <br />
-                    <p>{project.goal}</p>
+                    <p className={`text ${isIntersecting ? "textReveal" : ""}`}>
+                      {project.goal}
+                    </p>
                   </div>
                 </div>
               </div>
               <div className={`${styles.flexCol} ${styles.projectInfo}`}>
                 <p>Client</p>
-                <p>{project.client}</p>
+                <div ref={infoRef} className={styles.infoTextWrapper}>
+                  <p className={styles.infoText}>{project.client}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div className={styles.imgCol}>
           <div className={styles.projectImg}>
-            <div className={styles.imgContainer}>
-              <img
-                alt=""
-                role="presentation"
-                aria-hidden="true"
-                src={project.images[0]}
-                className={styles.img}
-              />
-            </div>
-            <div className={styles.bottomInfo}>
+            <a href="">
+              <div
+                className={`${styles.imgContainer} ${
+                  isIntersecting ? styles.imgReveal : ""
+                }`}
+              >
+                <img
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  src={project.images[0]}
+                  className={styles.img}
+                />
+              </div>
+              <div className={styles.projectLinkWrapper}>
+                <div className={styles.linkBtnContainer}>
+                  <Button label="Case Study" />
+                </div>
+              </div>
+            </a>
+            <div ref={infoRef} className={styles.bottomInfo}>
               <div className={`${styles.flexCol} ${styles.projectInfo}`}>
                 <p>Role</p>
-                <p>{project.role}</p>
+                <div className={styles.infoTextWrapper}>
+                  <p className={styles.infoText}>{project.role}</p>
+                </div>
               </div>
               <div className={`${styles.flexCol} ${styles.projectInfo}`}>
                 <p>Year</p>
-                <p>{project.year}</p>
+                <div className={styles.infoTextWrapper}>
+                  <p className={styles.infoText}>{project.year}</p>
+                </div>
               </div>
               <div className={styles.bottomLine}></div>
             </div>
