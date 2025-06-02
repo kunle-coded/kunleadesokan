@@ -7,10 +7,8 @@
 }
 
 .bgImg {
-  /* background: url("../../assets/img/koos/img.png"); */
   background-image: url("../../assets/img/koos/img.png");
   background-repeat: no-repeat;
-  /* background-position: top; */
   background-position: 100% 15%;
   background-size: cover;
   object-fit: cover;
@@ -23,16 +21,17 @@
   bottom: 0;
   left: 0;
   background-color: rgb(0, 191, 255, 0.5);
-  background-color: rgb(14, 16, 24, 0.8);
+  background-color: rgb(14, 16, 24, 0.5);
+  z-index: 5;
 }
 
 .bgImg h1 {
   /* font-family: "Geist", "Barlow", Arial, Helvetica, sans-serif; */
-  font-size: 8vw;
+  font-size: 6vw;
   text-transform: uppercase;
   letter-spacing: normal;
   letter-spacing: -0.01em;
-  /* color: var(--secondary-capri); */
+  color: var(--primary-black);
 }
 
 .heroWrapper {
@@ -45,6 +44,15 @@
   margin-top: calc(var(--header-height) - 5rem);
   padding-bottom: 3.5rem;
   transition: margin 150ms ease;
+}
+
+.heroWrapper > div {
+  /* padding: 1rem 2rem;
+  border-radius: 8px;
+  background-color: var(--primary-white);
+  position: fixed;
+  top: 6rem; */
+  z-index: 10;
 }
 
 .subtitle {

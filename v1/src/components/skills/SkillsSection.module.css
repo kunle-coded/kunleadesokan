@@ -462,18 +462,18 @@
   }
 
   .skllSctnShp {
-    display: none;
+    display: block;
   }
 
   .skllSctnShp {
     flex: 0 0 auto;
     position: relative;
-    min-width: 200px;
+    min-width: 100px;
   }
 
   .skllsShpsCntnr {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
   }
   .skllsDtlsDesc h5 {
     font-size: 1.5rem;
