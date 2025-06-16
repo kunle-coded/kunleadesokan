@@ -171,3 +171,14 @@ export const otherProjects = [
     externalLink: "",
   },
 ];
+
+export const aboutPage = {
+  journeyStart: [
+    "My journey into web development began in 2012, when I stumbled upon customizing WordPress themes. Experimenting with HTML and CSS opened my eyes to the creative potential of web development, and I've been hooked ever since. What started as a hobby has grown into a lifelong pursuit of crafting visually stunning and technically sound websites.",
+    "Over the years, I’ve developed a deep passion for building engaging, user-friendly experiences. I focus on creating digital products that are not only visually striking but also intuitive and accessible to everyone. I believe in combining cutting-edge technology with thoughtful design to create sites that look good and work even better.",
+  ],
+  journeyNow: [
+    "When I’m not writing code, you can find me learning about new tech trends, working on passion projects, or exploring how design and functionality intersect to improve user experiences. For me, web development is a continuous journey of learning, growing, and creating magic for the web.",
+    "Over the years, I’ve developed a deep passion for building engaging, user-friendly experiences. I focus on creating digital products that are not only visually striking but also intuitive and accessible to everyone.",
+  ],
+};

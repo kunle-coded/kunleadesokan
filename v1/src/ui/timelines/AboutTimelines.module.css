@@ -1,0 +1,31 @@
+.container {
+  display: block;
+  padding: var(--section-padding-mobile);
+  padding-top: 2.5rem;
+  background-color: var(--primary-black-dark);
+  min-height: 1px;
+  width: 100%;
+}
+
+.orderedList {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+@media (min-width: 580px) {
+  .orderedList {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--section-padding-tablet);
+    padding-top: 2.5rem;
+  }
+
+  .orderedList {
+    flex-direction: row;
+  }
+}

@@ -265,15 +265,21 @@
   -webkit-box-pack: justify;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 2.1rem;
+  padding-right: 2.1rem;
   padding-top: 15vh;
   margin-left: auto;
   margin-right: auto;
   max-width: calc(1440px + 20vw);
 }
 
-.projectImage img {
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.projectImage .imgWrapper img {
   width: 100%;
   height: 100%;
 }
@@ -356,10 +362,7 @@
     padding: 15vh 10vw 0;
     /* margin-left: auto;
   margin-right: auto; */
-  }
-
-  .projectImage img {
-    width: calc(100% - 200px);
+    max-width: calc(1440px + 20vw);
   }
 
   .projectImage .info .title {
@@ -386,10 +389,6 @@
 
   .singleCol .projectSummary {
     flex-wrap: nowrap;
-  }
-
-  .projectImage {
-    /* flex-wrap: unset; */
   }
 }
 

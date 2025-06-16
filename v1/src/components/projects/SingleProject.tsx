@@ -271,7 +271,9 @@ function SingleProject() {
         {/* Project overview */}
 
         <section className={styles.projectImage}>
-          <img src="/src/assets/img/koos/img.png" alt="Home" />
+          <div className={styles.imgWrapper}>
+            <img src="/src/assets/img/koos/img.png" alt="Home" />
+          </div>
           <div className={styles.info}>
             <h6 className={styles.title}>
               Studio Mega's own branding set them apart from other agencies.
@@ -784,7 +786,9 @@ function SingleProject() {
 
         {/* Project image */}
         <section className={styles.projectImage}>
-          <img src="/src/assets/img/koos/img.png" alt="Home" />
+          <div className={styles.imgWrapper}>
+            <img src="/src/assets/img/koos/img.png" alt="Home" />
+          </div>
           <div className={styles.info}>
             <h6 className={styles.title}>
               Koos Languages' online <br /> presence improved significantly

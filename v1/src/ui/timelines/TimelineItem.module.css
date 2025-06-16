@@ -1,0 +1,81 @@
+.listItemContainer {
+  width: 100%;
+}
+
+.listItemWrapper {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.shapeContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.timelineShape {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 1px solid var(--secondary-capri);
+  border-radius: 1000px;
+  transition: all 150ms ease;
+}
+
+.timelinePoint {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-neon-coral);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 350ms ease;
+}
+
+.timelineText {
+  padding: 1rem 3rem 0;
+  text-align: center;
+}
+
+.timelineText p {
+  font-size: 1rem;
+}
+
+@media (min-width: 580px) {
+  .timelineText {
+    padding: 1rem 1rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--section-padding-tablet);
+    padding-top: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .timelineText {
+    padding: 1rem 2rem 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .timelineShape {
+    /* width: 200px;
+    height: 200px; */
+  }
+}

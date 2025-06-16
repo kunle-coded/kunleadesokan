@@ -3,6 +3,7 @@ import AppLayout from "../layouts/AppLayout";
 import Home from "../pages/Home";
 import Work from "../pages/Work";
 import WorkSingle from "../pages/WorkSingle";
+import About from "../pages/About";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/work", element: <Work /> },
       { path: "/work/:title", element: <WorkSingle /> },
+      { path: "/about", element: <About /> },
     ],
   },
 ]);

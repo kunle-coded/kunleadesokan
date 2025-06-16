@@ -81,6 +81,7 @@
   --primary-white-darkest: #858586;
   --secondary-capri: #00bfff;
   --secondary-capri-dark: #0074b4;
+  --secondary-capri-darker: #182e6f;
   --accent-neon-coral: #ff6044;
 
   --primary-border: rgb(121, 125, 128, 0.7);
@@ -167,7 +168,8 @@ h1 span {
   color: var(--secondary-capri);
 }
 
-ul {
+ul,
+ol {
   list-style: none;
   margin: 0;
   margin-block: 0;

@@ -23,3 +23,10 @@ export interface Indicator {
   fourth: boolean;
   fifth: boolean;
 }
+
+export interface timeline {
+  id: number;
+  experience: string;
+  level: number;
+  year: string;
+}
