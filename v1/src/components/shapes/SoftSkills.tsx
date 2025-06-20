@@ -32,7 +32,7 @@ function SoftSkills() {
           y1="34.4111"
           x2="160.928"
           y2="67.6308"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -40,7 +40,7 @@ function SoftSkills() {
           y1="35.36"
           x2="161.877"
           y2="78.0712"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -48,7 +48,7 @@ function SoftSkills() {
           y1="31.5636"
           x2="165.673"
           y2="93.2575"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -56,7 +56,7 @@ function SoftSkills() {
           y1="27.767"
           x2="169.471"
           y2="108.444"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -64,7 +64,7 @@ function SoftSkills() {
           y1="28.7162"
           x2="168.522"
           y2="118.884"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -72,7 +72,7 @@ function SoftSkills() {
           y1="34.4111"
           x2="162.826"
           y2="124.579"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -80,7 +80,7 @@ function SoftSkills() {
           y1="35.36"
           x2="161.877"
           y2="135.019"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -88,7 +88,7 @@ function SoftSkills() {
           y1="41.0549"
           x2="156.182"
           y2="140.714"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -96,7 +96,7 @@ function SoftSkills() {
           y1="46.7497"
           x2="150.488"
           y2="146.409"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -104,7 +104,7 @@ function SoftSkills() {
           y1="52.4445"
           x2="144.792"
           y2="152.104"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -112,7 +112,7 @@ function SoftSkills() {
           y1="58.1393"
           x2="139.098"
           y2="157.799"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -120,7 +120,7 @@ function SoftSkills() {
           y1="63.8342"
           x2="133.403"
           y2="163.493"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -128,7 +128,7 @@ function SoftSkills() {
           y1="69.529"
           x2="127.708"
           y2="169.188"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -136,7 +136,7 @@ function SoftSkills() {
           y1="79.9694"
           x2="117.268"
           y2="170.137"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -144,7 +144,7 @@ function SoftSkills() {
           y1="89.4609"
           x2="105.878"
           y2="170.137"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -152,7 +152,7 @@ function SoftSkills() {
           y1="99.9013"
           x2="95.4373"
           y2="171.087"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -160,7 +160,7 @@ function SoftSkills() {
           y1="115.088"
           x2="80.2514"
           y2="167.29"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
         <line
@@ -168,7 +168,7 @@ function SoftSkills() {
           y1="123.63"
           x2="71.7093"
           y2="166.341"
-          stroke="#28303b"
+          stroke="#797d80"
           strokeWidth="2"
         />
       </mask>
@@ -178,8 +178,8 @@ function SoftSkills() {
           cy="98.7103"
           r="66.6141"
           transform="rotate(45 97.5781 98.7103)"
-          fill="#28303b"
-          stroke="#28303b"
+          fill="#797d80"
+          stroke="#797d80"
         />
       </g>
     </svg>

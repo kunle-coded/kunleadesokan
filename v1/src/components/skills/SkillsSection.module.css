@@ -27,12 +27,10 @@
 
 .skillsTablist {
   display: flex;
-  /* justify-content: flex-start; */
   gap: 1.5rem;
   width: 100%;
   overflow-x: scroll;
   padding: 0.75rem;
-  /* margin-bottom: 1rem; */
 }
 
 .skillsTablist.xMandatoryScrolling {
@@ -392,6 +390,7 @@
   opacity: 0;
   transform: translate(10rem, 20rem);
   transition: transform 999ms ease, opacity 5ms ease;
+  
 }
 
 .skllsShpsCntnr {

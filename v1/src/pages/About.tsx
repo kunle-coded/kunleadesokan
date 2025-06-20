@@ -5,6 +5,7 @@ import AboutPageHero from "../components/about/AboutPageHero";
 import TwoColSection from "../ui/sections/TwoColSection";
 import { aboutPage } from "../lib/store/data";
 import AboutTimelines from "../ui/timelines/AboutTimelines";
+import AboutSkills from "../components/skills/AboutSkills";
 
 function About() {
   const skillesRef = useRef(null);
@@ -20,6 +21,7 @@ function About() {
       <TwoColSection title="How it started" body={aboutPage.journeyStart} />
       <AboutTimelines />
       <TwoColSection title="How it is going" body={aboutPage.journeyNow} />
+      <AboutSkills />
       <SkillsSection skillsSectionRef={skillesRef} />
     </div>
   );

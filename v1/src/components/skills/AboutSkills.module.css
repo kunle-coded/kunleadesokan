@@ -1,0 +1,143 @@
+.container {
+  display: block;
+  padding: var(--section-padding-mobile);
+  padding-top: 2.5rem;
+  background-color: var(--primary-black-dark);
+  min-height: 1px;
+  width: 100%;
+}
+
+.colmnsWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-black-light);
+  background-color: rgb(40, 48, 59, 0.4);
+  overflow: hidden;
+}
+
+.colInner {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.leftCol,
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.leftCol {
+  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid var(--primary-border);
+}
+.rightCol {
+  padding: 1.5rem 0 2rem;
+}
+
+.leftCol h1,
+.rightCol h1 {
+  color: var(--secondary-capri);
+}
+
+.leftCol p,
+.rightCol p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--primary-white-dark);
+  margin-top: 1rem;
+}
+
+.leftShapeContainer,
+.rightShapeContainer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.leftShapeContainer {
+  margin-top: 6rem;
+}
+
+.rightShapeContainer {
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 6rem;
+}
+
+.leftShape,
+.rightShape {
+  display: none;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transition: transform 999ms ease, opacity 5ms ease;
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+.leftShape {
+  opacity: 0;
+  transform: translate(50rem, 10rem);
+}
+
+.rightShape {
+  opacity: 0;
+  transform: translate(-50rem, -10rem);
+}
+
+@media (min-width: 580px) {
+  .colmnsWrapper {
+    flex-direction: row;
+  }
+
+  .leftCol {
+    border: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--section-padding-tablet);
+    padding-top: 2.5rem;
+  }
+
+  .colInner {
+    padding: 0 2.5rem;
+  }
+
+  .leftCol,
+  .rightCol {
+    padding: 4rem 0 2rem;
+  }
+
+  .leftCol p,
+  .rightCol p {
+    font-size: 1.1rem;
+  }
+
+  .rightCol {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+  }
+
+  .leftShape,
+  .rightShape {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--section-padding);
+  }
+
+  .leftShape,
+  .rightShape {
+    width: 150px;
+    height: 150px;
+  }
+}

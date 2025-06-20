@@ -52,3 +52,10 @@
     font-size: 1.1rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--section-padding);
+    padding-top: 4.5rem;
+  }
+}

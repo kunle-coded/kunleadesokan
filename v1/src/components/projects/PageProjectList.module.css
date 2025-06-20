@@ -36,7 +36,7 @@
 
 @media (min-width: 1024px) {
   .container {
-    /* padding: var(--section-padding); */
+    padding: var(--section-padding);
   }
 
   .projectList li:not(:first-child) {
