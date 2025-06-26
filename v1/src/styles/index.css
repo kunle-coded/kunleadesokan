@@ -104,6 +104,7 @@
   /* Margins */
   --margin-desktop-spcr: 8.5rem;
   --margin-desktop-section: 0 8.1rem;
+  --margin-section-tablet: 0 6.1rem;
 
   /* Heights */
   --header-height: 11.12em;
@@ -117,6 +118,7 @@
   --global-padding-mobile: 2.5rem;
 
   /* Margins */
+  --margin-section-mobile: 0 3.1rem;
   --margin-desktop-section-tablet: 0 1.1rem;
 }
 

@@ -10,7 +10,6 @@
 .colmnsWrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-black-light);
   background-color: rgb(40, 48, 59, 0.4);
   overflow: hidden;
 }
@@ -66,7 +65,7 @@
 .rightShapeContainer {
   -webkit-box-pack: end;
   justify-content: flex-end;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .leftShape,
@@ -97,6 +96,16 @@
   .leftCol {
     border: none;
   }
+
+  .rightCol {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+  }
+
+  .leftShape,
+  .rightShape {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
@@ -119,14 +128,8 @@
     font-size: 1.1rem;
   }
 
-  .rightCol {
-    -webkit-box-pack: end;
-    justify-content: flex-end;
-  }
-
-  .leftShape,
-  .rightShape {
-    display: block;
+  .rightCol p {
+    padding-bottom: 4rem;
   }
 }
 

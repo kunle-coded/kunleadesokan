@@ -30,3 +30,10 @@ export interface timeline {
   level: number;
   year: string;
 }
+
+export interface Education {
+  id: number;
+  institution: string;
+  title: string;
+  period: string;
+}

@@ -182,3 +182,106 @@ export const aboutPage = {
     "Over the years, I’ve developed a deep passion for building engaging, user-friendly experiences. I focus on creating digital products that are not only visually striking but also intuitive and accessible to everyone.",
   ],
 };
+
+export const cv = {
+  education: [
+    {
+      id: 0,
+      institution: "Hochschule Fulda",
+      title: "M.A. Intercultural Communication and European Studies",
+      period: "2024 - Date",
+    },
+    {
+      id: 1,
+      institution: "Friedrich Schiller University, Jena",
+      title: "Computer Science (Foundation)",
+      period: "2022 - 2024",
+    },
+    {
+      id: 2,
+      institution: "IBM & Coursera",
+      title: "IBM Fullstack Development Course",
+      period: "2023 - 2023",
+    },
+    {
+      id: 3,
+      institution: "Udemy",
+      title: "Web Development Bootcamp",
+      period: "2023 - 2023",
+    },
+    {
+      id: 4,
+      institution: "Udemy",
+      title: "Java Programming - Standard Edition",
+      period: "2022 - 2022",
+    },
+    {
+      id: 5,
+      institution: "INCO Academy DACH & Coursera",
+      title: "Google IT Support Professional Certificate",
+      period: "2021 - 2022",
+    },
+    {
+      id: 6,
+      institution: "Udemy",
+      title: "Complete JavaScript Course",
+      period: "2020 - 2021",
+    },
+    {
+      id: 7,
+      institution: "Obafemi Awolowo University, Ile-Ife",
+      title: "Bachelor of Arts German Studies",
+      period: "2007 - 2012",
+    },
+  ],
+  experience: [
+    {
+      id: 0,
+      institution: "Hochschule Fulda",
+      title: "IT Administrator – Faculty of Social and Cultural Studies",
+      period: "2025 - Date",
+    },
+    {
+      id: 1,
+      institution: "Freelance",
+      title: "Software Engineer",
+      period: "2022 - Date",
+    },
+    {
+      id: 2,
+      institution: "Naijagig Entertainment",
+      title: "Web Developer / Content Creator",
+      period: "2019 - 2021",
+    },
+    {
+      id: 3,
+      institution: "Foursquare Educational Services",
+      title: "Managing Director / Web Developer",
+      period: "2017 - 2019",
+    },
+    {
+      id: 4,
+      institution: "WFO Roedl & Partner",
+      title: "Business Services Executive",
+      period: "2015 - 2017",
+    },
+    {
+      id: 5,
+      institution: "Rough Diamond Entertainment",
+      title: "Web Developer / Content Creator",
+      period: "2013 - 2015",
+    },
+    {
+      id: 6,
+      institution: "Kool-End Languages Centre",
+      title: "German Language Teacher",
+      period: "2013 - 2013",
+    },
+    {
+      id: 7,
+      institution: "Freelance",
+      title: "German Language Teacher",
+      period: "2012 - 2013",
+    },
+  ],
+};

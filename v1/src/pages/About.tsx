@@ -6,6 +6,7 @@ import TwoColSection from "../ui/sections/TwoColSection";
 import { aboutPage } from "../lib/store/data";
 import AboutTimelines from "../ui/timelines/AboutTimelines";
 import AboutSkills from "../components/skills/AboutSkills";
+import CV from "../components/about/CV";
 
 function About() {
   const skillesRef = useRef(null);
@@ -22,6 +23,7 @@ function About() {
       <AboutTimelines />
       <TwoColSection title="How it is going" body={aboutPage.journeyNow} />
       <AboutSkills />
+      <CV />
       <SkillsSection skillsSectionRef={skillesRef} />
     </div>
   );
