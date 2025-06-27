@@ -1,0 +1,131 @@
+.container {
+  display: block;
+  padding: var(--section-padding-mobile);
+  /* padding: 4.5rem 0rem 0rem; */
+  min-height: 1px;
+  width: 100%;
+  transition: all 150ms ease;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  margin: 0 2.5rem;
+  padding: 0;
+}
+
+.colLeft {
+  width: 100%;
+}
+
+.colLeft h2 {
+  font-family: "Barlow", "Geist", Arial, Helvetica, sans-serif;
+  font-size: var(--h2);
+  line-height: 1;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.colRight {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.colRight .faqs {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.faqs .faqItem {
+  padding: 1rem 0;
+  border-width: 1px 0 0;
+  border-color: var(--primary-border);
+  border-style: solid;
+  cursor: pointer;
+}
+
+.faqItem .faqHeader p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 0;
+}
+.faqItem .faqHeader {
+  pointer-events: none;
+}
+
+.faqItem .faqBody {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.faqBody .faqBodyInner {
+  will-change: opacity;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: max-height 0.4s linear, opacity 0.2s linear, transform 0.2s linear;
+}
+
+.faqItem .showFaqBody {
+  max-height: 100px;
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.faqItem .faqBodyInner p {
+  padding-top: 1rem;
+  color: var(--primary-white-darker);
+}
+
+@media (min-width: 580px) {
+  .contentContainer {
+    flex-direction: row;
+    margin: 0 3.5rem;
+  }
+
+  .colLeft {
+    width: 40%;
+  }
+
+  .colLeft h2 {
+    text-align: left;
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .colRight {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--section-padding-tablet);
+    /* padding: 8.5rem 0rem 0rem; */
+  }
+
+  .contentContainer {
+    margin: 0 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--section-padding);
+  }
+
+  .contentContainer {
+    margin: 0 5.5rem;
+  }
+}

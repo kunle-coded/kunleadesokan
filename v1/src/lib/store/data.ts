@@ -1,3 +1,5 @@
+import { Faq } from "../types/types";
+
 export const projects = [
   {
     id: 1,
@@ -285,3 +287,55 @@ export const cv = {
     },
   ],
 };
+
+export const faqs: Faq[] = [
+  {
+    id: 0,
+    question: "What types of projects do you work on?",
+    answer:
+      "I specialize in crafting modern, responsive websites and web applications — from landing pages and portfolios to complex full-stack projects. I also explore mobile applications, Web3 and blockchain-based solutions.",
+  },
+  {
+    id: 1,
+    question:
+      "What is your availability for freelance, collaborations or full-time work?",
+    answer:
+      "Yes, I’m open to freelance opportunities, creative collaborations and full-time employment. Feel free to reach out via the contact form or email to discuss your project.",
+  },
+  {
+    id: 2,
+    question: "How can I hire you for a project?",
+    answer:
+      "Simply send me a message using the contact form or email me directly with details about your project, timeline, and goals. I’ll get back to you promptly to discuss next steps.",
+  },
+  {
+    id: 3,
+    question: "What’s your typical response time?",
+    answer:
+      "I usually respond to messages within 24–48 hours, excluding weekends and holidays.",
+  },
+  {
+    id: 4,
+    question: "Do you work remotely?",
+    answer:
+      "Yes, I work remotely and collaborate with clients from around the world using tools like Zoom, Slack, Notion, and GitHub.",
+  },
+  {
+    id: 5,
+    question: "What tools or technologies do you use?",
+    answer:
+      "I primarily use JavaScript/TypeScript, React, Next.js, Node.js, React Native, and various modern tools for design, development, and deployment. You can view my full tech stack on the projects or about page.",
+  },
+  {
+    id: 6,
+    question: "How long do projects typically take?",
+    answer:
+      "Timelines vary depending on the scope and complexity of the project. A simple landing page might take a few days, while a full-stack application could take several weeks. Once I understand your requirements, I’ll provide a realistic estimate and keep you updated throughout the process.",
+  },
+  {
+    id: 7,
+    question: "Can I see more examples of your work?",
+    answer:
+      "Yes, feel free to explore the featured projects on my portfolio. Each project page includes an overview, process, and technologies used.",
+  },
+];

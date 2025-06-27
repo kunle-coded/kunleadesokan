@@ -1,0 +1,54 @@
+import React, { useState } from "react";
+import styles from "./ContactFaq.module.css";
+import { faqs } from "../../lib/store/data";
+
+function ContactFaq() {
+  const [current, setCurrent] = useState(0);
+
+  function handleFaq(event: React.MouseEvent<HTMLUListElement>) {
+    const target = event.target as HTMLElement;
+    const index = target.tabIndex;
+    if (current !== index) {
+      setCurrent(index);
+    } else {
+      setCurrent(-1);
+    }
+  }
+
+  return (
+    <section className={styles.container}>
+      <div className={styles.contentContainer}>
+        <div className={styles.colLeft}>
+          <h2>A few things you may want to ask me</h2>
+        </div>
+        <div className={styles.colRight}>
+          <ul className={styles.faqs} onClick={handleFaq}>
+            {faqs.map((faq) => (
+              <li
+                key={faq.id}
+                className={styles.faqItem}
+                tabIndex={faq.id}
+                aria-current={current === faq.id}
+              >
+                <div className={styles.faqHeader}>
+                  <p>{faq.question}</p>
+                </div>
+                <div className={styles.faqBody}>
+                  <div
+                    className={`${styles.faqBodyInner} ${
+                      current === faq.id ? styles.showFaqBody : ""
+                    }`}
+                  >
+                    <p>{faq.answer}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default ContactFaq;

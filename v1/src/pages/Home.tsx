@@ -38,7 +38,7 @@ function Home() {
   useIntersection(sectionRefs, setActiveIndex, indicatorCallback);
 
   return (
-    <>
+    <div>
       <Header />
       <Hero
         activeIndex={activeIndex}
@@ -49,7 +49,7 @@ function Home() {
       <SkillsSection skillsSectionRef={sectionRefs[2]} />
       <ProjectList projectsSectionRef={sectionRefs[3]} />
       <ContactSection contactSectionRef={sectionRefs[4]} />
-    </>
+    </div>
   );
 }
 

@@ -37,3 +37,8 @@ export interface Education {
   title: string;
   period: string;
 }
+export interface Faq {
+  id: number;
+  question: string;
+  answer: string;
+}
