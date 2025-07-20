@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import styles from "./SingleProject.module.css";
 // import useAnimationFrame from "../../lib/hooks/useAnimationFrame";
+import { projects } from "../../lib/store/data";
+import { Project } from "../../lib/types/types";
 
 function SingleProject() {
   const STEP = 10005;
   const MAX = 40020;
+  const [project, setProject] = useState<Project | null>(null);
   const [currentSlide, setCurrentSlide] = useState(1);
   const [slidePosition, setSlidePosition] = useState(STEP);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
+  const location = useLocation();
   // const { handleSlide, isTransitioning, slidePosition } = useAnimationFrame();
 
   const sliderStyle = {
@@ -16,6 +21,19 @@ function SingleProject() {
     transform: `translateX(-${slidePosition / 100}%)`,
     transition: isTransitioning ? "transform 0.6s ease-in-out" : "none",
   };
+
+  useEffect(() => {
+    const projectId = location.search.split("=")[1];
+
+    const proj = projects.find((project) => project.id === Number(projectId));
+    if (proj) {
+      setProject(proj);
+    }
+  }, [location.search]);
+
+  if (!project) {
+    return <div>Loading...</div>;
+  }
 
   const handleSlide = (direction: string) => {
     if (direction === "next") {
@@ -66,15 +84,11 @@ function SingleProject() {
         <section className={styles.threeCol}>
           <div className={styles.credits}>
             <h5>
-              <a
-                href="http://www.kooslanguages.com.ng"
-                target="_blank"
-                rel="noopener"
-              >
-                www.kooslanguages.com
+              <a href={project.externalLink} target="_blank" rel="noopener">
+                {project.externalLink.split("//")[1]}
               </a>
             </h5>
-            <h6>Koos Languages</h6>
+            <h6>{project.name}</h6>
             <span className={styles.title}>Agency:</span>
             <span>House 16</span>
             <span className={styles.title}>Lead Front-end Developer:</span>
@@ -85,24 +99,12 @@ function SingleProject() {
           <div className={styles.summary}>
             <div className={styles.col}>
               <p>
-                <strong>
-                  Koos Languages is a language training and services based in
-                  Abuja, Nigeria.
-                </strong>
+                <strong>{project.projDetails.intro}</strong>
               </p>
-              <p>
-                They needed a modern web presence to enhance their online
-                visibility and streamline the enrollment process.
-              </p>
+              <p>{project.projDetails.need}</p>
             </div>
             <div className={`${styles.col} ${styles.col2}`}>
-              <p>
-                Their existing website was outdated and not responsive, which
-                impacted user experience, especially for mobile visitors. They
-                approached me to develop a new platform that would improve their
-                digital experience and better reflect their high standards of
-                educational services.
-              </p>
+              <p>{project.projDetails.problem}</p>
             </div>
           </div>
         </section>
@@ -233,18 +235,16 @@ function SingleProject() {
             </div>
 
             <h6 className={styles.title}>
-              Modern look and feel <br />
-              better user experience
+              {project.projDetails.outcomeTitle[0]} <br />
+              {project.projDetails.outcomeTitle[1]}
             </h6>
             <div className={styles.projectPages}>
               <p>
                 {" "}
-                — Home
-                <br />
-                — Work
-                <br />
-                — Studio
-                <br />— Journal
+                — {project.projDetails.outcomeGallery[0]}
+                <br />— {project.projDetails.outcomeGallery[1]}
+                <br />— {project.projDetails.outcomeGallery[2]}
+                <br />— {project.projDetails.outcomeGallery[3]}
               </p>
             </div>
           </div>
@@ -252,19 +252,10 @@ function SingleProject() {
         <section className={`${styles.twoCol} ${styles.singleCol}`}>
           <div className={styles.projectSummary}>
             <div className={styles.col}>
-              <p>
-                I developed a user-friendly, responsive platform that simplifies
-                language learning through a clean interface and structured
-                content.
-              </p>
+              <p>{project.projDetails.outcome[0]}</p>
             </div>
             <div className={`${styles.col} ${styles.col2}`}>
-              <p>
-                Designed with accessibility at its core to support learners
-                across various devices and backgrounds, it focused on
-                simplicity, clarity, and multilingual support to enhance
-                engagement and ease of use.
-              </p>
+              <p>{project.projDetails.outcome[1]}</p>
             </div>
           </div>
         </section>
@@ -276,12 +267,9 @@ function SingleProject() {
           </div>
           <div className={styles.info}>
             <h6 className={styles.title}>
-              Studio Mega's own branding set them apart from other agencies.
+              {project.projDetails.interlude.title}
             </h6>
-            <p>
-              Vibrant colors, unique blending modes, and hover overlays can be
-              seen here and in hoverable content throughout the website.
-            </p>
+            <p>{project.projDetails.interlude.body}</p>
           </div>
         </section>
 
@@ -416,38 +404,22 @@ function SingleProject() {
             <div className={styles.projectPages}>
               <p>
                 {" "}
-                — Redesign
-                <br />
-                — Scalability
-                <br />
-                — Responsiveness
-                <br />— User Experience
+                — {project.projDetails.executionList[0]}
+                <br />— {project.projDetails.executionList[1]}
+                <br />— {project.projDetails.executionList[2]}
+                <br />— {project.projDetails.executionList[3]}
               </p>
             </div>
           </div>
         </section>
-        {/* Project Summary */}
+        {/* Project Execution Summary */}
         <section className={`${styles.twoCol} ${styles.singleCol}`}>
           <div className={styles.projectSummary}>
             <div className={styles.col}>
-              <p>
-                The project involved a complete redesign and rebuild of the
-                website using React for the frontend to ensure a smooth,
-                responsive, and dynamic user experience. I worked closely with
-                the client to identify key functionality, such as an interactive
-                course catalog and an intuitive contact form, ensuring the
-                platform catered to both prospective students and partners.
-              </p>
+              <p>{project.projDetails.execution[0]}</p>
             </div>
             <div className={`${styles.col} ${styles.col2}`}>
-              <p>
-                The site was built with scalability and performance in mind,
-                integrating modern frameworks like React, as well as responsive
-                design principles to ensure consistency across all devices. A
-                key element of the project was implementing a robust course
-                management system to help students easily browse available
-                language courses and register online.
-              </p>
+              <p>{project.projDetails.execution[1]}</p>
             </div>
           </div>
         </section>
@@ -583,12 +555,10 @@ function SingleProject() {
             <div className={styles.projectPages}>
               <p>
                 {" "}
-                — User registration
-                <br />
-                — Payment
-                <br />
-                — Low budget
-                <br />— Spam and security
+                — {project.projDetails.challengesGallery[0]}
+                <br />— {project.projDetails.challengesGallery[1]}
+                <br />— {project.projDetails.challengesGallery[2]}
+                <br />— {project.projDetails.challengesGallery[3]}
               </p>
             </div>
           </div>
@@ -597,24 +567,10 @@ function SingleProject() {
         <section className={`${styles.twoCol} ${styles.singleCol}`}>
           <div className={styles.projectSummary}>
             <div className={styles.col}>
-              <p>
-                One of the biggest challenges was ensuring the website supported
-                multilingual functionality, as Koos Language Centre serves a
-                diverse audience. Additionally, optimizing the user interface
-                for both mobile and desktop users required careful consideration
-                to maintain a high-quality user experience across different
-                screen sizes.
-              </p>
+              <p>{project.projDetails.challenges[0]}</p>
             </div>
             <div className={`${styles.col} ${styles.col2}`}>
-              <p>
-                One of the biggest challenges was ensuring the website supported
-                multilingual functionality, as Koos Language Centre serves a
-                diverse audience. Additionally, optimizing the user interface
-                for both mobile and desktop users required careful consideration
-                to maintain a high-quality user experience across different
-                screen sizes.
-              </p>
+              <p>{project.projDetails.challenges[1]}</p>
             </div>
           </div>
         </section>
@@ -750,12 +706,10 @@ function SingleProject() {
             <div className={styles.projectPages}>
               <p>
                 {" "}
-                — Responsive design
-                <br />
-                — User-friendly
-                <br />
-                — Easy-to-navigate
-                <br />— Backend app
+                — {project.projDetails.solutionsGallery[0]}
+                <br />— {project.projDetails.solutionsGallery[1]}
+                <br />— {project.projDetails.solutionsGallery[2]}
+                <br />— {project.projDetails.solutionsGallery[3]}
               </p>
             </div>
           </div>
@@ -764,22 +718,10 @@ function SingleProject() {
         <section className={`${styles.twoCol} ${styles.singleCol}`}>
           <div className={styles.projectSummary}>
             <div className={styles.col}>
-              <p>
-                To address the multilingual requirement, I implemented a dynamic
-                translation system that allowed seamless switching between
-                languages. I also focused on creating a clean, intuitive design
-                that reduced user friction and made information easily
-                accessible. Key features include:
-              </p>
+              <p>{project.projDetails.solutions[0]}</p>
             </div>
             <div className={`${styles.col} ${styles.col2}`}>
-              <p>
-                To address the multilingual requirement, I implemented a dynamic
-                translation system that allowed seamless switching between
-                languages. I also focused on creating a clean, intuitive design
-                that reduced user friction and made information easily
-                accessible. Key features include:
-              </p>
+              <p>{project.projDetails.solutions[1]}</p>
             </div>
           </div>
         </section>
@@ -791,15 +733,10 @@ function SingleProject() {
           </div>
           <div className={styles.info}>
             <h6 className={styles.title}>
-              Koos Languages' online <br /> presence improved significantly
+              {project.projDetails.result[0]} <br />{" "}
+              {project.projDetails.result[1]}
             </h6>
-            <p>
-              Mobile user engagement increased by 40%, and online course
-              registrations grew by 30% within the first three months of the
-              site launch. The client was particularly impressed with how the
-              new design elevated their brand image and made their services more
-              accessible to a wider audience.
-            </p>
+            <p>{project.projDetails.resultSummary}</p>
           </div>
         </section>
       </div>

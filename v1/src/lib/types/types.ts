@@ -14,6 +14,27 @@ export interface Project {
   status: string;
   type: string;
   year: string;
+  projDetails: {
+    intro: string;
+    need: string;
+    problem: string;
+    role: string;
+    outcome: string[];
+    outcomeTitle: string[];
+    outcomeGallery: string[];
+    interlude: {
+      title: string;
+      body: string;
+    };
+    execution: string[];
+    executionList: string[];
+    challenges: string[];
+    challengesGallery: string[];
+    solutions: string[];
+    solutionsGallery: string[];
+    result: string[];
+    resultSummary: string;
+  };
 }
 
 export interface Indicator {

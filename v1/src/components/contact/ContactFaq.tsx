@@ -3,7 +3,7 @@ import styles from "./ContactFaq.module.css";
 import { faqs } from "../../lib/store/data";
 
 function ContactFaq() {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(-1);
 
   function handleFaq(event: React.MouseEvent<HTMLUListElement>) {
     const target = event.target as HTMLElement;
@@ -32,6 +32,26 @@ function ContactFaq() {
               >
                 <div className={styles.faqHeader}>
                   <p>{faq.question}</p>
+                  <span>
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                      }}
+                    >
+                      <path
+                        d="M6.66675 11.3334L10.0001 8.00002L6.66675 4.66669"
+                        stroke="#e6e6e6"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
                 </div>
                 <div className={styles.faqBody}>
                   <div

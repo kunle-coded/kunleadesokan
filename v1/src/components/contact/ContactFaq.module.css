@@ -48,11 +48,34 @@
 }
 
 .faqs .faqItem {
+  width: 100%;
   padding: 1rem 0;
+  cursor: pointer;
+}
+
+.faqs .faqItem:not(:first-child) {
   border-width: 1px 0 0;
   border-color: var(--primary-border);
   border-style: solid;
-  cursor: pointer;
+}
+
+.faqItem .faqHeader {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.faqItem .faqHeader span {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  transform: rotate(-90deg);
+  transition: transform 250ms ease;
+}
+.faqItem[aria-current="true"] .faqHeader span {
+  transform: rotate(90deg);
 }
 
 .faqItem .faqHeader p {

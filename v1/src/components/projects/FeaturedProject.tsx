@@ -82,7 +82,13 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
             <div className={styles.projectDetailsContainer}>
               <p className={styles.projectNumber}>0{project.id}.</p>
               <h2 className={styles.projectName}>{project.name}</h2>
-              <LinkButton label="Case Study" link="/project-name" />
+              <LinkButton
+                label="Case Study"
+                link={`/work/${project.name
+                  .split(" ")
+                  .join("-")
+                  .toLowerCase()}`}
+              />
               <p className={styles.projectDescription}>{project.intent}</p>
             </div>
           </div>

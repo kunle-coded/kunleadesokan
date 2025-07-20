@@ -3,6 +3,7 @@ import SectionSubtitle from "../../ui/titles/SectionSubtitle";
 import EduExpItem from "../../ui/lists/EduExpItem";
 import School from "../shapes/School";
 import { cv } from "../../lib/store/data";
+import Work from "../shapes/Work";
 
 function CV() {
   return (
@@ -30,7 +31,7 @@ function CV() {
             <header>
               <span>
                 <div className={styles.eduIcon}>
-                  <School />
+                  <Work />
                 </div>
               </span>
               <h3>Work Experience</h3>

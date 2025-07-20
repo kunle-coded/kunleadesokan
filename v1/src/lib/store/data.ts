@@ -20,11 +20,67 @@ export const projects = [
     gitHubLink: "",
     externalLink: "",
     type: "web",
+    projDetails: {
+      intro:
+        "Koos Languages is a language training and services based in Abuja, Nigeria.",
+      need: "They needed a modern web presence to enhance their online visibility and streamline the enrollment process.",
+      problem:
+        "Their existing website was outdated and not responsive, which impacted user experience, especially for mobile visitors. They approached me to develop a new platform that would improve their digital experience and better reflect their high standards of educational services.",
+      role: "full", //NOTE: To be edited
+      outcome: [
+        "I developed a user-friendly, responsive platform that simplifies language learning through a clean interface and structured content.",
+        "Designed with accessibility at its core to support learners across various devices and backgrounds, it focused on simplicity, clarity, and multilingual support to enhance engagement and ease of use.",
+      ],
+      outcomeTitle: ["Modern look and feel", "better user experience"],
+      outcomeGallery: ["Home", "Work", "Studio", "Journal"],
+      interlude: {
+        //NOTE: To be edited
+        title:
+          "Koos Languages' own branding set them apart from other agencies.",
+        body: "Vibrant colors, unique blending modes, and hover overlays can be seen here and in hoverable content throughout the website.",
+      },
+      execution: [
+        //NOTE: To be edited
+        "The project involved a complete redesign and rebuild of the website using React for the frontend to ensure a smooth, responsive, and dynamic user experience. I worked closely with the client to identify key functionality, such as an interactive course catalog and an intuitive contact form, ensuring the platform catered to both prospective students and partners.",
+        "The site was built with scalability and performance in mind, integrating modern frameworks like React, as well as responsive design principles to ensure consistency across all devices. A key element of the project was implementing a robust course management system to help students easily browse available language courses and register online.",
+      ],
+      executionList: [
+        "Redesign",
+        "Scalability",
+        "Responsiveness",
+        "User Experience",
+      ],
+      challenges: [
+        //NOTE: To be edited
+        "One of the biggest challenges was ensuring the website supported multilingual functionality, as Koos Language Centre serves a diverse audience. Additionally, optimizing the user interface for both mobile and desktop users required careful consideration to maintain a high-quality user experience across different screen sizes.",
+        "to be added",
+      ],
+      challengesGallery: [
+        "User registration",
+        "Payment",
+        "Low budget",
+        "Spam and security",
+      ],
+      solutions: [
+        //NOTE: To be edited
+        "To address the multilingual requirement, I implemented a dynamic translation system that allowed seamless switching between languages. I also focused on creating a clean, intuitive design that reduced user friction and made information easily accessible. Key features include:",
+        "To be edited",
+      ],
+      solutionsGallery: [
+        "Responsive design",
+        "User-friendly",
+        "Easy-to-navigate",
+        "Backend app",
+      ],
+      result: ["Koos Languages' online", "presence improved significantly"], //NOTE: To be edited
+      resultSummary:
+        "Mobile user engagement increased by 40%, and online course registrations grew by 30% within the first three months of the site launch. The client was particularly impressed with how the new design elevated their brand image and made their services more accessible to a wider audience.", //NOTE: To be edited
+    },
   },
   {
     id: 2,
     name: "Walleth",
-    client: "Koos-End Language Centre",
+    client: "Personal Project",
     role: "Web3 Development",
     description:
       "Walleth is a high-performance, multi-chain, and multi-currency cryptocurrency wallet designed with advanced security architecture. Built for speed, reliability, and seamless user experience, it empowers users to manage digital assets across diverse blockchain networks effortlessly.",
@@ -38,13 +94,69 @@ export const projects = [
     year: "Dec 2024",
     images: ["/src/assets/img/walleth/home2.png"],
     gitHubLink: "",
-    externalLink: "",
+    externalLink: "https://www.kooslanguages.com.ng",
     type: "web",
+    projDetails: {
+      intro:
+        "Walleth is a high-performance, multi-chain, and multi-currency cryptocurrency wallet.",
+      need: "They needed a modern web presence to enhance their online visibility and streamline the enrollment process.",
+      problem:
+        "Their existing website was outdated and not responsive, which impacted user experience, especially for mobile visitors. They approached me to develop a new platform that would improve their digital experience and better reflect their high standards of educational services.",
+      role: "full", //NOTE: To be edited
+      outcome: [
+        "I developed a user-friendly, responsive platform that simplifies language learning through a clean interface and structured content.",
+        "Designed with accessibility at its core to support learners across various devices and backgrounds, it focused on simplicity, clarity, and multilingual support to enhance engagement and ease of use.",
+      ],
+      outcomeTitle: ["Modern look and feel", "better user experience"],
+      outcomeGallery: ["Home", "Work", "Studio", "Journal"],
+      interlude: {
+        //NOTE: To be edited
+        title:
+          "Koos Languages' own branding set them apart from other agencies.",
+        body: "Vibrant colors, unique blending modes, and hover overlays can be seen here and in hoverable content throughout the website.",
+      },
+      execution: [
+        //NOTE: To be edited
+        "The project involved a complete redesign and rebuild of the website using React for the frontend to ensure a smooth, responsive, and dynamic user experience. I worked closely with the client to identify key functionality, such as an interactive course catalog and an intuitive contact form, ensuring the platform catered to both prospective students and partners.",
+        "The site was built with scalability and performance in mind, integrating modern frameworks like React, as well as responsive design principles to ensure consistency across all devices. A key element of the project was implementing a robust course management system to help students easily browse available language courses and register online.",
+      ],
+      executionList: [
+        "Redesign",
+        "Scalability",
+        "Responsiveness",
+        "User Experience",
+      ],
+      challenges: [
+        //NOTE: To be edited
+        "One of the biggest challenges was ensuring the website supported multilingual functionality, as Koos Language Centre serves a diverse audience. Additionally, optimizing the user interface for both mobile and desktop users required careful consideration to maintain a high-quality user experience across different screen sizes.",
+        "to be added",
+      ],
+      challengesGallery: [
+        "User registration",
+        "Payment",
+        "Low budget",
+        "Spam and security",
+      ],
+      solutions: [
+        //NOTE: To be edited
+        "To address the multilingual requirement, I implemented a dynamic translation system that allowed seamless switching between languages. I also focused on creating a clean, intuitive design that reduced user friction and made information easily accessible. Key features include:",
+        "To be edited",
+      ],
+      solutionsGallery: [
+        "Responsive design",
+        "User-friendly",
+        "Easy-to-navigate",
+        "Backend app",
+      ],
+      result: ["Koos Languages' online", "presence improved significantly"], //NOTE: To be edited
+      resultSummary:
+        "Mobile user engagement increased by 40%, and online course registrations grew by 30% within the first three months of the site launch. The client was particularly impressed with how the new design elevated their brand image and made their services more accessible to a wider audience.", //NOTE: To be edited
+    },
   },
   {
     id: 3,
     name: "Arie Classic",
-    client: "Koos-End Language Centre",
+    client: "Arie Fashion Designer",
     role: "UX/UI Design, Web Development",
     description:
       "Arie Classic is a sleek, responsive fashion website designed for style enthusiasts seeking refined digital experiences. It blends aesthetics with functionality, offering visitors a smooth journey through curated collections tailored to diverse fashion preferences.",
@@ -58,8 +170,63 @@ export const projects = [
     year: "Oct 2024",
     images: ["/src/assets/img/arie/img1.png"],
     gitHubLink: "",
-    externalLink: "",
+    externalLink: "https://www.arieclassic.com",
     type: "design",
+    projDetails: {
+      intro: "Arie Classic is a fashion design brand based in Lagos, Nigeria.",
+      need: "They needed a modern web presence to enhance their online visibility, improve client reach and increase sales.",
+      problem:
+        "Their existing website was outdated and not responsive, which impacted user experience, especially for mobile visitors. They approached me to develop a new platform that would improve their digital experience and better reflect their high standards of educational services.",
+      role: "full", //NOTE: To be edited
+      outcome: [
+        "I developed a user-friendly, responsive platform that simplifies language learning through a clean interface and structured content.",
+        "Designed with accessibility at its core to support learners across various devices and backgrounds, it focused on simplicity, clarity, and multilingual support to enhance engagement and ease of use.",
+      ],
+      outcomeTitle: ["Modern look and feel", "better user experience"],
+      outcomeGallery: ["Home", "Work", "Studio", "Journal"],
+      interlude: {
+        //NOTE: To be edited
+        title:
+          "Arie Classic's own branding set them apart from other agencies.",
+        body: "Vibrant colors, unique blending modes, and hover overlays can be seen here and in hoverable content throughout the website.",
+      },
+      execution: [
+        //NOTE: To be edited
+        "The project involved a complete redesign and rebuild of the website using React for the frontend to ensure a smooth, responsive, and dynamic user experience. I worked closely with the client to identify key functionality, such as an interactive course catalog and an intuitive contact form, ensuring the platform catered to both prospective students and partners.",
+        "The site was built with scalability and performance in mind, integrating modern frameworks like React, as well as responsive design principles to ensure consistency across all devices. A key element of the project was implementing a robust course management system to help students easily browse available language courses and register online.",
+      ],
+      executionList: [
+        "UI Design",
+        "Scalability",
+        "Responsiveness",
+        "User Experience",
+      ],
+      challenges: [
+        //NOTE: To be edited
+        "One of the biggest challenges was ensuring the website supported multilingual functionality, as Koos Language Centre serves a diverse audience. Additionally, optimizing the user interface for both mobile and desktop users required careful consideration to maintain a high-quality user experience across different screen sizes.",
+        "to be added",
+      ],
+      challengesGallery: [
+        "User registration",
+        "Payment",
+        "Low budget",
+        "Spam and security",
+      ],
+      solutions: [
+        //NOTE: To be edited
+        "To address the multilingual requirement, I implemented a dynamic translation system that allowed seamless switching between languages. I also focused on creating a clean, intuitive design that reduced user friction and made information easily accessible. Key features include:",
+        "To be edited",
+      ],
+      solutionsGallery: [
+        "Responsive design",
+        "User-friendly",
+        "Easy-to-navigate",
+        "Backend app",
+      ],
+      result: ["Arie Classic's online", "presence improved significantly"], //NOTE: To be edited
+      resultSummary:
+        "Mobile user engagement increased by 40%, and online course registrations grew by 30% within the first three months of the site launch. The client was particularly impressed with how the new design elevated their brand image and made their services more accessible to a wider audience.", //NOTE: To be edited
+    },
   },
 ];
 

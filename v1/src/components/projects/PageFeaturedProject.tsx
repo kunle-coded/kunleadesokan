@@ -3,6 +3,7 @@ import styles from "./PageFeaturedProject.module.css";
 import useReveal from "../../lib/hooks/useReveal";
 import { Project } from "../../lib/types/types";
 import Button from "../../ui/buttons/Button";
+import { transformUrl } from "../../lib/helpers/utils";
 
 interface ProjectProps {
   project: Project;
@@ -66,7 +67,7 @@ function PageFeaturedProject({ project }: ProjectProps) {
         </div>
         <div className={styles.imgCol}>
           <div className={styles.projectImg}>
-            <a href="">
+            <a href={`/work/${transformUrl(project.name)}?id=${project.id}`}>
               <div
                 className={`${styles.imgContainer} ${
                   isIntersecting ? styles.imgReveal : ""

@@ -43,7 +43,7 @@
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--primary-white);
   z-index: 10;
 }
 
