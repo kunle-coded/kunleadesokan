@@ -1,0 +1,77 @@
+/* Image gallery */
+.mediaGallery {
+  position: relative;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.imageViewport {
+  position: relative;
+  height: 371.82px;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.imageSlider {
+  position: absolute;
+  width: 100.05%;
+  height: 100%;
+  transition: transform 150ms ease;
+}
+
+.mediaGallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.sliderDots {
+  display: flex;
+  position: static;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  list-style: none;
+  line-height: 1;
+}
+
+.sliderDots .dot {
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  background-color: var(--primary-white-darkest);
+  opacity: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.sliderDots .dot[aria-selected="true"] {
+  background-color: var(--primary-white);
+}
+
+.previousNextBtn {
+  position: absolute;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: hsla(0, 0%, 100%, 0.75);
+  background-color: transparent;
+  cursor: pointer;
+  transform: translateY(0);
+}
+
+.previousNextBtn.previous {
+  left: 0;
+}
+.previousNextBtn.next {
+  right: 0;
+}

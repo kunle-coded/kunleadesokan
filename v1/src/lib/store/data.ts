@@ -18,7 +18,7 @@ export const projects = [
     year: "Jul 2024",
     images: ["/src/assets/img/koos/img.png"],
     gitHubLink: "",
-    externalLink: "",
+    externalLink: "https://www.kooslanguages.com.ng",
     type: "web",
     projDetails: {
       intro:

@@ -139,23 +139,6 @@
   text-align: right;
 }
 
-.projectGallery .pagination button {
-  color: var(--primary-white-dark);
-  outline: none;
-}
-
-.projectGallery .pagination button svg {
-  fill: var(--primary-white-dark);
-}
-
-.projectGallery .pagination .current {
-  padding-left: 10px;
-}
-
-.projectGallery .pagination .total {
-  padding-right: 10px;
-}
-
 .container .twoCol .info .title {
   font-size: 1.143rem;
   font-weight: 600;
@@ -246,6 +229,8 @@
 .previousNextBtn.next {
   right: 0;
 }
+
+/* NOTE: To remove image gallery styles - moved to slider component stylesheet */
 
 .singleCol {
   padding-top: 5vh;

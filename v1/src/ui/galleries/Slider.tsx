@@ -1,64 +1,19 @@
-import React, { useState } from "react";
 import styles from "./Slider.module.css";
+import { useSlider } from "../../contexts/SliderContext";
 
-interface SliderProps {
-  handleSlideClick: (direction: string) => void;
-}
-
-function Slider({ handleSlideClick }: SliderProps) {
-  const STEP = 10005;
-  const MAX = 40020;
-  const [currentSlide, setCurrentSlide] = useState(1);
-  const [slidePosition, setSlidePosition] = useState(STEP);
-  const [isTransitioning, setIsTransitioning] = useState(true);
+function Slider() {
+  const {
+    currentSlide,
+    slidePosition,
+    isTransitioning,
+    handleSlide,
+    handleDots,
+  } = useSlider();
 
   const sliderStyle = {
     left: "0px",
     transform: `translateX(-${slidePosition / 100}%)`,
     transition: isTransitioning ? "transform 0.6s ease-in-out" : "none",
-  };
-
-  const handleSlide = (direction: string) => {
-    if (direction === "next") {
-      setCurrentSlide((prev) => prev + 1);
-      setSlidePosition((prev) => prev + STEP);
-
-      if (currentSlide === 4) {
-        setTimeout(() => {
-          setIsTransitioning(false);
-          setCurrentSlide(1);
-          setSlidePosition(STEP);
-        }, 600);
-
-        setTimeout(() => setIsTransitioning(true), 700);
-      }
-    } else {
-      setCurrentSlide((prev) => prev - 1);
-      setSlidePosition((prev) => prev - STEP);
-
-      if (currentSlide === 1) {
-        setTimeout(() => {
-          setIsTransitioning(false);
-          setCurrentSlide(4);
-          setSlidePosition(MAX);
-        }, 500);
-
-        setTimeout(() => setIsTransitioning(true), 700);
-      }
-    }
-  };
-
-  const handleDots = (event: React.MouseEvent<HTMLOListElement>) => {
-    const target = event.target as HTMLElement;
-
-    if (target.tagName !== "LI") return;
-
-    const targetIndex = target.tabIndex;
-
-    if (targetIndex === currentSlide) return;
-
-    setCurrentSlide(targetIndex);
-    setSlidePosition(STEP * targetIndex);
   };
 
   return (
@@ -104,8 +59,6 @@ function Slider({ handleSlideClick }: SliderProps) {
             style={{ left: "500.25%" }}
           />
         </div>
-        <div className={styles.imageViewpo}></div>
-        <div className={styles.imageViewpo}></div>
       </div>
       <button
         className={`${styles.previousNextBtn} ${styles.previous}`}

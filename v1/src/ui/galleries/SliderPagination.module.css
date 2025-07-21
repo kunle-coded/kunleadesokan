@@ -1,0 +1,16 @@
+.sliderBtns button {
+  color: var(--primary-white-dark);
+  outline: none;
+}
+
+.sliderBtns button svg {
+  fill: var(--primary-white-dark);
+}
+
+.sliderBtns .current {
+  padding-left: 10px;
+}
+
+.sliderBtns .total {
+  padding-right: 10px;
+}
