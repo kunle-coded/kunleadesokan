@@ -8,15 +8,6 @@ function useReveal(ref: RefObject<HTMLDivElement | null>) {
       const [entry] = entries;
       setIsIntersecting(entry.isIntersecting);
 
-      //   const scrollY = window.scrollY;
-      //   const threshold = 10;
-      //   const progress = Math.min(
-      //     entry.boundingClientRect.y / entry.intersectionRatio,
-      //     1
-      //   );
-
-      //   const headerDynWidth = 100 - progress * 100;
-
       if (!entry.isIntersecting) return;
 
       entry.target.classList.remove("section-hidden");

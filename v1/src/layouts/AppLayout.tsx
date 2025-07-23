@@ -1,12 +1,12 @@
 import { Outlet } from "react-router";
-import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
+import PageHeader from "../components/header/PageHeader";
 
 function AppLayout() {
   return (
     <div className="app">
-      {/* <Header /> */}
-      <main className="main">
+      <PageHeader />
+      <main>
         <Outlet />
         <div
           id="Announcer"

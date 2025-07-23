@@ -1,9 +1,16 @@
+import useScrollDirection from "../../lib/hooks/useScrollDirection";
 import LinkButton from "../../ui/buttons/LinkButton";
 import styles from "./Header.module.css";
 
 function Header() {
+  const { isScrollHome } = useScrollDirection();
+
   return (
-    <header className={styles.headerMain}>
+    <header
+      className={`${styles.headerMain} ${
+        isScrollHome ? styles.hide : styles.show
+      }`}
+    >
       <div className={styles.headerWrapper}>
         <div className={styles.headerInner}>
           <nav className={styles.headerNav}>

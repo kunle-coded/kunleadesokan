@@ -87,6 +87,11 @@
   --primary-border: rgb(121, 125, 128, 0.7);
   --secondary-border: rgb(121, 125, 128, 0.2);
 
+  /* --backdrop-bg: rgb(20, 24, 33, 0.85); */
+  --backdrop-bg: rgb(14, 16, 24, 0.85);
+  /* --nav-shadow: rgb(24, 46, 111, 0.7); */
+  --nav-shadow: rgba(2, 12, 27, 0.7);
+
   /* Typography */
   --h1: clamp(2.75rem, 3.5vw + 1.4375rem, 4.5rem);
   --h2: clamp(3.5rem, 1vw + 3.125rem, 4rem);
@@ -100,6 +105,7 @@
   --global-padding-inner: 6.6rem;
   --section-padding: 8.5rem 6.6rem 5.5rem;
   --section-padding-big: 8.5rem 8.1rem 5.5rem;
+  --header-padding: 0 3.6rem;
 
   /* Margins */
   --margin-desktop-spcr: 8.5rem;
@@ -108,18 +114,27 @@
 
   /* Heights */
   --header-height: 11.12em;
+  --nav-height: 6.25em;
+  --nav-scroll-height: 4.375rem;
+
+  /* Widths */
+  --hamburger-width: 1.875rem;
 
   /* Mobile */
   /* Padding */
   --section-padding-tablet: 4.5rem 3.6rem 2.5rem;
   --section-padding-big-tablet: 4.5rem 4rem 2.5rem;
   --section-padding-mobile: 3.5rem 2.1rem 1.5rem;
+  --header-padding-mobile: 0 2.5rem;
 
   --global-padding-mobile: 2.5rem;
 
   /* Margins */
   --margin-section-mobile: 0 3.1rem;
   --margin-desktop-section-tablet: 0 1.1rem;
+
+  /* Misc */
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 html {
@@ -282,6 +297,23 @@ button,
   user-select: none;
 }
 
+.nav-link[aria-selected="true"]::after {
+  content: "";
+  width: 20%;
+  min-width: 1em;
+  height: 100%;
+
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+  transform: translateX(0.5em);
+  transform-origin: left;
+  transition: 0.3s;
+  position: absolute;
+  pointer-events: none;
+  background-color: currentColor;
+}
+
 /* Forms */
 .contact-form {
   display: -webkit-box;
@@ -432,6 +464,25 @@ textarea:invalid,
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   transition: all, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+/* shared transition */
+.fade-slide {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* visible state */
+.fade-slide--in {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* hidden state */
+.fade-slide--out {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
 }
 
 /* Media queries */

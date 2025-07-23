@@ -12,6 +12,7 @@ function SingleProject() {
   const [project, setProject] = useState<Project | null>(null);
 
   const location = useLocation();
+
   // const { handleSlide, isTransitioning, slidePosition } = useAnimationFrame();
 
   useEffect(() => {

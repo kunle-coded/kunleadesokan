@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  padding: var(--header-padding-mobile);
+  background-color: var(--backdrop-bg);
+  backdrop-filter: blur(10px);
+  filter: none;
+  pointer-events: auto;
+  user-select: auto;
+  transition: var(--transition);
+  z-index: 15;
+}
+
+.navWrapper {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  counter-reset: item 0;
+  z-index: 12;
+}
+
+.hdrMenu {
+  display: none;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.hdrMenu ol {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hdrMenu ol li {
+  position: relative;
+  margin: 0 5px;
+  counter-increment: item 1;
+  font-size: var(--p-sm);
+  padding: 10px;
+}
+
+.hdrMenu ol li a {
+  color: var(--primary-white);
+}
+
+.hdrBtnWrapper {
+  margin-left: 2.5rem;
+}
+
+.hdrMenuMobile {
+  display: block;
+}
+
+.hamburgerMenuBtn {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  margin-right: -15px;
+  margin-right: -2.5rem;
+  padding: 2.5rem;
+  background-color: transparent;
+  color: inherit;
+  text-transform: none;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  z-index: 10;
+}
+
+.hamBox {
+  display: inline-block;
+  position: relative;
+  width: var(--hamburger-width);
+  height: 1.5rem;
+}
+
+.hamBoxInner {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: var(--hamburger-width);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--header-padding);
+  }
+
+  .hdrMenu {
+    display: flex;
+  }
+
+  .hdrMenuMobile {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hideHeader {
+    height: var(--nav-scroll-height);
+    transform: translateY(calc(var(--nav-scroll-height) * -1));
+    box-shadow: 0 10px 30px -10px var(--navy-shadow);
+  }
+
+  .showHeader {
+    height: var(--nav-scroll-height);
+    transform: translateY(0px);
+    background-color: rgba(10, 25, 47, 0.85);
+    box-shadow: 0 10px 30px -10px var(--nav-shadow);
+  }
+}
