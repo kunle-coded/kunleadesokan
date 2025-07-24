@@ -7,16 +7,14 @@ interface PageHeroProps {
   title: string;
   subtitleOne?: string;
   subtitleTwo?: string;
-  bgImg?: boolean;
 }
 
-function PageHero({ title, subtitleOne, subtitleTwo, bgImg }: PageHeroProps) {
+function PageHero({ title, subtitleOne, subtitleTwo }: PageHeroProps) {
   const heroRef = useRef(null);
   const { isIntersecting } = useReveal(heroRef);
 
   return (
-    <div className={`${styles.heroContainer} ${bgImg ? styles.bgImg : ""}`}>
-      <div className={styles.bgOverlay}></div>
+    <div className={styles.heroContainer}>
       <div ref={heroRef} className={styles.heroWrapper}>
         <SectionTitle title={title} isPoint />
         {subtitleOne && (

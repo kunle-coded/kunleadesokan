@@ -6,9 +6,10 @@ import useInputFocus from "../../lib/hooks/useInputFocus";
 
 interface ContactProps {
   contactSectionRef: RefObject<HTMLDivElement | null>;
+  type?: string;
 }
 
-function ContactSection({ contactSectionRef }: ContactProps) {
+function ContactSection({ contactSectionRef, type }: ContactProps) {
   const contactTopRef = useRef(null);
   const contactBottomRef = useRef(null);
   useReveal(contactTopRef);
@@ -25,7 +26,9 @@ function ContactSection({ contactSectionRef }: ContactProps) {
     <section
       ref={contactSectionRef}
       data-section="fuenf"
-      className={`contactSection ${styles.contactSection}`}
+      className={`contactSection ${styles.contactSection} ${
+        type === "page" ? styles.contactPage : ""
+      }`}
     >
       <div className={styles.contactInnerContainer}>
         <div ref={contactTopRef} className={`section ${styles.contactTop}`}>

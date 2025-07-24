@@ -92,13 +92,23 @@
   /* --nav-shadow: rgb(24, 46, 111, 0.7); */
   --nav-shadow: rgba(2, 12, 27, 0.7);
 
+  /* Slates */
+  --slate-dark: #495670;
+  --slate: #8892b0;
+  --slate-light: #a8b2d1;
+  --slate-lightest: #ccd6f6;
+
   /* Typography */
   --h1: clamp(2.75rem, 3.5vw + 1.4375rem, 4.5rem);
   --h2: clamp(3.5rem, 1vw + 3.125rem, 4rem);
   --h3: clamp(1.75rem, 1vw + 1.375rem, 2.25rem);
 
   --p-md: 2vw;
+  --p-lg: 18px;
+  --p-bg: 20px;
+  --p-n: 16px;
   --p-sm: 14px;
+  --p-xsm: 12px;
 
   /* Padding */
   --global-padding: 3.6rem;
@@ -132,6 +142,9 @@
   /* Margins */
   --margin-section-mobile: 0 3.1rem;
   --margin-desktop-section-tablet: 0 1.1rem;
+
+  /* border radius */
+  --border-radius: 4px;
 
   /* Misc */
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -277,6 +290,14 @@ button,
   display: block;
   outline: none;
   background-color: var(--primary-black);
+}
+
+#archive {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  /* padding: 50px 50px; */
 }
 
 .visuallyHidden {

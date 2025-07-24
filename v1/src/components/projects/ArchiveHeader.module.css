@@ -1,0 +1,67 @@
+.container {
+  display: block;
+  /* background-color: var(--primary-black-dark); */
+  width: 100%;
+  position: relative;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: calc(var(--header-height) - 5rem);
+  padding: var(--section-padding-mobile);
+  transition: margin 150ms ease;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.subtitle {
+  font-family: "Geist Mono", "Fira Code", "Geist", "Barlow", Arial, Helvetica,
+    sans-serif;
+  /* font-size: var(--p-md); */
+  font-size: 1.1rem;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--secondary-capri);
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .contentWrapper {
+    padding: var(--section-padding-big-tablet);
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentWrapper {
+    padding: var(--section-padding);
+  }
+}
+
+@media (min-width: 1440px) {
+  .contentWrapper {
+    padding: var(--section-padding-big);
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}

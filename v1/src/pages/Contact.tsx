@@ -8,8 +8,8 @@ function Contact() {
   return (
     <div>
       {/* <PageHero title="Contact Me" subtitleOne="Send me a message!" /> */}
-      <div style={{ marginTop: "8.5rem" }}></div>
-      <ContactSection contactSectionRef={contactSecRef} />
+      {/* <div style={{ paddingTop: "8.5rem", backgroundColor: "#141821" }}></div> */}
+      <ContactSection contactSectionRef={contactSecRef} type="page" />
       <ContactFaq />
     </div>
   );
