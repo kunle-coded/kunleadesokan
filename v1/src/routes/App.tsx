@@ -6,6 +6,8 @@ import WorkSingle from "../pages/WorkSingle";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Archive from "../pages/Archive";
+import Error from "../pages/Error";
+import Resume from "../pages/Resume";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,9 @@ const router = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
       { path: "/archive", element: <Archive /> },
     ],
+    errorElement: <Error />,
   },
+  { path: "/resume", element: <Resume /> },
 ]);
 
 function App() {

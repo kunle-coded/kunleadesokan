@@ -1,4 +1,4 @@
-import { Faq } from "../types/types";
+import { Faq, Resume } from "../types/types";
 
 export const projects = [
   {
@@ -453,6 +453,73 @@ export const cv = {
       period: "2012 - 2013",
     },
   ],
+};
+
+export const resume: Resume = {
+  experience: [
+    {
+      id: 0,
+      company: "Hochschule Fulda",
+      period: "Mar 2024 – Present",
+      points: [
+        "Delivered first-line technical support, resolving hardware, software, and connectivity issues across faculty offices and labs",
+        "Maintained and configured desktops, printers, and audiovisual equipment to support learning and teaching environments",
+        "Collaborated with IT staff on routine maintenance, equipment setup, and user onboarding for new devices and systems",
+        "Ensured classroom tech (projectors, microphones, smart boards) was fully operational ahead of lectures and events",
+        "Logged and documented support requests, creating internal references to streamline future troubleshooting",
+        "Contributed to improving digital literacy by assisting staff and students with day-to-day tech-related queries",
+      ],
+      responsibility:
+        "Supporting the faculty’s digital environment through hands-on troubleshooting and maintenance – ensuring smooth operation of academic and administrative technology services for students and staff.",
+      role: "IT Support (Student Assistant)",
+    },
+    {
+      id: 1,
+      company: "Freelance",
+      period: "Jan 2021 – Present",
+      points: [
+        "Developed and deployed custom full-stack web applications using the MERN stack (MongoDB, Express, React, Node.js) for local businesses",
+        "Designed and maintained WordPress websites using page builders such as Elementor, WPBakery, and Visual Composer",
+        "Delivered end-to-end website redesigns by combining modern UX/UI principles with clean, responsive frontend implementations",
+        "Troubleshot critical bugs and performance issues in legacy codebases, improving stability and usability",
+        "Extended functionality in existing projects by building and integrating new features and components",
+        "Collaborated closely with clients to translate business needs into technical solutions with a focus on usability and performance",
+      ],
+      responsibility:
+        "Partnering with small business owners to bring their digital ideas to life – delivering full-stack web solutions, redesigns, and technical fixes that help brands establish and grow their online presence.",
+      role: "Software Engineer",
+    },
+    {
+      id: 2,
+      company: "Foursquare Language School",
+      period: "Jan 2017 – Mar 2021",
+      points: [
+        "Designed, developed, and maintained the company’s website using HTML, CSS, and JavaScript to establish a functional and engaging online presence",
+        "Supported business development efforts by contributing to strategic outreach and enhancing the school’s digital visibility",
+        "Facilitated internal language training sessions, helping colleagues improve German communication skills for client and team interactions",
+        "Promoted cross-cultural understanding and collaboration within the team by assisting in language-focused initiatives and workshops",
+      ],
+      responsibility:
+        "Built and managed the organization’s digital presence while contributing to language training and business development – blending technical execution with cultural and communication support.",
+      role: "Frontend Developer",
+    },
+    {
+      id: 3,
+      company: "WFO Rödl & Partner",
+      period: "Sep 2015 – Nov 2016",
+      points: [
+        "Managed the preparation and dispatch of recurring client invoices, ensuring accuracy and timely financial transactions",
+        "Conducted in-depth research on prospective clients and crafted tailored proposals to highlight the firm’s service offerings",
+        "Translated the firm’s Nigeria Business Guide from English to German, broadening its reach and accessibility to international clients",
+        "Handled incoming and outgoing mail with precision, helping maintain efficient communication flow within the office",
+      ],
+      responsibility:
+        "Supported the firm’s business development and operational communication – driving key client interactions, translations, and internal workflows to support cross-border consulting services.",
+      role: "Business Services Executive",
+    },
+  ],
+  techSkills: [],
+  otherSkills: [],
 };
 
 export const faqs: Faq[] = [

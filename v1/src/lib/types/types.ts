@@ -58,6 +58,22 @@ export interface Education {
   title: string;
   period: string;
 }
+
+export interface Experience {
+  id: number;
+  company: string;
+  period: string;
+  points: string[];
+  responsibility: string;
+  role: string;
+}
+
+export interface Resume {
+  experience: Experience[];
+  techSkills: string[];
+  otherSkills: string[];
+}
+
 export interface Faq {
   id: number;
   question: string;
