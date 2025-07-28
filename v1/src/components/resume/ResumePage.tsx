@@ -1,6 +1,8 @@
 import styles from "./ResumePage.module.css";
+import { resume } from "../../lib/store/data";
 
 function ResumePage() {
+  const experience = resume.experience;
   return (
     <main id="resume" className={styles.container}>
       <aside className={styles.meta}>
@@ -138,145 +140,34 @@ function ResumePage() {
             which were for the following organizations:
           </p>
           <ul className={styles.companies}>
-            <li className={styles.company}>
-              <header>
-                <h4>
-                  Shopify <span>Senior Frontend Engineer</span>
-                </h4>
-                <span className={styles.period}>Apr 2025 - Present</span>
-              </header>
-              <p>
-                Shaping the future of commerce and entrepreneurship – building
-                and advocating for inclusive and thoughtful experiences for over
-                three million merchants across the globe.
-              </p>
-              <ul className={styles.points}>
-                <li>
-                  {" "}
-                  Pioneering initiatives around the future of onboarding, signup
-                  and developing technical vision for them
-                </li>
-                <li>
-                  {" "}
-                  Identified a gap in my team’s deployment workflow and built a
-                  solution that reduced the time required for each deployment
-                  from over 40 minutes to less than 6 minutes, which restores
-                  almost 300 hours of developer productivity every year
-                </li>
-                <li>
-                  {" "}
-                  Collaborating with UX designers and researchers to inform the
-                  direction of products we craft
-                </li>
-                <li>
-                  {" "}
-                  First-hand involvement in early-stage product and UX thinking
-                  and rapid prototyping
-                </li>
-                <li>
-                  {" "}
-                  Conducting and monitoring several strategic experiments,
-                  refining experiences based on resulting metrics and learnings
-                </li>
-                <li>
-                  {" "}
-                  Participating and incorporating learnings from real merchant
-                  interviews and research sessions
-                </li>
-                <li>
-                  {" "}
-                  Identifying gaps around the org-wide frontend infrastructure,
-                  drafting proposals and implementing solutions
-                </li>
-                <li>
-                  {" "}
-                  Mentoring engineers within and outside my team on best
-                  practices, performance and advanced patterns
-                </li>
-                <li>
-                  {" "}
-                  Providing guidance around product accessibility and
-                  inclusivity across the org
-                </li>
-                <li>
-                  {" "}
-                  Built an OAuth 2.0 compliant client-side library for our
-                  Identity provider across Shopify
-                </li>
-              </ul>
-              <p className={styles.outro}></p>
-            </li>
-            <li className={styles.company}>
-              <header>
-                <h4>
-                  Shopify <span>Senior Frontend Engineer</span>
-                </h4>
-                <span className={styles.period}>Apr 2025 - Present</span>
-              </header>
-              <p>
-                Shaping the future of commerce and entrepreneurship – building
-                and advocating for inclusive and thoughtful experiences for over
-                three million merchants across the globe.
-              </p>
-              <ul className={styles.points}>
-                <li>
-                  {" "}
-                  Pioneering initiatives around the future of onboarding, signup
-                  and developing technical vision for them
-                </li>
-                <li>
-                  {" "}
-                  Identified a gap in my team’s deployment workflow and built a
-                  solution that reduced the time required for each deployment
-                  from over 40 minutes to less than 6 minutes, which restores
-                  almost 300 hours of developer productivity every year
-                </li>
-                <li>
-                  {" "}
-                  Collaborating with UX designers and researchers to inform the
-                  direction of products we craft
-                </li>
-                <li>
-                  {" "}
-                  First-hand involvement in early-stage product and UX thinking
-                  and rapid prototyping
-                </li>
-                <li>
-                  {" "}
-                  Conducting and monitoring several strategic experiments,
-                  refining experiences based on resulting metrics and learnings
-                </li>
-                <li>
-                  {" "}
-                  Participating and incorporating learnings from real merchant
-                  interviews and research sessions
-                </li>
-                <li>
-                  {" "}
-                  Identifying gaps around the org-wide frontend infrastructure,
-                  drafting proposals and implementing solutions
-                </li>
-                <li>
-                  {" "}
-                  Mentoring engineers within and outside my team on best
-                  practices, performance and advanced patterns
-                </li>
-                <li>
-                  {" "}
-                  Providing guidance around product accessibility and
-                  inclusivity across the org
-                </li>
-                <li>
-                  {" "}
-                  Built an OAuth 2.0 compliant client-side library for our
-                  Identity provider across Shopify
-                </li>
-              </ul>
-              <p className={styles.outro}></p>
-            </li>
+            {experience.map((exp) => (
+              <li key={exp.id} className={styles.company}>
+                <header>
+                  <h4>
+                    {exp.company} <span>{exp.role}</span>
+                  </h4>
+                  <span className={styles.period}>{exp.period}</span>
+                </header>
+                <p>{exp.responsibility}</p>
+                <ul className={styles.points}>
+                  {exp.points.map((point) => (
+                    <li> {point}</li>
+                  ))}
+                </ul>
+                <p className={styles.outro}></p>
+              </li>
+            ))}
           </ul>
         </section>
-        <section className={styles.projects}></section>
+        <section className={styles.projects}>
+          <h3>Projects</h3>
+          <p>
+            Links to some of my work can be found on{" "}
+            <a href="https://kunle.dev/work">kunle.dev/work</a> and details can
+            be provided upon request.
+          </p>
+        </section>
+        <p className={styles.logo}>logo</p>
       </article>
       <div
         id="Announcer"

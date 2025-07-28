@@ -80,7 +80,8 @@
   line-height: 2.5;
 }
 
-.container .resumeOverview a:not(.metaLink) {
+.container .resumeOverview a:not(.metaLink),
+.container .projects a:not(.metaLink) {
   font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
   font-weight: 700;
@@ -297,6 +298,20 @@
   margin-top: 1em;
 }
 
+.container .projects {
+  margin-bottom: 14em;
+}
+
+.companies .projects p a {
+  margin: 0 0.2em;
+}
+
+.container .logo {
+  position: absolute;
+  width: 7em;
+  bottom: 2em;
+}
+
 /* Media Queries */
 
 @media (max-width: 790px) {
@@ -335,6 +350,10 @@
   .container .company .period {
     margin-left: auto;
     margin-right: 2em;
+  }
+
+  .container .logo {
+    left: 4em;
   }
 }
 
