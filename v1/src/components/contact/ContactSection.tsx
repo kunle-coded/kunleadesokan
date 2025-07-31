@@ -127,7 +127,7 @@ function ContactSection({ contactSectionRef, type }: ContactProps) {
               </div>
             </div>
             <div className={styles.sendButton}>
-              <Button label="Send" type="secondary" big />
+              <Button label="Send" big />
             </div>
           </form>
         </div>

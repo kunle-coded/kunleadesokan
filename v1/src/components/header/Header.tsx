@@ -1,5 +1,5 @@
 import useScrollDirection from "../../lib/hooks/useScrollDirection";
-import LinkButton from "../../ui/buttons/LinkButton";
+import LinkButtonCustom from "../../ui/buttons/LinkButtonCustom";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -37,7 +37,7 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <LinkButton label="Resume" link="/resume" />
+          <LinkButtonCustom />
         </div>
       </div>
     </header>

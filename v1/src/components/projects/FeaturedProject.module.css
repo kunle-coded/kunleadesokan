@@ -15,7 +15,8 @@
   -webkit-box-align: start;
   align-items: flex-start;
   margin: var(--margin-desktop-section-tablet);
-  background-color: var(--primary-black-dark);
+  /* background-color: var(--primary-black-dark); */
+  background-color: var(--surface-color);
 }
 
 .projectContainer {
@@ -35,7 +36,9 @@
 
 .projectHeader .projectLabel {
   flex: 1;
-  color: var(--secondary-capri);
+  /* color: var(--secondary-capri); */
+  color: var(--soft-sky-blue); /* NOTE Might change color later */
+  color: var(--text-muted);
   font-size: 0.75rem;
 }
 
@@ -53,7 +56,8 @@
   justify-content: flex-end;
   -webkit-box-align: center;
   align-items: center;
-  color: var(--primary-white-darkest);
+  /* color: var(--primary-white-darkest); */
+  color: var(--text-muted);
   font-family: "Geist Mono", "Fira Code", Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
   line-height: 1;
@@ -71,7 +75,8 @@
   -webkit-box-align: center;
   align-items: center;
   margin-left: 1.2rem;
-  color: var(--primary-white-darkest);
+  /* color: var(--primary-white-darkest); */
+  color: var(--text-muted);
 }
 
 .projectListItem .projectLink li:not(:first-child) {
@@ -117,15 +122,21 @@ svg:not(:root) {
   padding: 1rem 0rem 0rem;
   border-width: 1px 0px 0px 0px;
   border-style: solid;
-  border-color: var(--secondary-border);
+  /* border-color: var(--secondary-border); */
+  border-color: var(--border-lines);
 }
 
 .projectListItem .projectDetails {
   grid-area: 1 / 1 / -1 / 8;
   margin-top: 4rem;
   padding: 1.5rem;
-  background-color: var(--primary-white);
-  color: var(--primary-black);
+  /* background-color: var(--primary-white); */
+  background-color: var(--bg-color);
+  /* color: var(--primary-black); */
+  color: var(--text-primary);
+  border-width: 1px 1px 1px 0px;
+  border-style: solid;
+  border-color: var(--surface-color);
   z-index: 5;
 }
 
@@ -145,7 +156,8 @@ svg:not(:root) {
   font-size: 1.5rem;
   line-height: 1;
   font-weight: 600;
-  color: var(--primary-black-lighter);
+  /* color: var(--primary-black-lighter); */
+  color: var(--text-muted);
 }
 
 .projectName {
@@ -160,7 +172,8 @@ svg:not(:root) {
 .projectListItem .projectDescription {
   position: relative;
   font-size: 0.9rem;
-  color: var(--primary-black-lighter);
+  /* color: var(--primary-black-lighter); */
+  color: var(--text-muted);
   padding: 1.2rem 0rem 0rem;
   white-space: wrap;
 }
@@ -185,8 +198,8 @@ svg:not(:root) {
 }
 
 .projectListItem .projectImage .imageCover:hover {
-  background-color: var(--accent-neon-coral);
-  background-color: var(--secondary-capri);
+  /* background-color: var(--secondary-capri); */
+  background-color: var(--soft-sky-blue);
 }
 
 .projectListItem .projectImage .imageCover::before {
@@ -203,7 +216,8 @@ svg:not(:root) {
   z-index: 3;
 }
 .projectListItem .projectImage .imageCover:hover::before {
-  background-color: var(--primary-black);
+  /* background-color: var(--primary-black); */
+  background-color: var(--text-primary);
 }
 
 .projectImageWrapper {
@@ -289,7 +303,8 @@ svg,
 .paginationDots li button {
   width: 6px;
   height: 6px;
-  background-color: var(--primary-white-darkest);
+  /* background-color: var(--primary-white-darkest); */
+  background-color: var(--text-muted);
   opacity: 0.5;
   -webkit-transition: -webkit-transform 0.2s 100ms;
   -webkit-transition: transform 0.2s 100ms;
@@ -300,7 +315,8 @@ svg,
   -webkit-transform: scale(1.4);
   -ms-transform: scale(1.4);
   transform: scale(1.4);
-  background-color: var(--accent-neon-coral);
+  /* background-color: var(--accent-neon-coral); */
+  background-color: var(--deeper-coral);
   opacity: 1;
 }
 
@@ -311,7 +327,8 @@ svg,
   -webkit-box-align: center;
   align-items: center;
   gap: 8px;
-  color: var(--primary-white-darkest);
+  /* color: var(--primary-white-darkest); */
+  color: var(--text-muted);
   font-family: "Barlow", "Inter", Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
@@ -322,16 +339,19 @@ svg,
   margin: 0rem 0.25rem 0rem 0.7rem;
   height: 1px;
   border: none;
-  background-color: var(--primary-white-darkest);
+  /* background-color: var(--primary-white-darkest); */
+  background-color: var(--text-muted);
 }
 
 .slideButtons button {
   background-color: transparent;
-  color: var(--accent-neon-coral);
+  /* color: var(--accent-neon-coral); */
+  color: var(--deeper-coral);
 }
 
 .slideButtons button[data-inactive="true"] {
-  color: var(--primary-white-darkest);
+  /* color: var(--primary-white-darkest); */
+  color: var(--text-muted);
   opacity: 0.5;
   cursor: default;
 }
@@ -544,6 +564,7 @@ svg,
 
 @media (hover: hover) and (any-pointer: fine) {
   .projectListItem .projectLink a:hover {
-    color: var(--secondary-capri);
+    /* color: var(--secondary-capri); */
+    color: var(--soft-sky-blue);
   }
 }

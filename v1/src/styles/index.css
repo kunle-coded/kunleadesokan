@@ -92,6 +92,19 @@
   /* --nav-shadow: rgb(24, 46, 111, 0.7); */
   --nav-shadow: rgba(2, 12, 27, 0.7);
 
+  /* New light scheme */
+  --bg-color: #ffffff;
+  --surface-color: #f2f2f3;
+  --text-primary: #141821;
+  --text-muted: #6e6e73;
+  --soft-sky-blue: #3ea6ff;
+  --surface-sky-blue: #e6f4ff;
+  --deeper-coral: #ff7755;
+  --border-lines: #dcdcdc;
+  --btn-text: #ffffff;
+  --btn-bg: #141821;
+  /* --btn-: #ffffff; */
+
   /* Slates */
   --slate-dark: #495670;
   --slate: #8892b0;
@@ -116,8 +129,8 @@
   /* Padding */
   --global-padding: 3.6rem;
   --global-padding-inner: 6.6rem;
-  --section-padding: 8.5rem 6.6rem 5.5rem;
-  --section-padding-big: 8.5rem 8.1rem 5.5rem;
+  --section-padding: 8.5rem 6.6rem;
+  --section-padding-big: 8.5rem 8.1rem;
   --header-padding: 0 3.6rem;
 
   /* Margins */
@@ -135,9 +148,9 @@
 
   /* Mobile */
   /* Padding */
-  --section-padding-tablet: 4.5rem 3.6rem 2.5rem;
-  --section-padding-big-tablet: 4.5rem 4rem 2.5rem;
-  --section-padding-mobile: 3.5rem 2.1rem 1.5rem;
+  --section-padding-tablet: 4.5rem 3.6rem;
+  --section-padding-big-tablet: 4.5rem 4rem;
+  --section-padding-mobile: 3.5rem 2.1rem 2.5rem;
   --header-padding-mobile: 0 2.5rem;
 
   --global-padding-mobile: 2.5rem;
@@ -151,6 +164,18 @@
 
   /* Misc */
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.dark {
+  --bg-color: #0d1117;
+  --surface-color: #161b22;
+  --text-primary: #e6e6e6;
+  --text-muted: #a8b2d1;
+  --soft-sky-blue: #3ea6ff;
+  --deeper-coral: #ff6044;
+  --border-lines: #2c2f36;
+  --btn-text: #ffffff;
+  --btn-bg: #3ea6ff;
 }
 
 html {
@@ -167,10 +192,11 @@ body {
   line-height: 1.15;
   font-synthesis: none;
   overflow-x: hidden;
-  background-color: var(--primary-black);
-  color: var(--primary-white);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
   width: 100%;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 h1,
@@ -196,7 +222,8 @@ h1 {
 
 h1 span {
   margin-left: 0.5rem;
-  color: var(--secondary-capri);
+  /* color: var(--secondary-capri); */
+  color: var(--soft-sky-blue);
 }
 
 ul,

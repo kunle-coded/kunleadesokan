@@ -3,8 +3,8 @@
   position: relative;
   padding: var(--section-padding-mobile);
   padding-top: 2.5rem;
-  background-color: var(--primary-black);
-  /* color: var(--primary-black-lighter); */
+  /* background-color: var(--primary-black); */
+  /* background-color: rebeccapurple; */
   min-height: 1px;
   width: 100%;
 }
@@ -22,15 +22,13 @@
   width: 100%;
 }
 
-.gridColumn {
-}
-
 .headerContainer {
   padding: 2.5rem 0 3.5rem;
   height: 100%;
   border-width: 1px 0;
   border-style: solid;
-  border-color: var(--primary-border);
+  /* border-color: var(--primary-border); */
+  border-color: var(--border-lines);
 }
 
 .gridColumn h3 {
@@ -44,7 +42,8 @@
 .gridColumn p {
   margin-top: 2rem;
   margin-right: 6.5rem;
-  color: var(--primary-white-darker);
+  /* color: var(--primary-white-darker); */
+  color: var(--text-muted);
 }
 
 .gridColumn2 {
@@ -86,7 +85,7 @@
   left: 0;
   width: 10%;
   height: 1px;
-  background-color: var(--primary-border);
+  background-color: var(--border-lines);
 }
 
 .contentContainer .content:first-child .contentTitle::after {
@@ -102,7 +101,7 @@
 }
 
 .content > p {
-  color: var(--primary-white-darker);
+  color: var(--text-muted);
 }
 
 @media (min-width: 768px) {
@@ -162,9 +161,6 @@
 @media (min-width: 1024px) {
   .container {
     padding: var(--section-padding);
-  }
-
-  .gridColumn {
   }
 
   .headerContainer {

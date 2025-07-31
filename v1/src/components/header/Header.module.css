@@ -26,7 +26,8 @@
   font-weight: 600;
   -webkit-text-transform: uppercase;
   text-transform: uppercase;
-  color: var(--primary-white-darker);
+  /* color: var(--primary-white-darker); */
+  color: #a8b2d1;
 }
 
 .headerNav ul li {

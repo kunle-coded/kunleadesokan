@@ -2,22 +2,17 @@ import styles from "./Button.module.css";
 
 interface ButtonProps {
   label: string;
-  type?: "primary" | "secondary";
   big?: boolean;
 }
 
-function Button({ label, type, big }: ButtonProps) {
+function Button({ label, big }: ButtonProps) {
   return (
     <button
-      className={`${styles.buttonContainer} ${
-        type === "secondary" ? styles.buttonContainerSecondary : ""
-      } ${big ? styles.bigButtonContainer : ""}`}
+      className={`${styles.buttonContainer}  ${
+        big ? styles.bigButtonContainer : ""
+      }`}
     >
-      <div
-        className={`${styles.btnContent} ${
-          type === "secondary" ? styles.btnContentSecondary : ""
-        } ${big ? styles.bigButton : ""}`}
-      >
+      <div className={`${styles.btnContent}  ${big ? styles.bigButton : ""}`}>
         {label}
         <svg
           width="72"

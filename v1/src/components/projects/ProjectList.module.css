@@ -1,8 +1,10 @@
 .projectListSection {
   display: block;
   padding: var(--section-padding-mobile);
-  background-color: var(--primary-black);
-  color: var(--primary-white);
+  /* background-color: var(--primary-black);
+  background-color: var(--primary-black); */
+
+  color: var(--text-primary);
   width: 100%;
 }
 

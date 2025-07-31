@@ -1,15 +1,11 @@
-import styles from "./LinkButton.module.css";
+import styles from "./LinkButtonCustom.module.css";
 
-interface ButtonProps {
-  label: string;
-  link: string;
-}
-
-function LinkButton({ label, link }: ButtonProps) {
+// NOTE Might delete later - same style as LinkButton
+function LinkButtonCustom() {
   return (
-    <a href={link} className={styles.buttonContainer}>
+    <a href="/resume" className={styles.buttonContainer}>
       <div className={styles.btnContent}>
-        {label}
+        Resume
         <svg
           width="72"
           height="22"
@@ -30,4 +26,4 @@ function LinkButton({ label, link }: ButtonProps) {
   );
 }
 
-export default LinkButton;
+export default LinkButtonCustom;

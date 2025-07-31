@@ -3,6 +3,7 @@ import { Project } from "../../lib/types/types";
 import styles from "./FeaturedProject.module.css";
 import useReveal from "../../lib/hooks/useReveal";
 import LinkButton from "../../ui/buttons/LinkButton";
+import { transformUrl } from "../../lib/helpers/utils";
 
 interface FeaturedProjectProps {
   project: Project;
@@ -84,10 +85,7 @@ function FeaturedProject({ project }: FeaturedProjectProps) {
               <h2 className={styles.projectName}>{project.name}</h2>
               <LinkButton
                 label="Case Study"
-                link={`/work/${project.name
-                  .split(" ")
-                  .join("-")
-                  .toLowerCase()}`}
+                link={`/work/${transformUrl(project.name)}?id=${project.id}`}
               />
               <p className={styles.projectDescription}>{project.intent}</p>
             </div>

@@ -10,7 +10,7 @@
   min-width: 13.222em;
   min-width: 11.222em;
   background-color: transparent;
-  color: var(--primary-black);
+  color: var(--btn-text);
   overflow: hidden;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -18,10 +18,6 @@
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-}
-
-.buttonContainerSecondary {
-  color: var(--secondary-capri);
 }
 
 .btnContent {
@@ -34,13 +30,9 @@
   padding: 1em 2em;
   width: 100%;
   min-height: 3.2em;
-  color: var(--primary-black);
+  color: var(--btn-bg);
   border: 1px solid currentColor;
   z-index: 1;
-}
-
-.btnContentSecondary {
-  color: var(--secondary-capri);
 }
 
 .buttonContainer .btnContent::before {
@@ -67,24 +59,13 @@
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
-  background-color: var(--primary-black);
-}
-
-.buttonContainerSecondary:hover .btnContentSecondary::before,
-.buttonContainerSecondary:focus .btnContentSecondary::before {
-  background-color: var(--secondary-capri);
+  background-color: var(--btn-bg);
 }
 
 .buttonContainer:hover .btnContent,
 .buttonContainer:focus .btnContent {
-  color: var(--primary-white);
-  border-color: var(--primary-black);
-}
-
-.buttonContainerSecondary:hover .btnContentSecondary,
-.buttonContainerSecondary:focus .btnContentSecondary {
-  color: var(--primary-black);
-  border-color: var(--secondary-capri);
+  color: var(--btn-text);
+  border-color: var(--btn-bg);
 }
 
 .bowArrow {

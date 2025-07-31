@@ -1,8 +1,10 @@
 .contactSection {
   display: block;
   padding: 4.5rem 0rem 0rem;
-  background-color: var(--primary-black);
-  color: var(--primary-white);
+  /* background-color: var(--primary-black); */
+  background-color: var(--surface-color);
+  /* color: var(--primary-white); */
+  color: var(--text-primary);
   width: 100%;
 }
 
@@ -54,7 +56,8 @@
   align-items: flex-end;
   height: 100%;
   font-size: 1rem;
-  color: var(--primary-white-darker);
+  /* color: var(--primary-white-darker); */
+  color: var(--text-muted);
 }
 
 .contactBottom {
@@ -67,7 +70,8 @@
   margin-top: 3.5rem;
   padding: 4.5rem 5.5rem 5.5rem;
   background-color: transparent;
-  background-color: var(--primary-black-dark);
+  /* background-color: var(--primary-black-dark); */
+  background-color: var(--bg-color);
 }
 
 .contactSection .contactBottom form {
@@ -112,7 +116,8 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  color: var(--secondary-capri);
+  /* color: var(--secondary-capri); */
+  color: var(--soft-sky-blue);
   padding: 1px;
   border-radius: 100px;
   border: 1px solid currentColor;
@@ -143,19 +148,22 @@
   flex-direction: column;
   width: 100%;
   position: relative;
-  /* color: var(--primary-black-lightest); */
-  color: var(--primary-white-darkest);
+  /* color: var(--primary-white-darkest); */
+  color: var(--text-muted);
+  opacity: 0.5;
 }
 
 .formRow .inputGroup.focused {
-  color: var(--primary-white);
-  color: var(--secondary-capri);
+  /* color: var(--secondary-capri); */
+  color: var(--soft-sky-blue);
+  opacity: 1;
 }
 
 .contactBottom form textarea {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-black-light) var(--primary-black-dark);
+  scrollbar-color: var(--border-lines) var(--surface-color);
 }
+
 .contactBottom form textarea::-webkit-scrollbar {
   width: 12px;
   cursor: grabbing;

@@ -1,7 +1,8 @@
 import { RefObject, useRef } from "react";
-import styles from "./AboutSection.module.css";
+import styles from "./AboutSectionLegacy.module.css";
 import useReveal from "../../lib/hooks/useReveal";
 
+// NOTE To delete later
 interface AboutProps {
   aboutSectionRef: RefObject<HTMLDivElement | null>;
 }

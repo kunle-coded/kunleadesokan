@@ -1,15 +1,16 @@
 .skillSection {
   display: block;
   padding: var(--section-padding-mobile);
-  background-color: var(--primary-black);
+  /* background-color: var(--primary-black); */
+  background-color: var(--surface-color);
   width: 100%;
 }
 
 .skllSctnWrppr {
   display: flex;
   padding: 2.25rem;
-  background-color: var(--primary-black-light);
-  background-color: rgb(40, 48, 59, 0.4);
+  /* background-color: rgb(40, 48, 59, 0.4); */
+  background-color: var(--bg-color);
   /* min-height: 100%; */
   overflow: hidden;
 }
@@ -42,35 +43,39 @@
 }
 
 .xMandatoryScrolling::-webkit-scrollbar-thumb {
-  background-color: var(--primary-black-lighter);
-  border: 3px solid var(--primary-black);
+  /* background-color: var(--primary-black-lighter); */
+  background-color: var(--bg-color);
+  border: 3px solid var(--border-lines);
   border-radius: 10px;
 }
 
 .xMandatoryScrolling::-webkit-scrollbar-track {
   border-radius: 10px;
-  background: var(--primary-black);
+  background: var(--surface-color);
 }
 
 .tabs .skillsTablist button {
   flex: none;
   white-space: nowrap;
   margin-bottom: 0.5rem;
-  color: var(--primary-white-darkest);
+  /* color: var(--primary-white-darkest); */
+  color: var(--text-muted);
   background-color: transparent;
   scroll-snap-align: center;
   text-align: center;
 }
 
 .tabs .skillsTablist button[tabIndex="0"] {
-  color: var(--primary-white);
+  color: var(--text-muted);
 }
+
 .tabs .skillsTablist button[tabIndex="0"]:focus {
   outline: none;
 }
 
 .tabs .skillsTablist button[tabIndex="-1"]:hover {
-  color: var(--primary-white);
+  /* color: var(--primary-white); */
+  color: var(--text-muted);
 }
 .tabs .skillsTablist button[tabIndex="0"]::after {
   content: "";
@@ -117,7 +122,9 @@
   -webkit-box-pack: center;
   width: 1px;
   height: 100%;
-  background-color: rgb(0, 191, 255, 0.3);
+  /* background-color: rgb(0, 191, 255, 0.3); */
+  background-color: var(--soft-sky-blue);
+  opacity: 0.3;
 }
 
 .skllTmLnePoint {
@@ -127,7 +134,7 @@
   width: 10px;
   height: 10px;
   border-radius: 100px;
-  background-color: var(--secondary-capri);
+  background-color: var(--soft-sky-blue);
   opacity: 0;
   transition: top 950ms ease, opacity 150ms ease;
 }
@@ -177,7 +184,8 @@
 .skillsHeading {
   display: block;
   width: 100%;
-  color: var(--primary-white);
+  /* color: var(--primary-white); */
+  color: var(--text-primary);
 }
 
 .skllSctnTbsCntnr {
@@ -197,16 +205,18 @@
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   color: var(--primary-white-darkest);
+  color: var(--text-muted);
   width: max-content;
   transition: all 250ms linear;
 }
 
 .skllTbsItm:hover {
-  color: var(--primary-white);
+  /* color: var(--primary-white); */
 }
 
 .activeTab {
-  color: var(--primary-white);
+  /* color: var(--primary-white); */
+  color: var(--text-muted);
 }
 
 .skllTbsItm button {
@@ -314,7 +324,8 @@
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
-  color: var(--primary-white);
+  /* color: var(--primary-white); */
+  color: var(--text-primary);
 }
 
 .skllsDtlsDesc p {
@@ -323,14 +334,15 @@
   line-height: 1.4;
   letter-spacing: 0;
   margin-top: 1.5rem;
-  color: var(--primary-white-darker);
+  /* color: var(--primary-white-darker); */
+  color: var(--text-muted);
 }
 
 .skllsDtlsDescInfo {
   padding-top: 1rem;
   border-width: 1px 0px 0px 0px;
   border-style: solid;
-  border-color: var(--primary-border);
+  border-color: var(--border-lines);
 }
 
 .skllsDtlsDescInfo:first-child {
@@ -343,7 +355,8 @@
   line-height: 1;
   letter-spacing: 0;
   text-transform: uppercase;
-  color: var(--primary-white-dark);
+  /* color: var(--primary-white-dark); */
+  color: var(--text-primary);
 }
 
 .skllsDtlsDescInfo p {
@@ -351,14 +364,16 @@
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0;
-  color: var(--primary-white-darker);
+  /* color: var(--primary-white-darker); */
+  color: var(--text-muted);
   margin-top: 0.625rem;
 }
 
 .skllsDtlsDescInfo p span {
   font-weight: 600;
   letter-spacing: 0;
-  color: var(--primary-white-dark);
+  /* color: var(--primary-white-dark); */
+  color: var(--text-muted);
 }
 
 /* Skills shapes */
@@ -390,7 +405,6 @@
   opacity: 0;
   transform: translate(10rem, 20rem);
   transition: transform 999ms ease, opacity 5ms ease;
-  
 }
 
 .skllsShpsCntnr {

@@ -479,11 +479,7 @@ function SkillsSection({ skillsSectionRef }: SkillsProps) {
                     </li>
                   </ul>
                   <div className={styles.skllSctnCta}>
-                    <LinkButton
-                      label="My Resume"
-                      link="/resume"
-                      type="secondary"
-                    />
+                    <LinkButton label="My Resume" link="/resume" />
                   </div>
                 </div>
               </div>

@@ -3,6 +3,9 @@ import { resume } from "../../lib/store/data";
 
 function ResumePage() {
   const experience = resume.experience;
+  const techSkills = resume.techSkills;
+  const otherSkills = resume.otherSkills;
+
   return (
     <main id="resume" className={styles.container}>
       <aside className={styles.meta}>
@@ -81,43 +84,19 @@ function ResumePage() {
         <section>
           <h3>Core Technologies:</h3>
           <ul>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>CSS-in-JS</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>GraphQL</li>
-            <li>MongoDB</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>React Native</li>
-            <li>Solidity</li>
-            <li>MySQL</li>
-            <li>Docker</li>
-            <li>Spring</li>
-            <li>Git/GitHub</li>
+            {techSkills.map((skill, i) => (
+              <li key={i}>{skill}</li>
+            ))}
           </ul>
         </section>
         <section>
           <h3>Others:</h3>
           <ul>
-            <li>Design Systems</li>
-            <li>Web3</li>
-            <li>E2E Testing</li>
-            <li>Performance Optimization</li>
-            <li>Software Testing</li>
-            <li>SE Optimization</li>
-            <li>Build Automation</li>
-            <li>Responsive Web Design</li>
-            <li>UI/UX Design</li>
-            <li>Cloud Computing</li>
-            <li>Software Versioning</li>
-            <li>Market Research</li>
+            {otherSkills.map((skill, i) => (
+              <li key={i}>{skill}</li>
+            ))}
           </ul>
         </section>
-        {/* <div className={styles.resumeOvervi}></div>
-        <div className={styles.resumeOvervi}></div> */}
       </div>
       <article>
         <header className={styles.profileSummary}>
@@ -150,8 +129,8 @@ function ResumePage() {
                 </header>
                 <p>{exp.responsibility}</p>
                 <ul className={styles.points}>
-                  {exp.points.map((point) => (
-                    <li> {point}</li>
+                  {exp.points.map((point, i) => (
+                    <li key={i}> {point}</li>
                   ))}
                 </ul>
                 <p className={styles.outro}></p>

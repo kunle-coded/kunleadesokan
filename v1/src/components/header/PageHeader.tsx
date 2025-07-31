@@ -79,7 +79,7 @@ function PageHeader() {
             </li>
           </ol>
           <div className={styles.hdrBtnWrapper}>
-            <LinkButton label="Resume" link="/resume" type="secondary" />
+            <LinkButton label="Resume" link="/resume" />
           </div>
         </div>
         <div className={styles.hdrMenuMobile}>

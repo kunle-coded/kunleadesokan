@@ -1,6 +1,6 @@
 .buttonContainer {
-  font-family: "Geist", "Inter", Arial, Helvetica, sans-serif;
-  font-size: 0.8em;
+  font-family: "Geist", "Barlow", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
   font-weight: bold;
   letter-spacing: 0.1em;
   -webkit-text-transform: uppercase;
@@ -8,8 +8,9 @@
   position: relative;
   display: inline-flex;
   min-width: 13.222em;
+  min-width: 11.222em;
   background-color: transparent;
-  color: var(--btn-text);
+  color: #141821;
   overflow: hidden;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -19,10 +20,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.bigButtonContainer {
-  min-width: 18.222em;
-}
-
 .btnContent {
   position: relative;
   display: flex;
@@ -30,16 +27,12 @@
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  padding: 1em 2.5em;
+  padding: 1em 2em;
   width: 100%;
-  min-height: 2em;
-  color: var(--btn-bg);
+  min-height: 3.2em;
+  color: #141821;
   border: 1px solid currentColor;
   z-index: 1;
-}
-
-.bigButton {
-  padding: 1em 2.3em;
 }
 
 .buttonContainer .btnContent::before {
@@ -66,28 +59,33 @@
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
-  background-color: var(--btn-bg);
+  background-color: #141821;
 }
 
 .buttonContainer:hover .btnContent,
 .buttonContainer:focus .btnContent {
-  color: var(--btn-text);
-  border-color: var(--btn-bg);
+  color: #ffffff;
+  border-color: #141821;
 }
 
 .bowArrow {
-  width: 3.1em;
-  height: 1.7em;
-  margin-left: 1.55em;
+  width: 3.2em;
+  height: 1.3em;
+  margin-left: 1em;
 }
 
 @media (min-width: 768px) {
-  .bigButtonContainer {
-    min-width: 23.222em;
+  .buttonContainer {
+    min-width: 13.222em;
   }
 
   .btnContent {
-    min-height: 4.2em;
     padding: 1em 3em;
+  }
+
+  .bowArrow {
+    width: 3.1em;
+    height: 1.7em;
+    margin-left: 1.55em;
   }
 }

@@ -19,7 +19,8 @@
   font-size: 1rem;
   line-height: 1.2;
   font-weight: normal;
-  color: var(--secondary-capri);
+  /* color: var(--secondary-capri); */
+  color: var(--soft-sky-blue);
   margin-top: 1rem;
 }
 

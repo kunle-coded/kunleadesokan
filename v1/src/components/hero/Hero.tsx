@@ -8,6 +8,7 @@ interface HeroProps {
   indicators: Indicator;
 }
 
+
 function Hero({ heroRef, activeIndex, indicators }: HeroProps) {
   return (
     <section ref={heroRef} data-section="eins" className={styles.heroSection}>
