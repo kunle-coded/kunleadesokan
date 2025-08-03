@@ -23,12 +23,12 @@
   font-size: 0.875em;
   font-weight: 500;
   margin-bottom: 0.3em;
-  color: var(--primary-white-dark);
+  color: var(--text-muted);
 }
 
 .details .desc {
   font-size: 0.75em;
-  color: var(--primary-white-darker);
+  color: var(--text-primary);
 }
 
 .period {
@@ -36,7 +36,9 @@
   padding: 0.3rem 0.5rem;
   border-radius: 4px;
   background-color: var(--primary-black-dark);
+  background-color: var(--bg-color);
   color: var(--primary-white-darker);
+  color: var(--text-muted);
 }
 
 .period p {

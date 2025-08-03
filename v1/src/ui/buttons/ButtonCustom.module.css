@@ -1,0 +1,93 @@
+.buttonContainer {
+  font-family: "Geist", "Inter", Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-flex;
+  min-width: 13.222em;
+  background-color: transparent;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bigButtonContainer {
+  min-width: 18.222em;
+}
+
+.btnContent {
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 1em 2.5em;
+  width: 100%;
+  min-height: 2em;
+  color: #141821;
+  border: 1px solid currentColor;
+  z-index: 1;
+}
+
+.bigButton {
+  padding: 1em 2.3em;
+}
+
+.buttonContainer .btnContent::before {
+  content: "";
+  width: 101%;
+  height: 108%;
+  position: absolute;
+  top: -0.1em;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: -1;
+}
+
+.buttonContainer:hover .btnContent::before,
+.buttonContainer:focus .btnContent::before {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  background-color: #141821;
+}
+
+.buttonContainer:hover .btnContent,
+.buttonContainer:focus .btnContent {
+  color: #ffffff;
+  border-color: #141821;
+}
+
+.bowArrow {
+  width: 3.1em;
+  height: 1.7em;
+  margin-left: 1.55em;
+}
+
+@media (min-width: 768px) {
+  .bigButtonContainer {
+    min-width: 23.222em;
+  }
+
+  .btnContent {
+    min-height: 4.2em;
+    padding: 1em 3em;
+  }
+}

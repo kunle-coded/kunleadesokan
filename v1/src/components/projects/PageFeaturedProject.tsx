@@ -2,8 +2,8 @@ import { useRef } from "react";
 import styles from "./PageFeaturedProject.module.css";
 import useReveal from "../../lib/hooks/useReveal";
 import { Project } from "../../lib/types/types";
-import Button from "../../ui/buttons/Button";
 import { transformUrl } from "../../lib/helpers/utils";
+import ButtonCustom from "../../ui/buttons/ButtonCustom";
 
 interface ProjectProps {
   project: Project;
@@ -83,7 +83,7 @@ function PageFeaturedProject({ project }: ProjectProps) {
               </div>
               <div className={styles.projectLinkWrapper}>
                 <div className={styles.linkBtnContainer}>
-                  <Button label="Case Study" />
+                  <ButtonCustom label="Case Study" />
                 </div>
               </div>
             </a>

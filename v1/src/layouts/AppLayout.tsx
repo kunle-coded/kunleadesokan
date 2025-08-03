@@ -1,12 +1,15 @@
 import { Outlet } from "react-router";
 import Footer from "../components/footer/Footer";
 import PageHeader from "../components/header/PageHeader";
+import React, { useRef } from "react";
 
 function AppLayout() {
+  const mainRef = useRef<HTMLElement | null>(null);
+
   return (
     <div className="app">
-      <PageHeader />
-      <main>
+      <PageHeader contentRef={mainRef} />
+      <main ref={mainRef} id="content">
         <Outlet />
         <div
           id="Announcer"

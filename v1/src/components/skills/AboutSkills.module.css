@@ -2,7 +2,7 @@
   display: block;
   padding: var(--section-padding-mobile);
   padding-top: 2.5rem;
-  background-color: var(--primary-black-dark);
+  background-color: var(--surface-color);
   min-height: 1px;
   width: 100%;
 }
@@ -10,7 +10,7 @@
 .colmnsWrapper {
   display: flex;
   flex-direction: column;
-  background-color: rgb(40, 48, 59, 0.4);
+  background-color: var(--bg-color);
   overflow: hidden;
 }
 
@@ -32,7 +32,7 @@
 
 .leftCol {
   padding: 2rem 0 1.5rem;
-  border-bottom: 1px solid var(--primary-border);
+  border-bottom: 1px solid var(--border-lines);
 }
 .rightCol {
   padding: 1.5rem 0 2rem;
@@ -40,20 +40,20 @@
 
 .leftCol h1,
 .rightCol h1 {
-  color: var(--secondary-capri);
+  color: var(--soft-sky-blue);
 }
 
 .leftCol p,
 .rightCol p {
   font-size: 1rem;
   line-height: 1.4;
-  color: var(--primary-white-dark);
+  color: var(--text-muted);
   margin-top: 1rem;
 }
 
 .leftShapeContainer,
 .rightShapeContainer {
-  display: flex;
+  display: none;
   width: 100%;
   overflow: hidden;
 }
@@ -70,7 +70,7 @@
 
 .leftShape,
 .rightShape {
-  display: none;
+  display: block;
   position: relative;
   width: 100px;
   height: 100px;
@@ -102,9 +102,9 @@
     justify-content: flex-end;
   }
 
-  .leftShape,
-  .rightShape {
-    display: block;
+  .leftShapeContainer,
+  .rightShapeContainer {
+    display: flex;
   }
 }
 

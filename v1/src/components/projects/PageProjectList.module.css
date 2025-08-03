@@ -1,7 +1,7 @@
 .container {
   display: block;
   padding: var(--section-padding-mobile);
-  background-color: var(--primary-black);
+  background-color: var(--bg-color);
   width: 100%;
 }
 

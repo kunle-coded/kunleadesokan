@@ -1,3 +1,4 @@
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router";
 import useScrollDirection from "../../lib/hooks/useScrollDirection";
 import { useIsMobile } from "../../lib/hooks/useIsMobile";
@@ -5,15 +6,46 @@ import { useIsMobile } from "../../lib/hooks/useIsMobile";
 import LinkButton from "../../ui/buttons/LinkButton";
 import styles from "./PageHeader.module.css";
 
-function PageHeader() {
+interface PageHeaderProps {
+  contentRef: React.RefObject<HTMLElement | null>;
+}
+
+function PageHeader({ contentRef }: PageHeaderProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isScrolling, isScrollDown } = useScrollDirection();
   const isMobile = useIsMobile();
   const location = useLocation();
   const pathName = location.pathname;
   const isHome = location.pathname === "/";
 
+  const bodyRef = useRef(document.body);
+
   // const shouldShowHeader = !isHome || isMobile || (isHome && isScrolling);
   // const shouldShowHeader = !isHome || (isHome && (isMobile || isScrolling));
+
+  function handleMobileMenu() {
+    setIsMenuOpen((prevState) => !prevState);
+  }
+
+  useEffect(() => {
+    const handleBody = () => {
+      document.querySelector("body")?.classList.remove("blur");
+      setIsMenuOpen(false);
+    };
+
+    const contentRefCopy = contentRef.current;
+
+    if (isMenuOpen) {
+      bodyRef.current.classList.add("blur");
+      contentRefCopy?.addEventListener("click", handleBody);
+    } else {
+      bodyRef.current.classList.remove("blur");
+    }
+
+    return () => {
+      contentRefCopy?.removeEventListener("click", handleBody);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header
@@ -46,7 +78,7 @@ function PageHeader() {
                 className="nav-link"
                 aria-selected={pathName === "/about"}
               >
-                About Me
+                About
               </a>
             </li>
             <li>
@@ -84,13 +116,75 @@ function PageHeader() {
         </div>
         <div className={styles.hdrMenuMobile}>
           <div>
-            <button aria-label="Menu" className={styles.hamburgerMenuBtn}>
+            <button
+              aria-label="Menu"
+              className={`${styles.hamburgerMenuBtn} ${
+                isMenuOpen ? styles.showMenu : ""
+              }`}
+              onClick={handleMobileMenu}
+            >
               <div className={styles.hamBox}>
                 <div className={styles.hamBoxInner}></div>
               </div>
               <div className={styles.hamburgerB}></div>
             </button>
-            <aside aria-hidden="true"></aside>
+            <aside
+              aria-hidden={isMenuOpen}
+              className={`${styles.menuDropdown} ${
+                isMenuOpen ? styles.showDropdown : ""
+              }`}
+            >
+              <nav>
+                <ol>
+                  {pathName !== "/" && (
+                    <li>
+                      <a href="/" className="" aria-selected="false">
+                        Home
+                      </a>
+                    </li>
+                  )}
+                  <li>
+                    <a
+                      href="/about"
+                      className=""
+                      aria-selected={pathName === "/about"}
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/work"
+                      className=""
+                      aria-selected={pathName === "/work"}
+                    >
+                      Work
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes"
+                      className=""
+                      aria-selected={pathName === "/notes"}
+                    >
+                      Notes
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/contact"
+                      className=""
+                      aria-selected={pathName === "/contact"}
+                    >
+                      Contact
+                    </a>
+                  </li>
+                </ol>
+                <div className={styles.menuCta}>
+                  <LinkButton label="Resume" link="/resume" />
+                </div>
+              </nav>
+            </aside>
           </div>
         </div>
       </nav>

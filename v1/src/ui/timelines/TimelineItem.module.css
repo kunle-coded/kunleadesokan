@@ -30,7 +30,7 @@
   width: 100px;
   height: 100px;
   background-color: transparent;
-  border: 1px solid var(--secondary-capri);
+  border: 1px solid var(--soft-sky-blue);
   border-radius: 1000px;
   transition: all 150ms ease;
 }
@@ -39,7 +39,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: var(--accent-neon-coral);
+  background-color: var(--deeper-coral);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: all 350ms ease;

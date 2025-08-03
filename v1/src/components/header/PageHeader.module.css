@@ -9,8 +9,8 @@
   width: 100%;
   height: var(--nav-height);
   padding: var(--header-padding-mobile);
-  background-color: var(--backdrop-bg);
-  backdrop-filter: blur(10px);
+  background-color: var(--bg-nav);
+  backdrop-filter: blur(8px);
   filter: none;
   pointer-events: auto;
   user-select: auto;
@@ -55,7 +55,7 @@
 }
 
 .hdrMenu ol li a {
-  color: var(--primary-white);
+  color: var(--text-primary);
 }
 
 .hdrBtnWrapper {
@@ -74,8 +74,8 @@
   align-items: center;
   position: relative;
   margin-right: -15px;
-  margin-right: -2.5rem;
-  padding: 2.5rem;
+  padding: 15px;
+  border: 0px;
   background-color: transparent;
   color: inherit;
   text-transform: none;
@@ -97,6 +97,141 @@
   top: 50%;
   right: 0px;
   width: var(--hamburger-width);
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--soft-sky-blue);
+  transition-duration: 0.22s;
+  transition-property: transform;
+  transition-delay: 0s;
+  transform: rotate(0deg);
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerMenuBtn .hamBoxInner::before,
+.hamburgerMenuBtn .hamBoxInner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: auto;
+  right: 0px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: var(--soft-sky-blue);
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform;
+}
+
+.hamburgerMenuBtn .hamBoxInner::before {
+  width: 120%;
+  top: -10px;
+  opacity: 1;
+  transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+}
+
+.hamburgerMenuBtn .hamBoxInner::after {
+  width: 80%;
+  bottom: -10px;
+  transform: rotate(0deg);
+  transition: bottom 0.1s ease-in 0.25s,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.showMenu .hamBoxInner::before {
+  width: 100%;
+  top: 0px;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+}
+
+.showMenu .hamBoxInner::after {
+  width: 100%;
+  bottom: 0px;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out,
+    transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+}
+
+.showMenu .hamBoxInner {
+  transform: rotate(225deg);
+}
+
+.menuDropdown {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  padding: 50px 10px;
+  width: min(75vw, 400px);
+  height: 100vh;
+  outline: 0px;
+  background-color: var(--bg-color);
+  box-shadow: -10px 0px 30px -15px var(--nav-shadow);
+  transform: translateX(100vw);
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: 9;
+}
+
+.showDropdown {
+  transform: translateX(0vw);
+  visibility: visible;
+}
+
+.menuDropdown nav {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.menuDropdown ol {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  width: 100%;
+}
+
+.menuDropdown ol li {
+  position: relative;
+  margin: 0px auto 10px;
+  font-size: clamp(14px, 4vw, 18px);
+}
+
+.menuDropdown ol a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  width: 100%;
+  padding: 3px 20px 20px;
+  transition: var(--transition);
+}
+
+.menuDropdown .resumeLink {
+  color: var(--soft-sky-blue);
+  background-color: transparent;
+}
+
+.menuDropdown .menuCta {
+  margin: 10% auto 0px;
+}
+
+@media (min-width: 600px) {
+  .menuDropdown ol li {
+    margin: 0px auto 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -111,6 +246,10 @@
   .hdrMenuMobile {
     display: none;
   }
+
+  .menuDropdown {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -123,7 +262,7 @@
   .showHeader {
     height: var(--nav-scroll-height);
     transform: translateY(0px);
-    background-color: rgba(10, 25, 47, 0.85);
+    background-color: var(--bg-nav-sticky);
     box-shadow: 0 10px 30px -10px var(--nav-shadow);
   }
 }

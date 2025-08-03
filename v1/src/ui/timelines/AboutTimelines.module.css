@@ -2,7 +2,7 @@
   display: block;
   padding: var(--section-padding-mobile);
   padding-top: 2.5rem;
-  background-color: var(--primary-black-dark);
+  background-color: var(--bg-color);
   min-height: 1px;
   width: 100%;
 }

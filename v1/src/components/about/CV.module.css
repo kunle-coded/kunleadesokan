@@ -3,7 +3,7 @@
   padding: var(--section-padding-mobile);
   padding-top: 2.5rem;
   padding-bottom: 4.5rem;
-  background-color: var(--primary-black-dark);
+  background-color: var(--bg-color);
   min-height: 1px;
   width: 100%;
 }
@@ -29,7 +29,7 @@
   width: 100%;
   padding: 1.5rem 1rem;
   border-radius: 6px;
-  background-color: rgb(40, 48, 59, 0.4);
+  background-color: var(--surface-color);
 }
 
 .eduExpContainer .eduExp header {
@@ -39,21 +39,25 @@
   -webkit-box-align: center;
   align-items: center;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--primary-border);
-  color: var(--secondary-capri);
+  border-bottom: 1px solid var(--border-lines);
+  color: var(--soft-sky-blue);
 }
 
 .eduExpContainer .eduExp header span {
   padding: 0.5rem;
   margin-right: 1.2rem;
   border-radius: 100%;
-  background-color: var(--secondary-capri);
+  background-color: var(--soft-sky-blue);
 }
 
 .eduExp .eduIcon {
   position: relative;
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.eduExp .eduIcon > svg > path {
+  fill: var(--bg-color);
 }
 
 .eduExpContainer .eduExp header h3 {

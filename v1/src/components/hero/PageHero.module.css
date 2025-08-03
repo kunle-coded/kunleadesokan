@@ -1,6 +1,7 @@
 .heroContainer {
   display: block;
-  background-color: var(--primary-black-dark);
+  /* background-color: var(--primary-black-dark); */
+  background-color: var(--surface-color);
   width: 100%;
   padding: 1.5rem 2.5rem;
   position: relative;
@@ -13,7 +14,7 @@
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  margin-top: calc(var(--header-height) - 5rem);
+  margin-top: calc(var(--header-height) - 3rem);
   padding-bottom: 3.5rem;
   transition: margin 150ms ease;
 }

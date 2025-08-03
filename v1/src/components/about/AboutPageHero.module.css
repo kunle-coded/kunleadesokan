@@ -3,7 +3,7 @@
   padding: var(--section-padding-mobile);
   padding-top: 2.5rem;
   padding-top: 0;
-  background-color: var(--primary-black-dark);
+  background-color: var(--bg-color);
   min-height: 1px;
   width: 100%;
 }
@@ -38,17 +38,40 @@
   width: 100%;
   padding: 18px;
   background-color: var(--secondary-capri-darker);
+  background-color: #3ea6ff;
+  background-color: #1e6ba8;
   font-size: var(--h2);
   font-size: 4vw;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.2;
   text-transform: uppercase;
-  color: var(--primary-white);
+  color: #ffffff;
   z-index: 10;
 }
 
 .textContainer p span {
-  color: var(--secondary-capri);
+  position: relative;
+  /* color: var(--deeper-coral); */
+  /* font-family: "Geist Mono", "Barlow", Arial, Helvetica, sans-serif; */
+  font-weight: 700;
+  line-height: 1.45;
+  padding: 0 0.5rem;
+  background-color: var(--bg-color);
+  color: var(--deeper-coral);
+  color: var(--soft-sky-blue);
+  color: #1e6ba8;
+  z-index: 2;
+}
+
+.textContainer p span::after {
+  /* content: "";
+  width: 100%;
+  height: 0.2em;
+  position: absolute;
+  left: 0;
+  bottom: 13px;
+  background-color: var(--deeper-coral);
+  z-index: -1; */
 }
 
 .textContainer p br {

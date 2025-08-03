@@ -90,7 +90,7 @@
   /* --backdrop-bg: rgb(20, 24, 33, 0.85); */
   --backdrop-bg: rgb(14, 16, 24, 0.85);
   /* --nav-shadow: rgb(24, 46, 111, 0.7); */
-  --nav-shadow: rgba(2, 12, 27, 0.7);
+  /* --nav-shadow: rgba(2, 12, 27, 0.7); */
 
   /* New light scheme */
   --bg-color: #ffffff;
@@ -103,7 +103,9 @@
   --border-lines: #dcdcdc;
   --btn-text: #ffffff;
   --btn-bg: #141821;
-  /* --btn-: #ffffff; */
+  --bg-nav: rgb(255, 255, 255, 0.75);
+  --nav-shadow: rgba(0, 0, 0, 0.05);
+  --bg-nav-sticky: rgba(255, 255, 255, 0.75);
 
   /* Slates */
   --slate-dark: #495670;
@@ -140,7 +142,7 @@
 
   /* Heights */
   --header-height: 11.12em;
-  --nav-height: 6.25em;
+  --nav-height: 5.5em;
   --nav-scroll-height: 4.375rem;
 
   /* Widths */
@@ -151,7 +153,7 @@
   --section-padding-tablet: 4.5rem 3.6rem;
   --section-padding-big-tablet: 4.5rem 4rem;
   --section-padding-mobile: 3.5rem 2.1rem 2.5rem;
-  --header-padding-mobile: 0 2.5rem;
+  --header-padding-mobile: 0 2.1rem;
 
   --global-padding-mobile: 2.5rem;
 
@@ -176,6 +178,9 @@
   --border-lines: #2c2f36;
   --btn-text: #ffffff;
   --btn-bg: #3ea6ff;
+  --bg-nav: rgb(13, 17, 23, 0.9);
+  --nav-shadow: rgba(10, 48, 73, 0.7);
+  --bg-nav-sticky: rgba(10, 20, 30, 0.85);
 }
 
 html {
@@ -197,6 +202,17 @@ body {
   width: 100%;
   transition: color 0.3s ease, background-color 0.3s ease,
     border-color 0.3s ease;
+}
+
+body.blur #content > * {
+  filter: blur(5px) brightness(0.7);
+  transition: var(--transition);
+  pointer-events: none;
+  user-select: none;
+}
+
+body.blur {
+  overflow: hidden;
 }
 
 h1,

@@ -3,7 +3,7 @@
   position: relative;
   padding: var(--section-padding-mobile);
   padding-top: 2.5rem;
-  background-color: var(--primary-black-dark);
+  background-color: var(--bg-color);
   min-height: 1px;
   width: 100%;
 }
@@ -26,7 +26,7 @@
 .col p {
   font-size: 1rem;
   line-height: 1.4;
-  color: var(--primary-white-dark);
+  color: var(--text-muted);
 }
 
 .colWrapper .col:first-child p:first-child {
@@ -34,7 +34,7 @@
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  color: var(--primary-white);
+  color: var(--text-primary);
 }
 
 @media (min-width: 580px) {

@@ -44,7 +44,7 @@
 
 .xMandatoryScrolling::-webkit-scrollbar-thumb {
   /* background-color: var(--primary-black-lighter); */
-  background-color: var(--bg-color);
+  background-color: var(--text-muted);
   border: 3px solid var(--border-lines);
   border-radius: 10px;
 }
