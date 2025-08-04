@@ -99,7 +99,7 @@
   width: var(--hamburger-width);
   height: 2px;
   border-radius: 4px;
-  background-color: var(--soft-sky-blue);
+  background-color: var(--btn-bg);
   transition-duration: 0.22s;
   transition-property: transform;
   transition-delay: 0s;
@@ -116,7 +116,7 @@
   right: 0px;
   height: 2px;
   border-radius: 4px;
-  background-color: var(--soft-sky-blue);
+  background-color: var(--btn-bg);
   transition-timing-function: ease;
   transition-duration: 0.15s;
   transition-property: transform;

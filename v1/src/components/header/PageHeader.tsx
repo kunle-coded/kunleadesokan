@@ -114,6 +114,7 @@ function PageHeader({ contentRef }: PageHeaderProps) {
             <LinkButton label="Resume" link="/resume" />
           </div>
         </div>
+
         <div className={styles.hdrMenuMobile}>
           <div>
             <button
@@ -126,7 +127,6 @@ function PageHeader({ contentRef }: PageHeaderProps) {
               <div className={styles.hamBox}>
                 <div className={styles.hamBoxInner}></div>
               </div>
-              <div className={styles.hamburgerB}></div>
             </button>
             <aside
               aria-hidden={isMenuOpen}

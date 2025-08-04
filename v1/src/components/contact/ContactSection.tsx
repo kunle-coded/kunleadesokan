@@ -40,7 +40,7 @@ function ContactSection({ contactSectionRef, type }: ContactProps) {
                 something <br />
                 amazing
               </span>{" "}
-              <br /> together
+              together
             </h1>
           </div>
           <div className={styles.contactBody}>

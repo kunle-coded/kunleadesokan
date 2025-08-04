@@ -9,7 +9,7 @@
   padding-top: var(--global-padding-inner);
   padding-bottom: var(--global-padding-inner);
   margin-top: 0px;
-  background-color: var(--primary-black-light);
+  background-color: var(--surface-sky-blue);
 }
 
 /* Resume meta */
@@ -28,7 +28,7 @@
   -webkit-box-align: center;
   align-items: center;
   font-weight: normal;
-  color: var(--primary-white);
+  color: var(--text-muted);
 }
 
 .container .meta a:not([hidden]) {
@@ -48,8 +48,7 @@
 }
 
 .container .meta a.linkedin {
-  /* color: var(--linkedin-blue); */
-  color: var(--primary-white);
+  color: var(--linkedin-blue);
 }
 
 .container .meta a svg {
@@ -87,7 +86,7 @@
   font-weight: 700;
   font-size: 1.1rem;
   line-height: 1;
-  color: var(--secondary-capri);
+  color: var(--soft-sky-blue);
   position: relative;
 }
 
@@ -131,7 +130,7 @@
   display: inline-block;
   font-weight: 700;
   display: flex;
-  color: var(--secondary-capri);
+  color: var(--soft-sky-blue);
   margin: 0;
 }
 
@@ -140,7 +139,7 @@
 }
 
 .container ul {
-  color: var(--primary-white-darker);
+  color: var(--text-muted);
   margin-top: 0.5em;
 }
 
@@ -174,14 +173,13 @@
   position: absolute;
   height: 1px;
   width: 100%;
-  background-color: var(--secondary-border);
-  background-color: var(--primary-border);
+  background-color: var(--border-lines);
 }
 
 .container .name {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: var(--secondary-capri);
+  color: var(--soft-sky-blue);
 }
 
 .container .profileSummary h2 {
@@ -222,7 +220,7 @@
 
 .container p,
 .container ul {
-  color: var(--primary-white-darker);
+  color: var(--text-muted);
 }
 
 .container .company:not(:last-of-type) {
@@ -250,7 +248,7 @@
 
 .container .company h4 span {
   font-weight: normal;
-  color: var(--primary-white-darker);
+  color: var(--text-muted);
 }
 
 .container .company h4 span::before {
@@ -327,6 +325,15 @@
 
   .container .resumeOverview section:last-of-type {
     margin-left: 1em;
+  }
+
+  .container .company header {
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+
+  .container .company h4 {
+    margin-bottom: 0.2em;
   }
 }
 

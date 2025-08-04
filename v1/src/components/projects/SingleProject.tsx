@@ -209,7 +209,7 @@ function SingleProject() {
         </section>
 
         {/* Project image */}
-        <section className={styles.projectImage}>
+        <section className={` ${styles.projectImage}`}>
           <div className={styles.imgWrapper}>
             <img src="/src/assets/img/koos/img.png" alt="Home" />
           </div>

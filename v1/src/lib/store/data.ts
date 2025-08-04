@@ -471,7 +471,7 @@ export const resume: Resume = {
       ],
       responsibility:
         "Supporting the faculty’s digital environment through hands-on troubleshooting and maintenance – ensuring smooth operation of academic and administrative technology services for students and staff.",
-      role: "IT Support (Student Assistant)",
+      role: "IT Support Assistant",
     },
     {
       id: 1,

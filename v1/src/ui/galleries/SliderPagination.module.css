@@ -1,10 +1,13 @@
 .sliderBtns button {
   color: var(--primary-white-dark);
+  color: var(--border-lines);
+  color: var(--text-muted);
   outline: none;
 }
 
 .sliderBtns button svg {
   fill: var(--primary-white-dark);
+  fill: var(--text-muted);
 }
 
 .sliderBtns .current {

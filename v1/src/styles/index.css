@@ -106,6 +106,7 @@
   --bg-nav: rgb(255, 255, 255, 0.75);
   --nav-shadow: rgba(0, 0, 0, 0.05);
   --bg-nav-sticky: rgba(255, 255, 255, 0.75);
+  --linkedin-blue: #0077b5;
 
   /* Slates */
   --slate-dark: #495670;
@@ -114,7 +115,6 @@
   --slate-lightest: #ccd6f6;
 
   /* External brand colors */
-  --linkedin-blue: #0077b5;
 
   /* Typography */
   --h1: clamp(2.75rem, 3.5vw + 1.4375rem, 4.5rem);
@@ -174,6 +174,7 @@
   --text-primary: #e6e6e6;
   --text-muted: #a8b2d1;
   --soft-sky-blue: #3ea6ff;
+  --surface-sky-blue: #161b22;
   --deeper-coral: #ff6044;
   --border-lines: #2c2f36;
   --btn-text: #ffffff;
@@ -181,6 +182,7 @@
   --bg-nav: rgb(13, 17, 23, 0.9);
   --nav-shadow: rgba(10, 48, 73, 0.7);
   --bg-nav-sticky: rgba(10, 20, 30, 0.85);
+  --linkedin-blue: #a8b2d1;
 }
 
 html {
@@ -396,6 +398,7 @@ button,
 
 .contact-form .input-wrapper textarea::placeholder,
 .contact-form .input-wrapper input::placeholder {
+  font-family: "Geist Mono", "Geist", "Barlow", Arial, Helvetica, sans-serif;
   color: inherit;
   transition: color 0.2s ease;
 }
