@@ -106,11 +106,9 @@ This project is licensed under the MIT License. See the [MIT License](https://op
 
 For inquiries or collaborations, you can reach me at the following platforms:
 
-[LinkedIn](https://www.linkedin.com/in/kunleadesokan/)
 
 [GitHub](https://github.com/kunle-coded)
 
-[Email](mailto:kunle.adesokan9@gmail.com)
 
 ## 🤝 Contributing
 
